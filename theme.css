@@ -1,0 +1,213 @@
+
+
+@import url('components/tagline/style.css');
+@import url('components/hamburger/style.css');
+@import url('components/button/style.css');
+@import url('components/highlight/style.css');
+@import url('components/card/style.css');
+@import url('components/panel/style.css');
+@import url('templates/staticParts/Navigation/style.css');
+@import url('components/clouds/style.css');
+@import url('components/card/style.css');
+@import url("css/font/bebas/stylesheet.css");
+
+:root {
+    --granit-blue: #32455f;
+    --granit-light-blue-1: #526178;
+    --granit-light-blue-2: #737e91;
+    --granit-light-blue-3: #949dac;
+    --granit-light-blue-4: #b7bcc7;
+    --granit-light-blue-5: #dadde3;
+    --granit-dark-blue-1: #2b3a4f;
+    --granit-dark-blue-2: #242f40;
+    --granit-dark-blue-3: #1d2531;
+    --granit-dark-blue-4: #161b23;
+    --granit-dark-blue-5: #0e1015;
+    --granit-yellow: #fbfbf5;
+    --granit-yellow-2: #cdbaa0;
+    --granit-body-font-size: 1rem;
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden !important;
+}
+*,*::before,*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+body {
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    color: #333;
+/   height: 100%;
+    overflow-x: hidden !important;
+}
+button {
+    padding: 0;
+    background-color: transparent;
+    background-image: none;
+}
+button, input, optgroup, select, textarea {
+    border: 0;
+    padding: 0;
+    line-height: inherit;
+    color: inherit;
+}
+button, [role=button] {
+    cursor: pointer;
+}
+ol, ul {
+    list-style: none;
+}
+a { 
+    text-decoration: none;
+ }
+.background-image-photo {
+    background-image: url('../../assets/bg.png');
+    background-size: cover;
+/*    background-position: center; */
+    background-position-y: 30vh;
+    background-position-x: -13vh;
+    background-repeat: no-repeat;
+}
+main {
+    overflow-x: hidden !important;
+}
+h1 {
+    font-size: 2.5rem;    
+}
+h2 {
+    font-size: 1.625rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+h4 {
+    font-size: 1.25rem;
+}
+h5 {
+    font-size: 1.125rem;
+}
+p {
+    font-size: 1rem;
+}
+#hero h1{
+
+    z-index: 10;
+}
+
+.product-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.product-item {
+  flex: 0 0 calc(45% - 10px); /* Два товара в ряд на экранах шириной более 768px */
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+/*    justify-content: center;*/
+    align-items: center;
+}
+
+.product-price,
+.product-name {
+    margin: 0 !important;
+    padding-top: 10px ;
+    display: block;
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+}
+
+
+.pagination-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Выравнивание по центру */
+    align-items: center;
+}
+
+.pagination {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pagination button {
+    margin-right: 20px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
+    letter-spacing: normal;
+    margin: 0 12px 0 0;
+    display: inline-block;
+    border-radius: 0px;
+    border-bottom: 1px solid #6a6a6a;
+
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+.product-img-container {
+    width: 90%;
+    height: 120px;
+    background: rgba(255, 255, 255, 0);
+/*    padding: 10px ;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.product img {
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    height: 100%;
+    max-height: 120px;
+    max-width: 100px;
+/*    margin: auto;*/
+}
+.product-name {
+        font-size: 16px;
+    color: #6a6a6a;
+    font-weight: 400;
+    text-align: center;
+}
+.product-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+}
+.product-details {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.add-to-cart-button {
+    width: 100%;    
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-weight: 100;
+    background-image: none;
+    font-size: 14px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    letter-spacing: 2.5px;
+}
+.mid {
+    text-align: center;
+}

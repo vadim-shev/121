@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "name": "Product 1", 
+        "image": "./assets/Tables/1bench.png", 
+        "price": "$10.99" 
+    }
+    
+]

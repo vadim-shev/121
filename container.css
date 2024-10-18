@@ -1,0 +1,32 @@
+
+.nav-bar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.nav-bar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 10;
+}
+.nav-bar-style {
+    border-bottom: 1px solid var(--granit-light-blue-4);
+    background-color: var(--granit-light-blue-5);
+    transition: border-color .5s, background-color .5s;
+}
+.vt-container {
+    padding: 60px 32px;
+}
+.vt-box {
+    padding: 20px 36px;
+}
+/*#hero {
+    padding: 76px 32px;
+}
+*/
