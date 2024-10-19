@@ -57,7 +57,7 @@ export default {
             path: '/gravestone/', // Initialize path without concatenating
             currentPageKey: 'gravestones', 
             products: [],
-            computedDisplayedProducts: [] // Renamed computed property
+            currentPage: 1, 
         }
     },
     mounted() {
@@ -68,13 +68,19 @@ export default {
                     product.path = '/gravestone/' + product.id;
                 });
                 this.computedDisplayedProducts = this.products; // Assign products to the renamed computed property
-
             })
             .catch(error => {
                 console.error('Problem:', error);
             });
     },
-    methods: {
-       
+    computed: {
+        computedDisplayedProducts() {
+      // Example logic for computing displayed products, you can customize it
+      const productsPerPage = 5;
+      const start = (this.currentPage - 1) * productsPerPage;
+      const end = this.currentPage * productsPerPage;
+      return this.products.slice(start, end);
     }
+    }
+
 }
