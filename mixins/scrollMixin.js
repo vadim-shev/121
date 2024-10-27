@@ -2,7 +2,7 @@ export default {
 	data() {
 		return {
 			isScrolled: false,
-            currentSection: 'Главная',
+            currentSection: '',
             
         }
 	},
@@ -21,16 +21,23 @@ export default {
 
                     const isTopVisible = elementRect.top >= 0 && elementRect.top < window.innerHeight / 2
 
+            // console.log(elementRect)
+            // console.log(document.getElementById("prime").getBoundingClientRect())
+            // console.log(document.getElementById("prising").getBoundingClientRect())
+            // console.log(document.getElementById("contact").getBoundingClientRect())
                     if (isTopVisible) {
                         this.currentSection = sectionName
                         break
                     }
                 }
             }
-            console.log('12')
+            console.log(window.scrollY ) 
         },
         scrollAction(elementId) {
             document.getElementById(elementId).scrollIntoView({ behavior: 'smooth', block: 'start' })
+        },
+        Action(elementId) {
+            if(document.getElementById(elementId).getBoundingClientRect().bottom - 55 >= 0) this.currentSection = 'U'
         },
         fetchAPI(pathToFile) {
             return fetch(pathToFile)
@@ -41,11 +48,17 @@ export default {
         },
 	},
     mounted() {
+            let y = window.scrollY 
+            
+        
+            // if(document.getElementById(this.items[1]).getBoundingClientRect().bottom - 55 >= 0) this.currentSection = 'Продукция'
+            // if(document.getElementById(this.items[2]).getBoundingClientRect().bottom - 55 >= 0) this.currentSection = 'Контакты'
+            // if(document.getElementById(this.items[3]).getBoundingClientRect().bottom - 55 >= 0) this.currentSection = 'Контакты'
 
         window.addEventListener("scroll", this.handleScroll);
     },
     beforeDestroy() {
         window.removeEventListener("scroll", this.handleScroll);
-  console.log(START_LOCATION)
+  // console.log(START_LOCATION)
     }
 }

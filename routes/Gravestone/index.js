@@ -10,9 +10,9 @@ export default {
     mixins: [scrollMixin, paginationMixin, fetchMixin],
     components: { NavigationPart, FooterPart, CustomLink, Clouds },
     template: `
-        <div ref="scrollContainer" id="p" class="menuItem">
-            <header style="position: relative; height: 55px; top: 0;">
-                <navigation-part></navigation-part>
+        <div ref="scrollContainer" id="p">
+            <header style="position: relative; height: 55px; top: 0;" class="menuItem" id="up">
+                <navigation-part  :class="{ 'highlighted': isScrolled }" :newItem="currentSection"></navigation-part>
             </header>
             <main>
                 <div style="position: relative;">
@@ -35,13 +35,14 @@ export default {
                             </div>
                             <!-- Пагинация -->
                             <div class="pagination-container">
-                                <div class="pagination">
+                                <div class="pagination" id="saa">
                                     <button v-for="pageNumber in pageCount" :key="pageNumber" @click="changePage(pageNumber)">{{ pageNumber }}</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
             </main>
             <footer class="menuItem" id="contact">
                 <div>
@@ -54,9 +55,14 @@ export default {
     `,
     data() {
         return {
+            sectionNames: {
+                up: 'Главная',
+                pricing: 'Продукция',
+                contact: 'Контакты'
+            },
+            products: [],
             path: '/gravestone/', // Initialize path without concatenating
             currentPageKey: 'gravestones', 
-            products: [],
             currentPage: 1, 
         }
     },
@@ -68,15 +74,18 @@ export default {
                     product.path = '/gravestone/' + product.id;
                 });
                 this.computedDisplayedProducts = this.products; // Assign products to the renamed computed property
+                if(data.length < this.itemsPerPage) document.getElementById('saa').style.display = "none"
             })
             .catch(error => {
                 console.error('Problem:', error);
             });
+
+                // document.getElementById('saa').style.display = "none"
     },
     computed: {
         computedDisplayedProducts() {
       // Example logic for computing displayed products, you can customize it
-      const productsPerPage = 5;
+      const productsPerPage = 6;
       const start = (this.currentPage - 1) * productsPerPage;
       const end = this.currentPage * productsPerPage;
       return this.products.slice(start, end);

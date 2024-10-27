@@ -26,7 +26,7 @@ export default {
 
         },
         updateMenu() {
-                this.Item = []
+                // this.Item = []
 
                 document.querySelectorAll(".menuItem").forEach((item) => {
                     this.Item.push(item.id)
@@ -35,7 +35,6 @@ export default {
         }
 	},
     mounted() {
-        this.updateMenu()
-                console.log(this.Item)
+        
     }
 }

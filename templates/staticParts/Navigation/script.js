@@ -1,12 +1,16 @@
+import fetchMixin from './../../../mixins/fetchMixin.js'
+import scrollMixin from './../../../mixins/scrollMixin.js'
+
 export default {
+    mixins: [fetchMixin, scrollMixin],
     props: {
         newItem: String
     },
     data() {
         return {
-            items: ['Главная', 'Достижения', 'Продукция', 'Контакты'],
+            items: [],
             isActive: false,
-            currentSectionPosition: 'Главная'
+            currentSectionPosition: 'asd'
         }
     },
     template: `  
@@ -31,7 +35,19 @@ export default {
         </div>  
     `,
     mounted() {
-        this.currentSectionPosition = this.newItem || 'Главная'
+        this.updateMenu();
+        
+        // Загружаем элементы
+        this.items = this.Item.slice(0, 4);
+        
+        // Проверка видимости элементов
+        this.checkElementsInViewport();
+        
+        window.addEventListener("scroll", this.handleScroll);
+        window.addEventListener("load", this.checkElementsInViewport); // Проверка при загрузке
+    },
+    beforeDestroy() {
+        window.removeEventListener("scroll", this.handleScroll);
     },
     computed: {
         computedClasses() {
@@ -41,34 +57,43 @@ export default {
         }
     },
     methods: {
-        toggleClass() {
-            this.isActive = !this.isActive
+        checkElementsInViewport() {
+            this.items.forEach(item => {
+                const element = document.getElementById(item);
+                if (element) {
+                    const isInViewport = this.isElementInViewport(element);
+                    if (isInViewport) {
+                        console.log(`Элемент "${item}" в зоне видимости!`);
+                        this.onElementInView(element); // Вызываем действие
+                    }
+                } else {
+                    // console.warn(`Элемент с ID "${item}" не найден.`);
+                }
+            });
         },
-        scrollAction(elementId) {
-            document.getElementById(elementId).scrollIntoView({ behavior: 'smooth', block: 'start' })
+        isElementInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top < window.innerHeight - 200 && // Элемент частично или полностью в видимой части экрана
+                rect.bottom > 0
+            );
+        },
+        onElementInView(element) {
+            // console.log(`Действие для элемента "${element.id}"!`);
+            // Здесь можно добавить любые действия, например, анимацию или изменение стилей
+        },
+        toggleClass() {
+            this.isActive = !this.isActive;
         },
         clickTarget(clickedItem) {
-            let sectionId = ''
-
-            switch (clickedItem) {
-                case this.items[0]:
-                    sectionId = 'prime'
-                    break;
-                case this.items[1]:
-                    sectionId = 'whatwedo'
-                    break;
-                case this.items[2]:
-                    sectionId = 'pricing'
-                    break;
-                case this.items[3]:
-                    sectionId = 'contact'
-                    break;
-                default:
-                    sectionId = 'prime'
-            }
-
-            this.currentSectionPosition !== clickedItem ? this.scrollAction(sectionId) : this.scrollAction('prime')
-            this.toggleClass()
+            this.currentSectionPosition !== clickedItem ? this.scrollAction(clickedItem) : this.scrollAction(this.items[0]);
+            this.toggleClass();
+        },
+        scrollAction(elementId) {
+            document.getElementById(elementId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        },
+        handleScroll() {
+            this.checkElementsInViewport(); // Проверяем видимость при прокрутке
         }
     }
 }

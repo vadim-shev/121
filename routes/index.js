@@ -18,7 +18,7 @@ export default {
     components: { NavigationPart, Clouds, TagLine, Btn, Highlight, Card, FooterPart },
     template: `
            <div ref="scrollContainer" :key="currentPageKey" id="p">
-            <header style="position: relative; height: 55px;">
+            <header style="position: relative; height: 55px;" >
                 <navigation-part :class="{ 'highlighted': isScrolled }" :newItem="currentSection"></navigation-part>
             </header>
             <main>

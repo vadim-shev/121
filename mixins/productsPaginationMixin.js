@@ -37,6 +37,7 @@ export default {
 			},
 			setCurrentPage(pageNumber) {
 				this.currentPage = pageNumber
+				
 			},
 		fetchAPI(pathToFile) {
 			return fetch(pathToFile).then(response => {

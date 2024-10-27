@@ -12,8 +12,8 @@ export default {
     components: { NavigationPart, FooterPart, CustomLink, Clouds },
 	template: `
 		<div ref="scrollContainer">
-			<header style="position: relative; height: 55px; top: 0;">
-				<navigation-part></navigation-part>
+			<header style="position: relative; height: 55px; top: 0;"  class="menuItem" id="up">
+				<navigation-part  :class="{ 'highlighted': isScrolled }" :newItem="currentSection"></navigation-part>
 			</header>
 			<main>
 				<div style="position: relative;">
@@ -22,7 +22,7 @@ export default {
 					<h1 class="tagline" style="text-align: center; font-weight: 100;">Площадки</h1>
 					<div>
 						<div style="position: relative;">
-							<div class="product-catalog">
+							<div class="product-catalog" class="menuItem" id="prising">
 							      	<router-link :to="product.path" class="product product-item" v-for="(product, index) in computedDisplayedProducts" :key="index">
                                     <div class="product-img-container">
                                         <img :src="product.image" :alt="product.name" class="product-image">
@@ -36,7 +36,7 @@ export default {
 							    </div>
 							    <!-- Пагинация -->
 							    <div class="pagination-container">
-							    	<div  class="pagination">
+							    	<div  class="pagination" id="saa">
 							    		<button v-for="pageNumber in pageCount" :key="pageNumber" @click="changePage(pageNumber)">{{ pageNumber }}</button>
 							    	</div>
 								</div>
@@ -44,7 +44,7 @@ export default {
 						</div>
 				</div>
 			</main>
-			<footer id="contact">
+			<footer class="menuItem" id="contact">
 				<div>
 					<section class='vt-container'>
 						<footer-part></footer-part>
@@ -69,6 +69,7 @@ export default {
                     product.path = '/platform/' + product.id;
                 });
                 this.computedDisplayedProducts = this.products; // Assign products to the renamed computed property
+                if(data.length < this.itemsPerPage) document.getElementById('saa').style.display = "none"
 
             })
             .catch(error => {
