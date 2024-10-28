@@ -5,7 +5,7 @@ export default {
     mixins: [fetchMixin],
 	props: ['pathTo', 'childClass', 'value', 'parentClass'],
 	template: `
-		<div @click="updateMenu()W"  :class="parentClass">
+		<div @click="updateMenu()"  :class="parentClass">
 			<router-link :to="{ path: pathTo }" :class="childClass ">{{ value }}</router-link>
 		</div>
 		
