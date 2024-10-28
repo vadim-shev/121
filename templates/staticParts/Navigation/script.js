@@ -33,25 +33,11 @@ export default {
             </aside>
         </div>  
     `,
-    mounted() {
-        this.updateMenu()
-        
-    },
     computed: {
         computedClasses() {
             return {
                 'is-active': this.isActive
             }
-        }
-    },
-    methods: {
-
-        toggleClass() {
-            this.isActive = !this.isActive;
-        },
-        clickTarget(clickedItem) {
-            this.currentSectionPosition !== clickedItem ? this.scrollAction(clickedItem) : this.scrollAction(this.items[0]);
-            this.toggleClass();
         }
     }
 }

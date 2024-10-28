@@ -61,12 +61,15 @@ export default {
         contact: 'Контакты'
       },
       path: '/gravestone/',
-      currentSection: '',
+      // currentSection: '',``
         }
     },
     mounted() {
+        this.currentSectionTO(0)
+
         this.updateMenu()
         
+            // this.currentSectionTO(0)        
         this.fetchAPI('./data/gravestones.json')
             .then(data => {
                 this.products = data;
@@ -79,7 +82,6 @@ export default {
             .catch(error => {
                 console.error('Problem:', error);
             });
-                // document.getElementById('saa').style.display = "none"
     }
 
 }

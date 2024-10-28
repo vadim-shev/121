@@ -15,15 +15,9 @@ export default {
             
     },
 	methods: {
-		fetchAPI(pathToFile) {
-            return fetch(pathToFile)
-                .then(response => {
-                    if (!response.ok) throw new Error('NOT ok!');
-                    return response.json();
-                });
-        },
-        updatePage() {
-
+		currentSectionTO(numb) {
+            if(this.currentSection = '' ) this.currentSection = this.Item[numb] 
+            window.scrollTo(0,0)
         }
 	},
     mounted() {

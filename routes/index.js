@@ -78,6 +78,7 @@ export default {
     data() {
         return {
             currentPageKey: 'home',
+            currentSection: 'PRIME',
             sectionNames: {
                 prime: 'Главная',
                 whatwedo: 'Достижения',
@@ -85,9 +86,8 @@ export default {
                 contact: 'Контакты'
             }
         }
-    },
-    mounted() {
-        this.updateMenu()
-        
+    }, mounted() {
+            // this.currentSection = "PRIME"11``
+
     }
 }
