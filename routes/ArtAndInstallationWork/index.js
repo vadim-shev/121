@@ -55,21 +55,27 @@ export default {
 	`,
     data() {
         return {
+             sectionNames: {
+        up: 'Главная',
+        pricing: 'Продукция',
+        contact: 'Контакты'
+      },
             path: '/art/', // Initialize path without concatenating
             currentPageKey: 'arts', 
-            products: [],
-            computedDisplayedProducts: [] // Renamed computed property
+      currentSection: '',
+            // products: [],
+            // computedDisplayedProducts: [] // Renamed computed property
         }
     },
     mounted() {
+        this.updateMenu()
         this.fetchAPI('./data/arts.json')
             .then(data => {
                 this.products = data;
                 this.products.forEach(product => {
                     product.path = '/art/' + product.id;
                 });
-                this.computedDisplayedProducts = this.products; // Assign products to the renamed computed property
-                 if(data.length < this.itemsPerPage) document.getElementById('saa').style.display = "none"
+                this.hidePagination(data)
 
             })
             .catch(error => {

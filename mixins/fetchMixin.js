@@ -1,7 +1,7 @@
 export default {
     data() {
         return {
-            Item: []
+            
         
         }
     },
@@ -23,14 +23,6 @@ export default {
                 });
         },
         updatePage() {
-
-        },
-        updateMenu() {
-                // this.Item = []
-
-                document.querySelectorAll(".menuItem").forEach((item) => {
-                    this.Item.push(item.id)
-                })
 
         }
 	},

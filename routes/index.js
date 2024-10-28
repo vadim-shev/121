@@ -77,16 +77,17 @@ export default {
     `,    
     data() {
         return {
+            currentPageKey: 'home',
             sectionNames: {
                 prime: 'Главная',
                 whatwedo: 'Достижения',
                 pricing: 'Продукция',
                 contact: 'Контакты'
-            },
-            currentPageKey: 'home'
+            }
         }
     },
-    methods: {
-       
+    mounted() {
+        this.updateMenu()
+        
     }
 }

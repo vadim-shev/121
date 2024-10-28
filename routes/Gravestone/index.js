@@ -55,41 +55,31 @@ export default {
     `,
     data() {
         return {
-            sectionNames: {
-                up: 'Главная',
-                pricing: 'Продукция',
-                contact: 'Контакты'
-            },
-            products: [],
-            path: '/gravestone/', // Initialize path without concatenating
-            currentPageKey: 'gravestones', 
-            currentPage: 1, 
+             sectionNames: {
+        up: 'Главная',
+        pricing: 'Продукция',
+        contact: 'Контакты'
+      },
+      path: '/gravestone/',
+      currentSection: '',
         }
     },
     mounted() {
+        this.updateMenu()
+        
         this.fetchAPI('./data/gravestones.json')
             .then(data => {
                 this.products = data;
                 this.products.forEach(product => {
                     product.path = '/gravestone/' + product.id;
                 });
-                this.computedDisplayedProducts = this.products; // Assign products to the renamed computed property
-                if(data.length < this.itemsPerPage) document.getElementById('saa').style.display = "none"
+                // this.computedDisplayedProducts = this.products; // Assign products to the renamed computed property
+                this.hidePagination(data)
             })
             .catch(error => {
                 console.error('Problem:', error);
             });
-
                 // document.getElementById('saa').style.display = "none"
-    },
-    computed: {
-        computedDisplayedProducts() {
-      // Example logic for computing displayed products, you can customize it
-      const productsPerPage = 6;
-      const start = (this.currentPage - 1) * productsPerPage;
-      const end = this.currentPage * productsPerPage;
-      return this.products.slice(start, end);
-    }
     }
 
 }
