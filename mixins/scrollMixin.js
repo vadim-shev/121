@@ -6,25 +6,40 @@ export default {
             currentSection: ''            
         }
 	},
+    computed: {
+        basePage() {
+            return this.$router.options.history.base
+        },
+        prevPage() {
+            return this.$router.options.history.state.back
+        },
+        currentPage() {
+            return this.$router.options.history.state.current
+        },
+        nextPage() {
+            return this.$router.options.history.state.forward
+        }
+            
+    },
 	methods: {
-		handleScroll() {           
-            this.Item.forEach(item => {
-                const element = document.getElementById(item)
-                if (element) {
-                    if (this.isElementInViewport(element)) {
-                        this.currentSection = item
-                    }
+		handleScroll() {          
+// this.updateMenu() 
+            this.displayViewportElement()
+        },
+        displayViewportElement() {
+            this.currentSection = this.Item[0]
+            this.Item.forEach(item => { // Перебирает каждый item в Item и для каждого выполняeт код
+                if(document.getElementById(item)) { // Существует ли такой element
+                    if(this.isElementInViewport(item)) this.currentSection = item // Eсли item в поле зрения
                 }
             })
+
         },
-        isElementInViewport(element) {
-            const rect = element.getBoundingClientRect()
-            return (
-                rect.top < window.innerHeight - 200 && // Элемент частично или полностью в видимой части экрана
-                rect.bottom > 0
-            )
+        isElementInViewport(element) { // Проверяем, находится ли указанный element в поле зрения
+            return  document.getElementById(element).getBoundingClientRect().top < window.innerHeight - 600 
+                        && document.getElementById(element).getBoundingClientRect().bottom > 0 
         },
-        scrollAction(elementId) {
+        scrollAction(elementId) { // Прокрутить страницу к указанному elementId 
             document.getElementById(elementId).scrollIntoView({ behavior: 'smooth', block: 'start' })
         },
         updateMenu() {
@@ -45,16 +60,10 @@ export default {
                     return response.json()
             })
         },
-    },
-    mounted() {
-        this.updateMenu()
-        // this.currentSectionTO(0)SSS
-
-        window.addEventListener("load", this.handleScroll)
-        window.addEventListener("scroll", this.handleScroll)
+    }, mounted() {
+           this.updateMenu()
 
     },
     beforeDestroy() {
-        window.removeEventListener("scroll", this.handleScroll)
     }
 }

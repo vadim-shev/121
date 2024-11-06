@@ -64,7 +64,7 @@ a {
     text-decoration: none;
  }
 .background-image-photo {
-    background-image: url('../../assets/bg.png');
+    background-image: url('assets/bg.png');
     background-size: cover;
 /*    background-position: center; */
     background-position-y: 30vh;

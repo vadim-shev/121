@@ -9,12 +9,12 @@ import Card from './../components/card/script.js'
 import FooterPart from './../templates/staticParts/Footer.js'
 
 import scrollMixin from './../mixins/scrollMixin.js'
-import fetchMixin from './../mixins/fetchMixin.js'
+// import fetchMixin from './../mixins/fetchMixin.js'
 
 // import { ref } from 'https://unpkg.com/vue@3.4.27/dist/vue.global.js';
 
 export default {
-    mixins: [scrollMixin, fetchMixin],
+    mixins: [scrollMixin],
     components: { NavigationPart, Clouds, TagLine, Btn, Highlight, Card, FooterPart },
     template: `
            <div ref="scrollContainer" :key="currentPageKey" id="p">
@@ -87,7 +87,12 @@ export default {
             }
         }
     }, mounted() {
-            // this.currentSection = "PRIME"11``
+           // this.updateMenu()
+        window.addEventListener("load", this.displayViewportElement)
+        window.addEventListener("scroll", this.handleScroll)
 
+    },
+    beforeDestroy() {
+        window.removeEventListener("scroll", this.handleScroll)
     }
 }

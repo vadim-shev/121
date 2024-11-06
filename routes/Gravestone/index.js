@@ -3,11 +3,11 @@ import FooterPart from './../../templates/staticParts/Footer.js'
 import CustomLink from './../../components/router-link/script.js'
 import Clouds from './../../components/clouds/script.js'
 import scrollMixin from './../../mixins/scrollMixin.js'
-import fetchMixin from './../../mixins/fetchMixin.js'
+// import fetchMixin from './../../mixins/fetchMixin.js'
 import paginationMixin from './../../mixins/productsPaginationMixin.js'
 
 export default {
-    mixins: [scrollMixin, paginationMixin, fetchMixin],
+    mixins: [scrollMixin, paginationMixin,],
     components: { NavigationPart, FooterPart, CustomLink, Clouds },
     template: `
         <div ref="scrollContainer" id="p">
@@ -65,11 +65,6 @@ export default {
         }
     },
     mounted() {
-        this.currentSectionTO(0)
-
-        this.updateMenu()
-        
-            // this.currentSectionTO(0)        
         this.fetchAPI('./data/gravestones.json')
             .then(data => {
                 this.products = data;
@@ -82,6 +77,11 @@ export default {
             .catch(error => {
                 console.error('Problem:', error);
             });
-    }
+        window.addEventListener("load", this.displayViewportElement)
+        window.addEventListener("scroll", this.handleScroll)
 
+    },
+    beforeDestroy() {
+        window.removeEventListener("scroll", this.handleScroll)
+    }
 }

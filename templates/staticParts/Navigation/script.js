@@ -1,8 +1,8 @@
-import fetchMixin from './../../../mixins/fetchMixin.js'
+// import fetchMixin from './../../../mixins/fetchMixin.js'
 import scrollMixin from './../../../mixins/scrollMixin.js'
 
 export default {
-    mixins: [fetchMixin, scrollMixin],
+    mixins: [ scrollMixin],
     props: {
         newItem: String
     },
