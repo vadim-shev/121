@@ -52,5 +52,17 @@
         "name": "Product 9", 
         "image": "./assets/Gravestones/1mini.png", 
         "price": "$15.99" 
+    },
+    {
+        "id": 10,
+        "name": "Product 10", 
+        "image": "./assets/Gravestones/1mini.png", 
+        "price": "$15.99" 
+    },
+    {
+        "id": 11,
+        "name": "Product 11", 
+        "image": "./assets/Gravestones/1mini.png", 
+        "price": "$15.99" 
     }
 ]

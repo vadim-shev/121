@@ -55,13 +55,14 @@ export default {
     `,
     data() {
         return {
+            currentPageKey: 'gravestone',
              sectionNames: {
-        up: 'Главная',
-        pricing: 'Продукция',
-        contact: 'Контакты'
-      },
-      path: '/gravestone/',
-      // currentSection: '',``
+                up: 'Главная',
+                pricing: 'Продукция',
+                contact: 'Контакты'
+            },
+            path: '/gravestone/',
+            // currentSection: '',``
         }
     },
     mounted() {
@@ -79,7 +80,7 @@ export default {
             });
         window.addEventListener("load", this.displayViewportElement)
         window.addEventListener("scroll", this.handleScroll)
-
+        console.log()
     },
     beforeDestroy() {
         window.removeEventListener("scroll", this.handleScroll)

@@ -73,6 +73,7 @@ export default {
                     </div>
                 </div>
             </footer>   
+            User {{ $route.params.id }}
         </div>    
     `,    
     data() {

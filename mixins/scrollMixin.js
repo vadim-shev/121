@@ -18,6 +18,9 @@ export default {
         },
         nextPage() {
             return this.$router.options.history.state.forward
+        },
+        vc() {
+            return this.$route.query.name
         }
             
     },
@@ -62,7 +65,7 @@ export default {
         },
     }, mounted() {
            this.updateMenu()
-
+            console.log(this.vc)
     },
     beforeDestroy() {
     }

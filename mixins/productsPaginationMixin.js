@@ -4,7 +4,7 @@ export default {
       products: [],
       currentPage: 1, // Ensure this is only in data
 
-                     itemsPerPage: 8,
+                     itemsPerPage: 9,
     	}
 	},
 	computed: {
