@@ -3,7 +3,6 @@ import FooterPart from './../../templates/staticParts/Footer.js'
 import CustomLink from './../../components/router-link/script.js'
 import Clouds from './../../components/clouds/script.js'
 import scrollMixin from './../../mixins/scrollMixin.js'
-// import fetchMixin from './../../mixins/fetchMixin.js'
 import paginationMixin from './../../mixins/productsPaginationMixin.js'
 
 export default {
@@ -12,7 +11,7 @@ export default {
     template: `
         <div ref="scrollContainer" id="p">
             <header style="position: relative; height: 55px; top: 0;" class="menuItem" id="up">
-                <navigation-part  :class="{ 'highlighted': isScrolled }" :newItem="currentSection"></navigation-part>
+                <navigation-part   :newItem="currentSection"></navigation-part>
             </header>
             <main>
                 <div style="position: relative;">
@@ -56,33 +55,27 @@ export default {
     data() {
         return {
             currentPageKey: 'gravestone',
-             sectionNames: {
-                up: 'Главная',
-                pricing: 'Продукция',
-                contact: 'Контакты'
-            },
             path: '/gravestone/',
-            // currentSection: '',``
+            products: [],
+            currentPage: 1,
+            itemsPerPage: 9
         }
     },
     mounted() {
         this.fetchAPI('./data/gravestones.json')
             .then(data => {
                 this.products = data;
+                // this.updateDisplayedProducts(this.currentPage);
                 this.products.forEach(product => {
                     product.path = '/gravestone/' + product.id;
                 });
                 // this.computedDisplayedProducts = this.products; // Assign products to the renamed computed property
                 this.hidePagination(data)
+                // console.log(this.products.length)
+                // console.log(this.displayedProducts.length)
             })
             .catch(error => {
                 console.error('Problem:', error);
             });
-        window.addEventListener("load", this.displayViewportElement)
-        window.addEventListener("scroll", this.handleScroll)
-        console.log()
-    },
-    beforeDestroy() {
-        window.removeEventListener("scroll", this.handleScroll)
     }
 }
