@@ -42,7 +42,8 @@ export default {
 		                    </section>
 		                </div>
 		                <div class="menuItem" id='pricing'>
-		                    <section class='vt-container'>
+		                    <section style="position: relative;" class='vt-container'>            
+                <div class="background-image-tombstone background-image-tombstone-transform "></div>
 		                        <div class="product-items">
 		                            <card @click="updateMenu()"  specification='Description' 
 		                                  name="Надгробия" price="Перейти к каталогу" 
@@ -60,37 +61,10 @@ export default {
 		                        </div>
 		                    </section>
 		                </div>
-		               
-		                	<!-- <section class="menuItem" id='pro' class="pro">
-		                		<h2>Productss</h2>
-		                		<div class="proList">
-		                			<div class="proItem">
-		                					<img src="./assets/cemetry-gates.png">
-		                					<div class="proInfo">
-		                						<h3>Gravestone</h3>
-		                						<p>No matter what your personal style, we have just the 		right furniture for your living room..</p>
-		                						<button>Deal</button>
-		                				</div>
-		                			</div>
-		                			<div class="proItem">
-		                				<div class="proInfo">
-		                						<h3>Tables</h3>
-		                						<p>No matter what your personal style, we have just the 		right furniture for your living room..</p>
-		                						<button>Deal</button>
-		                				</div>
-		                				<img src="./assets/bg_tombstone.png">
-		                			</div>
-		                			<div class="proItem">
-		                				<img src="./assets/tombstone-.png">
-		                				<div class="proInfo">
-				                				<h3>Drawer</h3>
-				                				<p>No matter what your personal style, we have just the right furniture for your living room..</p>		
-				                				<button>Deal</button>
-		                				</div>
-		                			</div>
-		                		</div>
-		                	</section> -->
-		                </div> 
+		                    <!-- <div class="container"> -->
+   
+		                	
+		                <!-- </div>  -->
             </main>
             <footer class="menuItem"  id='contact'>
                 <div style="position: relative;">
