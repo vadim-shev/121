@@ -1,9 +1,8 @@
 export default {
 	data() {
 		return {
-            Item: [],
-            isScrolled: false,
-            currentSection: ''            
+            Item: [],     
+            currentSection: ''     
         }
 	},
     computed: {
@@ -13,20 +12,19 @@ export default {
         prevPage() {
             return this.$router.options.history.state.back
         },
-        currentPage() {
+        currentPages() {
             return this.$router.options.history.state.current
         },
         nextPage() {
             return this.$router.options.history.state.forward
         },
-        vc() {
-            return this.$route.query.name
+        productId() {
+            return this.products[this.$route.params.id - 1]
         }
             
     },
 	methods: {
 		handleScroll() {          
-// this.updateMenu() 
             this.displayViewportElement()
         },
         displayViewportElement() {
@@ -51,7 +49,7 @@ export default {
             })
         },
         clickTarget(clickedItem) {
-            this.currentSectionPosition !== clickedItem ? this.scrollAction(clickedItem) : this.scrollAction(this.items[0])
+            this.currentSectionPosition !== clickedItem ? this.scrollAction(clickedItem) : this.scrollAction(this.Item[0])
             this.toggleClass()
         },
         toggleClass() {
@@ -63,10 +61,14 @@ export default {
                     return response.json()
             })
         },
-    }, mounted() {
-           this.updateMenu()
-            console.log(this.vc)
+    },
+    mounted() {
+       this.updateMenu()
+        window.addEventListener("load", this.displayViewportElement)
+        window.addEventListener("scroll", this.handleScroll)
+
     },
     beforeDestroy() {
+        window.removeEventListener("scroll", this.handleScroll)
     }
 }

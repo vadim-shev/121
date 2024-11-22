@@ -9,7 +9,7 @@ import Card from './../components/card/script.js'
 import FooterPart from './../templates/staticParts/Footer.js'
 
 import scrollMixin from './../mixins/scrollMixin.js'
-// import fetchMixin from './../mixins/fetchMixin.js'
+import fetchMixin from './../mixins/fetchMixin.js'
 
 // import { ref } from 'https://unpkg.com/vue@3.4.27/dist/vue.global.js';
 
@@ -19,7 +19,7 @@ export default {
     template: `
            <div ref="scrollContainer" :key="currentPageKey" id="p">
             <header style="position: relative; height: 55px;" >
-                <navigation-part :class="{ 'highlighted': isScrolled }" :newItem="currentSection"></navigation-part>
+                <navigation-part  :newItem="currentSection"></navigation-part>
             </header>
             <main>
                 <div style="position: relative;">
@@ -73,27 +73,11 @@ export default {
                     </div>
                 </div>
             </footer>   
-            User {{ $route.params.id }}
         </div>    
     `,    
     data() {
         return {
-            currentPageKey: 'home',
-            currentSection: 'PRIME',
-            sectionNames: {
-                prime: 'Главная',
-                whatwedo: 'Достижения',
-                pricing: 'Продукция',
-                contact: 'Контакты'
-            }
+            currentPageKey: 'home'
         }
-    }, mounted() {
-           // this.updateMenu()
-        window.addEventListener("load", this.displayViewportElement)
-        window.addEventListener("scroll", this.handleScroll)
-
-    },
-    beforeDestroy() {
-        window.removeEventListener("scroll", this.handleScroll)
     }
 }

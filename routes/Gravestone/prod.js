@@ -11,28 +11,28 @@ export default {
     },
     template: `
         <div ref="scrollContainer" :key="currentPageKey" id="p">
-            <header style="position: relative; height: 55px; top: 0;">
-                <navigation-part></navigation-part>
+            <header class="menuItem" id="up" style="position: relative; height: 55px; top: 0;">
+                <navigation-part  :newItem="currentSection"></navigation-part>
             </header>
-            <main>
+            <main class="menuItem" id="prod">
                 <div style="position: relative;">
-                    <h1 class="tagline" style="text-align: center; font-weight: 100;">{{ productName }}</h1>
+                    <h1 class="tagline" style="text-align: center; font-weight: 100;">{{ Name }}</h1>
                     <div class="product-img-container">
-                        <img :src="productImage" 
-                             :alt=""
+                        <img :src="Image" 
+                             alt=""
 							  class="product-image">
                     </div>
                     <div class="product-details">
                             <h3 class="product-name">
-                            	{{ productName }}
+                            	{{ Name }}
                             </h3>
                             <p class="product-price">
-                            	{{ productPrice }}
+                            	{{ Price }}
                             </p>
                     </div>
                 </div>
             </main>
-            <footer id="contact">
+            <footer class="menuItem"  id="contact">
                 <div>
                     <section class='vt-container'>
                         <footer-part></footer-part>
@@ -44,37 +44,23 @@ export default {
     data() {
         return {
             currentPageKey: this.$route.params.id || 'default',
-            productName: "",
-            productPrice: "",
-            productImage: ""
+            Name: "",
+            Price: "",
+            Image: ""
         }
     },
-    watch: {
-        '$route.params.currentPageKey': {
-            immediate: true,
-            handler(newVal) {
-                this.currentPageKey = newVal || 'default';
-            }
-        }
-    },
-    mounted() {
+    mounted() {    
+
         this.fetchAPI('./data/gravestones.json')
             .then(data => {
-                this.products = data;
+                this.products = data
                 this.products.forEach(product => {
                     product.path = '/gravestone/' + product.id;
                 });
-                this.computedDisplayedProducts = this.products; // Assign products to the renamed computed property
-                if( this.computedDisplayedProducts[this.$route.params.id - 1].id == this.$route.params.id) {
-                	console.log("true") 
-                	this.productName = this.computedDisplayedProducts[this.$route.params.id - 1].name
-                	this.productImage = this.computedDisplayedProducts[this.$route.params.id - 1].image
-                	this.productPrice = this.computedDisplayedProducts[this.$route.params.id - 1].price
-                } else {
-                	console.log("false")
-                }
-                // console.log(this.computedDisplayedProducts[0].id)
 
+                this.Name = this.productId.name
+                this.Price = this.productId.price
+                this.Image = this.productId.image
             })
             .catch(error => {
                 console.error('Problem:', error);

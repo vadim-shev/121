@@ -15,10 +15,7 @@ const router = VueRouter.createRouter({
         { path: "/", component: Home },
         {   
             path: "/gravestone", 
-            component: Gravestone,
-           query: {
-                            name: 'John', age: '23'
-                        }
+            component: Gravestone
         },
         {   
             path: "/gravestone/:id", 
@@ -71,10 +68,4 @@ const router = VueRouter.createRouter({
 
 })
 
-Vue.createApp({
-    data() {
-        return {
-            mess: "ciao mondo"
-        }
-    }
-}).use(router).mount('#app')
+Vue.createApp().use(router).mount('#app')
