@@ -63,13 +63,25 @@ ol, ul {
 a { 
     text-decoration: none;
  }
-.background-image-photo {
-    background-image: url('assets/bg.png');
-    background-size: cover;
-/*    background-position: center; */
-    background-position-y: 30vh;
-    background-position-x: -13vh;
+.background-image-tombstone {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-image: url('assets/bg_tombstone.png');
+    background-size: contain;
     background-repeat: no-repeat;
+    z-index: 0;
+}
+.background-image-tombstone-transform {
+    transform: rotate(-45deg);
+    left: -135px;
+    top: -220px;
+    /*transform: translate(-50px, -100px);*/
+}
+#hero {
+    z-index: 1000 !important;
 }
 main {
     overflow-x: hidden !important;
@@ -96,7 +108,9 @@ p {
 
     z-index: 10;
 }
+#whatwedo * {
 
+}
 .product-catalog {
   display: flex;
   flex-wrap: wrap;

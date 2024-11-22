@@ -16,12 +16,15 @@
     z-index: 10;
 }
 .nav-bar-style {
+    backdrop-filter: blur(10px);    
+    /*opacity: 0.8;*/
     border-bottom: 1px solid var(--granit-light-blue-4);
-    background-color: var(--granit-light-blue-5);
+    background-color: rgb(255 255 255 / 30%);
     transition: border-color .5s, background-color .5s;
 }
 .vt-container {
     padding: 60px 32px;
+  z-index: 100 !important; 
 }
 .vt-box {
     padding: 20px 36px;
