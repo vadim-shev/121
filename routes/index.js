@@ -1,6 +1,5 @@
 
 import NavigationPart from './../templates/staticParts/Navigation/script.js'
-
 import Clouds from './../components/clouds/script.js'
 import TagLine from './../components/tagline/script.js'
 import Btn from './../components/button/script.js'
@@ -29,16 +28,50 @@ export default {
                 	<div id="prime" class="menuItem">
 		                <div style="position: relative;">
 		                        <section id="hero" class='vt-container'>
-		                            <tag-line text="granitblizkim" style="index: 100;"></tag-line>
+		                            <tag-line text="granitblizkim"></tag-line>
 		                            <btn @click="scrollAction('pricing')" style="margin-top: 20px;" name="перейти к каталогу"></btn>
 
 		                    </section>
 		                </div>
 		                <div class="menuItem" id='whatwedo'>
-		                    <section id="highlight" class='vt-container'>
-		                        <highlight name='от 100' concept='товаров на выбор' ></highlight>
-		                        <highlight name='80%' concept='клиентов обращаются повторно' ></highlight>
-		                        <highlight name='более 15' concept='лет на рынке' ></highlight>
+		                    <section id="highlight" class='vt-container' >
+		                        <highlight 	name='Памятники и мемориалы' 
+		                        			concept='Поделимся какими бывают 
+		                        					мемориалы/памятники, для чего они служат и весь спектр наших услуг, которые мы готовы вам предоставить по работе с ними.' 
+		                        			value='Нажмите, чтобы перейти на страницу' 
+		                        				pathTo="/gravestone"
+		                        ></highlight>
+		                        <highlight 	name='Выбор материала' 
+		                        			concept='Подскажим какие материалы мы можем вам 
+		                        					предложить, в зависимости от вашего бюджета, а так же предупредим о возможных проблемах таких решений ' 
+		                        			value='Нажмите, чтобы перейти на страницу' 
+		                        			pathTo="/"
+		                        ></highlight>
+		                        <highlight 	name='Уход и обслуживание могил' 
+		                        			concept='Ознакомтесь с нашими условиями обслуживания и 
+		                        					ухода за могилами перед оформлением вышеупомянутых услуг ' 
+		                        			value='Нажмите, чтобы перейти на страницу' 
+		                        			pathTo="/"
+		                        ></highlight>
+		                        <highlight 	name='Памятники на заказ' 
+		                        			concept='Ознакомтесь со всеми видами памятников, с 
+		                        					которыми мы работаем и дальнейшими необходимыми услугами, которые мы предоставляем  ' 
+		                        			value='Нажмите, чтобы перейти на страницу' 
+		                        			pathTo="/"
+		                        ></highlight>
+		                        <highlight 	name='Гравировка' 
+		                        			concept='Ознакомтесь с условиями  предоставления данной 
+		                        					услуги' 
+		                        			value='Нажмите, чтобы перейти на страницу' 
+		                        			pathTo="/"
+		                        ></highlight>
+		                        <highlight 	name='Посчитать стоимость изделия' 
+		                        			concept='Расщитайте итоговую стоимость заказа 
+		                        				самостоятельно' 
+		                        			value='Нажмите, чтобы перейти на страницу' 
+		                        			pathTo="/"
+		                        ></highlight>
+		                        
 		                    </section>
 		                </div>
 		                <div class="menuItem" id='pricing'>
@@ -61,35 +94,8 @@ export default {
 		                    </section>
 		                </div>
 		               
-		                	<!-- <section class="menuItem" id='pro' class="pro">
-		                		<h2>Productss</h2>
-		                		<div class="proList">
-		                			<div class="proItem">
-		                					<img src="./assets/cemetry-gates.png">
-		                					<div class="proInfo">
-		                						<h3>Gravestone</h3>
-		                						<p>No matter what your personal style, we have just the 		right furniture for your living room..</p>
-		                						<button>Deal</button>
-		                				</div>
-		                			</div>
-		                			<div class="proItem">
-		                				<div class="proInfo">
-		                						<h3>Tables</h3>
-		                						<p>No matter what your personal style, we have just the 		right furniture for your living room..</p>
-		                						<button>Deal</button>
-		                				</div>
-		                				<img src="./assets/bg_tombstone.png">
-		                			</div>
-		                			<div class="proItem">
-		                				<img src="./assets/tombstone-.png">
-		                				<div class="proInfo">
-				                				<h3>Drawer</h3>
-				                				<p>No matter what your personal style, we have just the right furniture for your living room..</p>		
-				                				<button>Deal</button>
-		                				</div>
-		                			</div>
-		                		</div>
-		                	</section> -->
+		                	
+
 		                </div> 
             </main>
             <footer class="menuItem"  id='contact'>

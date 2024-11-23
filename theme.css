@@ -12,6 +12,13 @@
 @import url("css/font/bebas/stylesheet.css");
 
 :root {
+    --color-6: #06141B;
+    --color-5: #11212D;
+    --color-4: #253745;
+    --color-3: #4A5C6A;
+    --color-2: #9BA8AB;
+    --color-1: #CCD0CF;
+
     --granit-blue: #32455f;
     --granit-light-blue-1: #526178;
     --granit-light-blue-2: #737e91;
@@ -108,9 +115,35 @@ p {
 
     z-index: 10;
 }
-#whatwedo * {
+#whatwedo  {
 
 }
+
+/**/
+.produc {
+
+}
+.produc-image {
+
+}
+.produc-infoBlock {
+    display: flex;
+    flex-direction: column;
+}
+.produc-name {
+
+}
+.produc-article {
+
+}
+.produc-routerLink {
+
+}
+/**/
+
+
+
+
 .product-catalog {
   display: flex;
   flex-wrap: wrap;
