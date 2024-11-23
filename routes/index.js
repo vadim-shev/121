@@ -75,7 +75,8 @@ export default {
 		                    </section>
 		                </div>
 		                <div class="menuItem" id='pricing'>
-		                    <section class='vt-container'>
+		                    <section style="position: relative;" class='vt-container'>            
+                <div class="background-image-tombstone background-image-tombstone-transform "></div>
 		                        <div class="product-items">
 		                            <card @click="updateMenu()"  specification='Description' 
 		                                  name="Надгробия" price="Перейти к каталогу" 
@@ -97,6 +98,11 @@ export default {
 		                	
 
 		                </div> 
+		                    <!-- <div class="container"> -->
+   
+		                	
+		                <!-- </div>  -->
+
             </main>
             <footer class="menuItem"  id='contact'>
                 <div style="position: relative;">
