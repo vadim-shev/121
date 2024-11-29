@@ -77,7 +77,34 @@ export default {
 		                        
 		                    </section>
 		                </div>
-		                <div class="menuItem" id='pricing'>
+
+		                <div class="menuItem" id='material'>
+		                	<section class="material_flex">
+			                	<div class="material_exhibit dimovsky">
+			                		Dimovsky
+			                	</div>
+			                	<div class="material_exhibit gabbro_diass">
+			                		Gabbro Diass
+			                	</div>
+			                	<div class="material_exhibit green_gabbro_diass">
+			                		Green Gabbro
+			                	</div>
+		                		
+		                	</section>
+		                	<section class="material_flex">
+			                	<div class="material_exhibit korelsky">
+			                		Korelsky
+			                	</div>
+			                	<div class="material_exhibit korelsky2">
+			                		Korelsky2
+			                	</div>
+			                	<div class="material_exhibit sopka_bentina">
+			                		Sopka Bentina
+			                	</div>
+		                		
+		                	</section>
+		                </div>
+		               <!-- <div class="menuItem" id='pricing'>
 		                    <section style="position: relative;" class='vt-container'>            
 		                        <div class="product-items">
 		                            <card @click="updateMenu()"  specification='Description' 
@@ -95,7 +122,7 @@ export default {
 		                                  pathTo="/table"></card>
 		                        </div>
 		                    </section>
-		                </div>
+		                </div>-->
 		               
 		                	
 

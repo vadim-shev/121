@@ -15,36 +15,98 @@ export default {
                 <h2>
                     Посчитать стоимость изделия
                 </h2>
+                    <h4>Тип надгробия: {{ type_picked }}</h4> 
                 <ul>
-                    <h3>Тип надгробия</h3>
-                    <p>Плоский</p>
-                    <p>Волнистый</p>
-                    <p>Срезанный</p>
-                    <p>Закругленный</p>
-                    <p>Нестандартный</p>
+                    <li>
+                        <input type="radio" id="type_FLAT" value="1000" v-model="type_picked" />
+                        <label for="flat">Плоский</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="type_BEVEL" value="2000" v-model="type_picked" />
+                        <label for="bevel">Конус</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="type_SLANT" value="2500" v-model="type_picked" />
+                        <label for="slant">Наклон</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="type_UPRIGHT" value="3000" v-model="type_picked" />
+                        <label for="upright">Вертикальный</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="type_BENCH" value="5000" v-model="type_picked" />
+                        <label for="bench">Нестандартный</label>
+                    </li>
+                    
+                    
+                    
+                    
                 </ul>
+                    <h3>Гравиеровка: {{ message_picked }}</h3>
                 <ul>
-                    <h3>Гравиеровка</h3>
-                    <p>100 грн за букву</p>
+                    <input id="message_COUNT" value="450" placeholder="100 грн за букву"  v-model="message_picked"  />
 
                 </ul>
+                    <h3>Материал: {{ material_picked }}</h3>
                 <ul>
-                    <h3>Материал</h3>
-                    <p>Серый</p>
-                    <p>Черный</p>
-                    <p>Синий</p>
+                    
+                    <li>
+                        <input type="radio" id="material_RED" value="100" v-model="material_picked" />
+                        <label for="material_RED">Красный</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="material_BLACK" value="120" v-model="material_picked" />
+                        <label for="material_RED">Черный</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="material_GRAY" value="110" v-model="material_picked" />
+                        <label for="material_RED">Серый</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="material_BLUE" value="200" v-model="material_picked" />
+                        <label for="material_RED">Синий</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="material_" value="300" v-model="material_picked" />
+                        <label for="material_RED">Мрамор</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="material_" value="600" v-model="material_picked" />
+                        <label for="material_RED">Бронза</label>
+                    </li>
+                     
+                    
+                    
+                    
 
                 </ul>
+                    <h3>Установка: {{ installation_picked }}</h3>
                 <ul>
-                    <h3>Установка</h3>
-                    <p>Свободное место</p>
-                    <p>Выбрать место</p>
+                    <li>
+                        <input type="radio" id="installation_RANDOM" value="250" v-model="installation_picked" />
+                        <label for="material_RED">Стандартная</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="installation_CHOOSE" value="500" v-model="installation_picked" />
+                        <label for="material_RED">С бетонным основанием</label>
+                    </li>
+                    
+                    
 
                 </ul>
+                    <h3>Обслуживание: {{ maintenance_picked }}</h3>
                 <ul>
-                    <h3>Обслуживание</h3>
-                    <p>Уборка</p>
-                    <p>Очистка</p>
+                    <li>
+                        <input type="radio" id="maintenance_CLEANING" value="200" v-model="maintenance_picked" />
+                        <label for="maintenance">Уборка</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="maintenance_CLEARING" value="340" v-model="maintenance_picked" />
+                        <label for="maintenance">Очистка</label>
+                    </li>
+                    
+                    
+
 
                 </ul>
                 
@@ -60,7 +122,12 @@ export default {
     `,
     data() {
         return {
-            currentSection: ''
+            currentSection: '',
+            type_picked: '',
+            message_picked: "",
+            material_picked : "",
+            maintenance_picked : "",
+            installation_picked : ""
         }
     },
     mounted() {
