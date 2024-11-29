@@ -1,16 +1,20 @@
 
-import NavigationPart from './../templates/staticParts/Navigation/script.js'
+
+import FooterPart from './../templates/staticParts/Footer.js'
 import Clouds from './../components/clouds/script.js'
 import TagLine from './../components/tagline/script.js'
 import Btn from './../components/button/script.js'
 import Highlight from './../components/highlight/script.js'
 import Card from './../components/card/script.js'
-import FooterPart from './../templates/staticParts/Footer.js'
+import NavigationPart from './../templates/staticParts/Navigation/script.js'
+
 
 import scrollMixin from './../mixins/scrollMixin.js'
 import fetchMixin from './../mixins/fetchMixin.js'
 
-// import { ref } from 'https://unpkg.com/vue@3.4.27/dist/vue.global.js';
+// import { ref } from 'https://unpkg.com/vue@3.4.27/dist/vue.global.js';                <div class="background-image-tombstone background-image-tombstone-transform "></div>
+
+
 
 export default {
     mixins: [scrollMixin],
@@ -24,7 +28,6 @@ export default {
                  <div id="background-wrap" style="visibility: hidden;">
                     <clouds  speedValue="x1, x2, x3, x4, x5" scaleValue="0.2" colorValue="--granit-blue"></clouds>
                 </div>                 
-                <div class="background-image-tombstone background-image-tombstone-transform "></div>
                 	<div id="prime" class="menuItem">
 		                <div style="position: relative;">
 		                        <section id="hero" class='vt-container'>
@@ -39,44 +42,43 @@ export default {
 		                        			concept='Поделимся какими бывают 
 		                        					мемориалы/памятники, для чего они служат и весь спектр наших услуг, которые мы готовы вам предоставить по работе с ними.' 
 		                        			value='Нажмите, чтобы перейти на страницу' 
-		                        				pathTo="/gravestone"
+		                        				pathTo="/tombstone"
 		                        ></highlight>
-		                        <highlight 	name='Выбор материала' 
-		                        			concept='Подскажим какие материалы мы можем вам 
-		                        					предложить, в зависимости от вашего бюджета, а так же предупредим о возможных проблемах таких решений ' 
-		                        			value='Нажмите, чтобы перейти на страницу' 
-		                        			pathTo="/"
-		                        ></highlight>
-		                        <highlight 	name='Уход и обслуживание могил' 
-		                        			concept='Ознакомтесь с нашими условиями обслуживания и 
-		                        					ухода за могилами перед оформлением вышеупомянутых услуг ' 
-		                        			value='Нажмите, чтобы перейти на страницу' 
-		                        			pathTo="/"
-		                        ></highlight>
-		                        <highlight 	name='Памятники на заказ' 
+		                        <highlight 	name='Выбор памятника' 
 		                        			concept='Ознакомтесь со всеми видами памятников, с 
-		                        					которыми мы работаем и дальнейшими необходимыми услугами, которые мы предоставляем  ' 
+		                        					которыми мы работаем и дальнейшими необходимыми услугами, которые мы предоставляем ' 
 		                        			value='Нажмите, чтобы перейти на страницу' 
-		                        			pathTo="/"
+		                        			pathTo="/memorial"
 		                        ></highlight>
 		                        <highlight 	name='Гравировка' 
 		                        			concept='Ознакомтесь с условиями  предоставления данной 
 		                        					услуги' 
 		                        			value='Нажмите, чтобы перейти на страницу' 
-		                        			pathTo="/"
+		                        			pathTo="/lettering"
+		                        ></highlight>
+		                        <highlight 	name='Выбор материала' 
+		                        			concept='Подскажим какие материалы мы можем вам 
+		                        					предложить, в зависимости от вашего бюджета, а так же предупредим о возможных проблемах таких решений ' 
+		                        			value='Нажмите, чтобы перейти на страницу' 
+		                        			pathTo="/materials"
+		                        ></highlight>
+		                        <highlight 	name='Уход и обслуживание могил' 
+		                        			concept='Ознакомтесь с нашими условиями обслуживания и 
+		                        					ухода за могилами перед оформлением вышеупомянутых услуг ' 
+		                        			value='Нажмите, чтобы перейти на страницу' 
+		                        			pathTo="/care"
 		                        ></highlight>
 		                        <highlight 	name='Посчитать стоимость изделия' 
 		                        			concept='Расщитайте итоговую стоимость заказа 
 		                        				самостоятельно' 
 		                        			value='Нажмите, чтобы перейти на страницу' 
-		                        			pathTo="/"
+		                        			pathTo="/countPrice"
 		                        ></highlight>
 		                        
 		                    </section>
 		                </div>
 		                <div class="menuItem" id='pricing'>
 		                    <section style="position: relative;" class='vt-container'>            
-                <div class="background-image-tombstone background-image-tombstone-transform "></div>
 		                        <div class="product-items">
 		                            <card @click="updateMenu()"  specification='Description' 
 		                                  name="Надгробия" price="Перейти к каталогу" 
