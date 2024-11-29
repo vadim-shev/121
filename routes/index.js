@@ -25,14 +25,11 @@ export default {
                 <navigation-part  :newItem="currentSection"></navigation-part>
             </header>
             <main>
-                 <div id="background-wrap" style="visibility: hidden;">
-                    <clouds  speedValue="x1, x2, x3, x4, x5" scaleValue="0.2" colorValue="--granit-blue"></clouds>
-                </div>                 
                 	<div id="prime" class="menuItem">
-		                <div style="position: relative;">
+		                <div style="position: relative;" class="prime">
 		                        <section id="hero" class='vt-container'>
 		                            <tag-line text="granitblizkim"></tag-line>
-		                            <btn @click="scrollAction('pricing')" style="margin-top: 20px;" name="перейти к каталогу"></btn>
+		                            <!-- <btn @click="scrollAction('pricing')" style="margin-top: 20px;" name="перейти к каталогу"></btn> -->
 
 		                    </section>
 		                </div>
