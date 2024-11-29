@@ -1,12 +1,13 @@
 .menu {
     width: 300px; 
-    height: 90%; 
-    background-color: var(--granit-dark-blue-3); 
+    height: 90vh; 
+    background-color: var( --color-6); 
     position: fixed;
-    top: 0%;
+    top: 0px;
     left: -1450px; 
     transition: left 0.3s ease; 
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100 !important;
 }
 
 .menu-open {
