@@ -7,7 +7,7 @@ export default {
 			<div class="produc-infoBlock">
 				<h3 class="produc-name">{{ name }}</h3>
 				<p class="produc-article">{{ concept }}</p>
-				<router-link  :to="pathTo" >{{ value }}</router-link>
+				<router-link class="produc-routerLink"  :to="pathTo" >{{ value }}</router-link>
 			</div>
 		</section>
 			}

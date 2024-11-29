@@ -116,27 +116,50 @@ p {
     z-index: 10;
 }
 #whatwedo  {
-
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /**/
 .produc {
+    background-color: var(--color-6);
+    max-width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px 0px 0px;
 
 }
 .produc-image {
-
+    width: 50%;
+/*    height: auto;*/
 }
 .produc-infoBlock {
     display: flex;
     flex-direction: column;
+    padding: 10px;
 }
 .produc-name {
+    font-size: .9rem;
+    color: #FFF;
+    margin: 5px 0px;
 
 }
 .produc-article {
+    font-size: .6rem;
+    color: #777;
+    margin: 5px 0px;
 
 }
 .produc-routerLink {
+    font-size: .6rem;
+    color: #FFF;
+    margin: 5px 0px;
 
 }
 /**/
