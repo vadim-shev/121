@@ -16,15 +16,14 @@ export default {
                     Посчитать стоимость изделия
                 </h2>
                     <h4>Тип надгробия: {{ type_selected }}</h4> 
-                    <select v-model="type_selected">
+                    <select v-model="type_selected" multiple>
                         <option>Вертикальный</option>
                         <option>Горизонтальный</option>
                     </select>
-                    <h3>Гравиеровка: {{ message_picked }}</h3>
-                <ul>
-                    <input id="message_COUNT" value="450" placeholder="100 грн за букву"  v-model="message_picked"  />
-
-                </ul>
+                    <h3>Материал: {{ material_picked }}</h3>
+                     <select v-model="material_picked">
+                        <option>Гранит</option>
+                     </select>
                     <h3>Материал: {{ material_picked }}</h3>
                 <ul>
                     
