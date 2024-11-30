@@ -15,33 +15,11 @@ export default {
                 <h2>
                     Посчитать стоимость изделия
                 </h2>
-                    <h4>Тип надгробия: {{ type_picked }}</h4> 
-                <ul>
-                    <li>
-                        <input type="radio" id="type_FLAT" value="1000" v-model="type_picked" />
-                        <label for="flat">Плоский</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="type_BEVEL" value="2000" v-model="type_picked" />
-                        <label for="bevel">Конус</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="type_SLANT" value="2500" v-model="type_picked" />
-                        <label for="slant">Наклон</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="type_UPRIGHT" value="3000" v-model="type_picked" />
-                        <label for="upright">Вертикальный</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="type_BENCH" value="5000" v-model="type_picked" />
-                        <label for="bench">Нестандартный</label>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
+                    <h4>Тип надгробия: {{ type_selected }}</h4> 
+                    <select v-model="type_selected">
+                        <option>Вертикальный</option>
+                        <option>Горизонтальный</option>
+                    </select>
                     <h3>Гравиеровка: {{ message_picked }}</h3>
                 <ul>
                     <input id="message_COUNT" value="450" placeholder="100 грн за букву"  v-model="message_picked"  />
