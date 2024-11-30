@@ -27,11 +27,12 @@ export default {
             <main>
                 	<div id="prime" class="menuItem">
 		                <div style="position: relative;" class="prime">
-		                        <section id="hero" class='vt-container'>
+		                	<div class="prime_background"></div>
+		                        <!-- <section id="hero" class='vt-container'> -->
 		                            <tag-line text="granitblizkim"></tag-line>
 		                            <!-- <btn @click="scrollAction('pricing')" style="margin-top: 20px;" name="перейти к каталогу"></btn> -->
 
-		                    </section>
+		                    <!-- </section> -->
 		                </div>
 		                <div class="menuItem" id='whatwedo'>
 		                    <section id="highlight" class='vt-container' >

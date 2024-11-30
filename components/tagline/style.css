@@ -2,6 +2,9 @@
 	tagline
 */
 
+	.tagline {
+		text-transform: uppercase;
+	}
 @media screen and (min-width: 320px)  {
 	.tagline {
 		font-size: 46px;
@@ -11,16 +14,17 @@
 }
 @media screen and (min-width: 375px)  {
 	.tagline {
-		font-size: 56px;
-		text-align: right;
-		margin: 0;
+		margin: 40px 0px 0px 0px;
+		font-size: 46px;
+		text-align: center;
+/*		margin: 0;*/
 	}
 }
 @media screen and  (min-width: 600px)  { 
 	.tagline {
 		font-size: 90px;
 		letter-spacing: 4px;
-		margin: 20px 0px 0px 0px;
+/*		margin: 20px 0px 0px 0px;*/
 	}
 }
 @media screen and  (min-width: 1024px)  { 
@@ -103,18 +107,18 @@
         padding: 20px 0px 20px 0px;
     }
 }
-	.description-container::before {
+	/*.description-container::before {
 	    top: 0;
 	    right: 0;
 	    clip-path: polygon(0 0, 100% 0, 100% 100%);
-	}
-	.description-container::before,
+	}*/
+	/*.description-container::before,
 	.description-container::after {
 	    content: "";
 	    position: absolute;
 	    background-color: rgba(0, 0, 0, 0); 
 	    border: 1px solid rgba(0, 0, 0, 1.0);
-	}
+	}*/
 	@media screen and (min-width: 320px)  {
 		.description-container::before,
 	    .description-container::after {
