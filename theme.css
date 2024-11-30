@@ -120,10 +120,10 @@ p {
     height: 30vh;
 /*    transform: rotate(-45deg);*/
     border-radius: 150px;
-    background-image: url('assets/back1.jpg') center center no-repeat cover;
-    /*background-repeat: no-repeat;*/
+    background-image: url('assets/back1.jpg') center center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    /*background-size: cover;*/
+    background-size: cover;
     box-shadow: 2px 10px 10px rgba(0,0,0, .5) ;
 }
 .prime {
