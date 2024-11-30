@@ -120,7 +120,7 @@ p {
     height: 30vh;
 /*    transform: rotate(-45deg);*/
     border-radius: 150px;
-    background: url('assets/back1.jpg') center center;
+    background-image: url('assets/back1.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
