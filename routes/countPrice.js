@@ -2,95 +2,76 @@
 import NavigationPart from './../templates/staticParts/Navigation/script.js'
 
 import FooterPart from '../templates/staticParts/Footer.js'
-
 export default {
-    mixins: [],
-    components: { NavigationPart, FooterPart},
+    components: { NavigationPart, FooterPart },
     template: `
         <div ref="scrollContainer" id="p">
             <header style="position: relative; height: 55px; top: 0;" class="menuItem" id="up">
-                <navigation-part   :newItem="currentSection"></navigation-part>
+                <navigation-part :newItem="currentSection"></navigation-part>
             </header>
             <main>
-                <h2>
-                    Посчитать стоимость изделия
-                </h2>
-                    <h4>Тип надгробия: {{ type_selected }}</h4> 
-                    <select v-model="type_selected" multiple>
-                        <option>Вертикальный</option>
-                        <option>Горизонтальный</option>
-                    </select>
-                    <h3>Материал: {{ material_picked }}</h3>
-                     <select v-model="material_picked">
-                        <option>Гранит</option>
-                     </select>
-                    <h3>Материал: {{ material_picked }}</h3>
-                <ul>
-                    
-                    <li>
-                        <input type="radio" id="material_RED" value="100" v-model="material_picked" />
-                        <label for="material_RED">Красный</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="material_BLACK" value="120" v-model="material_picked" />
-                        <label for="material_RED">Черный</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="material_GRAY" value="110" v-model="material_picked" />
-                        <label for="material_RED">Серый</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="material_BLUE" value="200" v-model="material_picked" />
-                        <label for="material_RED">Синий</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="material_" value="300" v-model="material_picked" />
-                        <label for="material_RED">Мрамор</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="material_" value="600" v-model="material_picked" />
-                        <label for="material_RED">Бронза</label>
-                    </li>
-                     
-                    
-                    
-                    
-
-                </ul>
-                    <h3>Установка: {{ installation_picked }}</h3>
+                <h2>Посчитать стоимость изделия</h2>
+                <h4>Тип надгробия: {{ type_selected }}</h4>
                 <ul>
                     <li>
-                        <input type="radio" id="installation_RANDOM" value="250" v-model="installation_picked" />
-                        <label for="material_RED">Стандартная</label>
+                        <input type="radio" id="type_v" value="v" v-model="type_selected" />
+                        <label for="type_v">Вертикальный</label>
                     </li>
                     <li>
-                        <input type="radio" id="installation_CHOOSE" value="500" v-model="installation_picked" />
-                        <label for="material_RED">С бетонным основанием</label>
+                        <input type="radio" id="type_h" value="h" v-model="type_selected" />
+                        <label for="type_h">Горизонтальный</label>
                     </li>
-                    
-                    
-
                 </ul>
-                    <h3>Обслуживание: {{ maintenance_picked }}</h3>
+                <h3>Материал: {{ material_picked }}</h3>
                 <ul>
                     <li>
-                        <input type="radio" id="maintenance_CLEANING" value="200" v-model="maintenance_picked" />
-                        <label for="maintenance">Уборка</label>
+                        <input type="radio" id="material_picked" value="granit" v-model="material_picked" />
+                        <label for="material_picked">Гранит</label>
                     </li>
                     <li>
-                        <input type="radio" id="maintenance_CLEARING" value="340" v-model="maintenance_picked" />
-                        <label for="maintenance">Очистка</label>
+                        <input type="radio" id="material_picked" value="mramour" v-model="material_picked" />
+                        <label for="material_picked">Мрамор</label>
                     </li>
-                    
-                    
-
-
                 </ul>
-                
+                <h3>Размеры: {{ size_picked_w }} {{ size_picked_h }} {{ size_picked_z }}</h3>
+                <ul>
+                    <li>
+                        <label for="size_picked_w">W</label>
+                        <select v-model="size_picked_w" @change="changeSize">
+                            <option>80</option>
+                            <option>100</option>
+                            <option>120</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="size_picked_h">H</label>
+                        <select v-model="size_picked_h" @change="changeSize">
+                            <option>40</option>
+                            <option>50</option>
+                            <option>60</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="size_picked_z">Z</label>
+                        <select v-model="size_picked_z">
+                            <option>5</option>
+                            <option>8</option>
+                            <option>10</option>
+                            <option>12</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="model-container">
+                    <div class="visible" id="visible">
+                        <div id="monument" ref="monument" class="monument">
+                            <div id="model-content" class="model-content"></div>
+                        </div>
+                    </div>
+                </div>
             </main>
             <footer class="menuItem" id="contact">
                 <div>
-                    <section class='vt-container'>
+                    <section class="vt-container">
                         <footer-part></footer-part>
                     </section>
                 </div>
@@ -100,14 +81,50 @@ export default {
     data() {
         return {
             currentSection: '',
-            type_picked: '',
-            message_picked: "",
-            material_picked : "",
-            maintenance_picked : "",
-            installation_picked : ""
-        }
+            type_selected: '',
+            material_picked: '',
+            size_picked_w: '',
+            size_picked_h: '',
+            size_picked_z: '',
+        };
+    },
+    methods: {
+        changeSize() {
+            const monumentElement = this.$refs.monument;
+            if (!monumentElement) {
+                console.error('Monument element not found');
+                return;
+            }
+            monumentElement.style.width = this.size_picked_w === "80" 
+                ? "160px" 
+                : this.size_picked_w === "100" 
+                    ? "200px" 
+                    : this.size_picked_w === "120" 
+                        ? "240px" 
+                        : "160px";
+            monumentElement.style.height = this.size_picked_h === "40" 
+                ? "320px" 
+                : this.size_picked_h === "50" 
+                    ? "400px" 
+                    : this.size_picked_h === "60" 
+                        ? "480px" 
+                        : "320px";
+        },
     },
     mounted() {
-        
-    }
-}
+        const monumentElement = this.$refs.monument;
+        const modelContentElement = document.getElementById("model-content");
+
+        if (monumentElement) {
+            monumentElement.style.width = "160px";
+            monumentElement.style.height = "320px";
+            monumentElement.style.background = "url(assets/materials/1.png)";
+        }
+
+        if (modelContentElement) {
+            modelContentElement.style.background = "url(assets/mod1.png) 0% 0% / 100% 100%";
+            modelContentElement.style.width = "100%";
+            modelContentElement.style.height = "100%";
+        }
+    },
+};
