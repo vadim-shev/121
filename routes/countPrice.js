@@ -25,18 +25,18 @@ export default {
                 <h3>Материал: {{ material_picked }}</h3>
                 <ul>
                     <li>
-                        <input type="radio" id="material_picked" value="granit" v-model="material_picked" />
-                        <label for="material_picked">Гранит</label>
+                        <input type="radio" id="granit" value="granit" v-model="material_picked" @change="changeMaterial" />
+                        <label for="granit">Гранит</label>
                     </li>
                     <li>
-                        <input type="radio" id="material_picked" value="mramour" v-model="material_picked" />
-                        <label for="material_picked">Мрамор</label>
+                        <input type="radio" id="mramour" value="mramour" v-model="material_picked" @change="changeMaterial" />
+                        <label for="mramour">Мрамор</label>
                     </li>
                 </ul>
                 <h3>Размеры: {{ size_picked_w }} {{ size_picked_h }} {{ size_picked_z }}</h3>
                 <ul>
                     <li>
-                        <label for="size_picked_w">W</label>
+                        <label for="size_picked_w">w</label>
                         <select v-model="size_picked_w" @change="changeSize">
                             <option>80</option>
                             <option>100</option>
@@ -64,7 +64,7 @@ export default {
                 <div class="model-container">
                     <div class="visible" id="visible">
                         <div id="monument" ref="monument" class="monument">
-                            <div id="model-content" class="model-content"></div>
+                            <div ref="model" id="model-content" class="model-content"></div>
                         </div>
                     </div>
                 </div>
@@ -82,9 +82,9 @@ export default {
         return {
             currentSection: '',
             type_selected: '',
-            material_picked: '',
-            size_picked_w: '',
-            size_picked_h: '',
+            material_picked: 'granit',
+            size_picked_w: '80',
+            size_picked_h: '40',
             size_picked_z: '',
         };
     },
@@ -95,29 +95,27 @@ export default {
                 console.error('Monument element not found');
                 return;
             }
-            monumentElement.style.width = this.size_picked_w === "80" 
-                ? "160px" 
-                : this.size_picked_w === "100" 
-                    ? "200px" 
-                    : this.size_picked_w === "120" 
-                        ? "240px" 
-                        : "160px";
-            monumentElement.style.height = this.size_picked_h === "40" 
-                ? "320px" 
-                : this.size_picked_h === "50" 
-                    ? "400px" 
-                    : this.size_picked_h === "60" 
-                        ? "480px" 
-                        : "320px";
+            monumentElement.style.width = `${this.size_picked_w * 2 + "px"}` 
+            monumentElement.style.height = `${ this.size_picked_h * 8 + "px"}` 
+                
         },
+        changeMaterial() {
+            const material = this.material_picked
+            console.log(this.$refs.model)
+
+             this.material_picked == 'granit'  
+                ? this.$refs.model.style.background = "url(assets/materials/1.png)"
+                : this.material_picked == 'mramour'
+                    ? this.$refs.model.style.background = "url(assets/materials/0.png)"
+                    : this.$refs.model.style.background = ''
+        }
     },
     mounted() {
         const monumentElement = this.$refs.monument;
         const modelContentElement = document.getElementById("model-content");
 
         if (monumentElement) {
-            monumentElement.style.width = "160px";
-            monumentElement.style.height = "320px";
+            
             monumentElement.style.background = "url(assets/materials/1.png)";
         }
 
