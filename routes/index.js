@@ -37,39 +37,39 @@ export default {
 		                <div class="menuItem" id='whatwedo'>
 		                    <section id="highlight" class='vt-container' >
 		                        <highlight 	name='Памятники и мемориалы' 
+		                        			src='./assets/tombstone.png'
 		                        			concept='Поделимся какими бывают 
 		                        					мемориалы/памятники, для чего они служат и весь спектр наших услуг, которые мы готовы вам предоставить по работе с ними.' 
-		                        			value='Нажмите, чтобы перейти на страницу' 
+		                        			value='Перейти на страницу' 
 		                        				pathTo="/tombstone"
 		                        ></highlight>
 		                        <highlight 	name='Выбор памятника' 
+		                        			src='./assets/bg_tombstone.png'
+
 		                        			concept='Ознакомтесь со всеми видами памятников, с 
 		                        					которыми мы работаем и дальнейшими необходимыми услугами, которые мы предоставляем ' 
-		                        			value='Нажмите, чтобы перейти на страницу' 
+		                        			value='Перейти на страницу' 
 		                        			pathTo="/memorial"
 		                        ></highlight>
 		                        <highlight 	name='Гравировка' 
+		                        			src='./assets/grav.png'
 		                        			concept='Ознакомтесь с условиями  предоставления данной 
 		                        					услуги' 
-		                        			value='Нажмите, чтобы перейти на страницу' 
+		                        			value='Перейти на страницу' 
 		                        			pathTo="/lettering"
 		                        ></highlight>
-		                        <highlight 	name='Выбор материала' 
-		                        			concept='Подскажим какие материалы мы можем вам 
-		                        					предложить, в зависимости от вашего бюджета, а так же предупредим о возможных проблемах таких решений ' 
-		                        			value='Нажмите, чтобы перейти на страницу' 
-		                        			pathTo="/materials"
-		                        ></highlight>
 		                        <highlight 	name='Уход и обслуживание могил' 
+		                        			src='./assets/backgrounds/background-shovel-ground-diagonal-reverse.png'
 		                        			concept='Ознакомтесь с нашими условиями обслуживания и 
 		                        					ухода за могилами перед оформлением вышеупомянутых услуг ' 
-		                        			value='Нажмите, чтобы перейти на страницу' 
+		                        			value='Перейти на страницу' 
 		                        			pathTo="/care"
 		                        ></highlight>
 		                        <highlight 	name='Посчитать стоимость изделия' 
+		                        			src='./assets/calculate.png'
 		                        			concept='Расщитайте итоговую стоимость заказа 
 		                        				самостоятельно' 
-		                        			value='Нажмите, чтобы перейти на страницу' 
+		                        			value='Перейти на страницу' 
 		                        			pathTo="/countPrice"
 		                        ></highlight>
 		                        
