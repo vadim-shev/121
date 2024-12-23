@@ -20,20 +20,6 @@
     --color-2: #9BA8AB;
     --color-1: #CCD0CF;
 
-    --granit-blue: #32455f;
-    --granit-light-blue-1: #526178;
-    --granit-light-blue-2: #737e91;
-    --granit-light-blue-3: #949dac;
-    --granit-light-blue-4: #b7bcc7;
-    --granit-light-blue-5: #dadde3;
-    --granit-dark-blue-1: #2b3a4f;
-    --granit-dark-blue-2: #242f40;
-    --granit-dark-blue-3: #1d2531;
-    --granit-dark-blue-4: #161b23;
-    --granit-dark-blue-5: #0e1015;
-    --granit-yellow: #fbfbf5;
-    --granit-yellow-2: #cdbaa0;
-    --granit-body-font-size: 1rem;
     font-family: "Bebas Neue Cyrillic", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -43,12 +29,17 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+html {
+    width: auto;
+    height: auto;
+    overflow-x: hidden !important;
+}
 body {
     padding: 0;
     margin: 0;
+
     background: #fff;
     color: #333;
-/   height: 100%;
     overflow-x: hidden !important;
 }
 button {
@@ -71,6 +62,33 @@ ol, ul {
 a { 
     text-decoration: none;
  }
+main, header, footer {
+    overflow-x: hidden !important;
+    width: 100vw;
+}
+h1, h2, h3, h4, h5, p {
+    padding: 0;
+    margin: 0;
+}
+/*h1 {
+    font-size: 2.5rem;    
+}
+h2 {
+    font-size: 1.625rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+h4 {
+    font-size: 1.25rem;
+}
+h5 {
+    font-size: 1.125rem;
+}
+p {
+    font-size: 1rem;
+}
+
 .background-image-tombstone {
     width: 100vw;
     height: 100vh;
@@ -92,53 +110,32 @@ a {
     z-index: 1000 !important;
 
 }
-main {
-    overflow-x: hidden !important;
+#prime {
+    width: 100vw;
+    height: auto;
 }
-h1 {
-    font-size: 2.5rem;    
-}
-h2 {
-    font-size: 1.625rem;
-}
-h3 {
-    font-size: 1.5rem;
-}
-h4 {
-    font-size: 1.25rem;
-}
-h5 {
-    font-size: 1.125rem;
-}
-p {
-    font-size: 1rem;
+.prime {
+    width: 100%;
+    height: 75vh;
 }
 .prime_background { 
     position: absolute;
-    top: 20vh;
-    left: -50vw;
-    width: 110vw;
-    height: 30vh;
-/*    transform: rotate(-45deg);*/
-    border-radius: 150px;
-    background-image: url('assets/back1.jpg');
+
+    width: 100%;
+    height: 75vh;
+
+    background-image: url('./assets/backgrounds/back1.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    box-shadow: 2px 10px 10px rgba(0,0,0, .5) ;
-}
-.prime {
-    height: 60vh;
-   /* background-image: url('assets/back1.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    box-shadow: 2px 10px 10px rgba(0,0,0, .5) ;*/
 
+    text-align: right;
+    z-index: 1;
 }
-#hero h1{
-
-    z-index: 10;
+.prime .tagline{
+    position: absolute;
+    width: 100vw;
+    z-index: 1;
 }
 #whatwedo  {
     width: 100vw;
@@ -183,14 +180,14 @@ p {
     width: 100%;
     padding: 20px 10px;
     font-size: 1.1rem;
-    color: #FFF;
+    color: var(--color-1);
 
 }
 .produc-article {
     margin: 15px;
     width: 70%;
     font-size: .7rem;
-    color: #777;
+        color: var(--color-3);
 
 }
 .produc-routerLink {
@@ -198,14 +195,14 @@ p {
     position: relative;
 /*    top: -15px;*/
     font-size: .8rem;
-    color: #FFF;
+        color: var(--color-1);
 
 }
 /**/
 
 
 
-
+/*
 .product-catalog {
   display: flex;
   flex-wrap: wrap;
@@ -214,13 +211,13 @@ p {
 }
 
 .product-item {
-  flex: 0 0 calc(45% - 10px); /* Два товара в ряд на экранах шириной более 768px */
+  flex: 0 0 calc(45% - 10px);  Два товара в ряд на экранах шириной более 768px 
   margin-bottom: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
     display: flex;
     flex-direction: column;
-/*    justify-content: center;*/
+    justify-content: center;
     align-items: center;
 }
 
@@ -230,7 +227,7 @@ p {
     padding-top: 10px ;
     display: block;
     font-family: "Bebas Neue Cyrillic", sans-serif;
-}
+}*/
 
 
 .pagination-container {
@@ -262,11 +259,11 @@ p {
 .pagination button:hover {
   background-color: #0056b3;
 }
-.product-img-container {
+/*.product-img-container {
     width: 90%;
     height: 120px;
     background: rgba(255, 255, 255, 0);
-/*    padding: 10px ;*/
+    padding: 10px ;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -282,7 +279,7 @@ p {
     height: 100%;
     max-height: 120px;
     max-width: 100px;
-/*    margin: auto;*/
+    margin: auto;
 }
 .product-name {
         font-size: 16px;
@@ -319,4 +316,9 @@ p {
 }
 .mid {
     text-align: center;
+}*/
+
+#contact {
+    background-color: var(--color-5);
 }
+            

@@ -20,7 +20,7 @@
     position: absolute;
     width: 16px;
     height: 2px;
-    background-color: var(--granit-dark-blue-1);
+    background-color: var(--color-6);
     transition: top .25s, background-color .5s, transform .25s;
 }
 .hamburger-top {

@@ -1,4 +1,3 @@
-// import fetchMixin from './../../../mixins/fetchMixin.js'
 import scrollMixin from './../../../mixins/scrollMixin.js'
 
 export default {

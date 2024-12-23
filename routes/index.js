@@ -22,17 +22,13 @@ export default {
     template: `
            <div ref="scrollContainer" :key="currentPageKey" id="p">
             <header style="position: relative; height: 55px;" >
-                <navigation-part  :newItem="currentSection"></navigation-part>
+                <navigation-part style=" width: 100vw;"  :newItem="currentSection"></navigation-part>
             </header>
             <main>
-                	<div id="prime" class="menuItem">
-		                <div style="position: relative;" class="prime">
-		                	<div class="prime_background"></div>
-		                        <!-- <section id="hero" class='vt-container'> -->
-		                            <tag-line text="granitblizkim"></tag-line>
-		                            <!-- <btn @click="scrollAction('pricing')" style="margin-top: 20px;" name="перейти к каталогу"></btn> -->
-
-		                    <!-- </section> -->
+                 <div id="prime" class="menuItem">
+		                <div style="position: relative;" class="prime">		
+		                	<div class="prime_background"></div>                    
+		                        <tag-line text="granitblizkim"></tag-line>
 		                </div>
 		                <div class="menuItem" id='whatwedo'>
 		                    <section id="highlight" class='vt-container' >
@@ -44,8 +40,7 @@ export default {
 		                        				pathTo="/tombstone"
 		                        ></highlight>
 		                        <highlight 	name='Выбор памятника' 
-		                        			src='./assets/bg_tombstone.png'
-
+		                        			src='./assets/bg_tombstone.png' 
 		                        			concept='Ознакомтесь со всеми видами памятников, с 
 		                        					которыми мы работаем и дальнейшими необходимыми услугами, которые мы предоставляем ' 
 		                        			value='Перейти на страницу' 
@@ -75,7 +70,6 @@ export default {
 		                        
 		                    </section>
 		                </div>
-
 		                <div class="menuItem" id='material'>
 		                	<section class="material_flex">
 			                	<div class="material_exhibit dimovsky">
@@ -87,7 +81,6 @@ export default {
 			                	<div class="material_exhibit green_gabbro_diass">
 			                		Green Gabbro
 			                	</div>
-		                		
 		                	</section>
 		                	<section class="material_flex">
 			                	<div class="material_exhibit korelsky">
@@ -99,7 +92,6 @@ export default {
 			                	<div class="material_exhibit sopka_bentina">
 			                		Sopka Bentina
 			                	</div>
-		                		
 		                	</section>
 		                </div>
 		               <!-- <div class="menuItem" id='pricing'>
@@ -121,7 +113,7 @@ export default {
 		                        </div>
 		                    </section>
 		                </div>-->
-		               
+		             
 		                	
 
 		                </div> 
