@@ -170,7 +170,7 @@ p {
   transition: 0.6s ease transform;
 }
 .produc-image:hover {
-  transform: scale(1) translateX(11.5rem);
+  transform: scale(1) translate(11.5rem, 2rem);
   }
 .produc-infoBlock {
     display: flex;
@@ -187,7 +187,7 @@ p {
 
 }
 .produc-article {
-    margin: 10px;
+    margin: 15px;
     width: 70%;
     font-size: .7rem;
     color: #777;
@@ -196,7 +196,7 @@ p {
 .produc-routerLink {
     margin: 20px 10px;
     position: relative;
-    top: -15px;
+/*    top: -15px;*/
     font-size: .8rem;
     color: #FFF;
 
