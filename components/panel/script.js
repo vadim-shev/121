@@ -7,9 +7,9 @@ export default {
 		}
 	},
 	template: `
-		<div>
-			<h3>{{ title }}</h3>
-			<p v-for='(item, index) in modifiedArray' :key="index">{{ item }}</p>
+		<div class="cont_alignment">
+			<h2>{{ title }}</h2>
+			<span v-for='(item, index) in modifiedArray' :key="index">{{ item }}</span>
 		</div>
 	`,
 	computed: {

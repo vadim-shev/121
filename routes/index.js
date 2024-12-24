@@ -5,9 +5,10 @@ import Clouds from './../components/clouds/script.js'
 import TagLine from './../components/tagline/script.js'
 import Btn from './../components/button/script.js'
 import Highlight from './../components/highlight/script.js'
+import MaterialObject from './../components/materials_object.js'
 import Card from './../components/card/script.js'
 import NavigationPart from './../templates/staticParts/Navigation/script.js'
-
+import Panel from './../components/panel/script.js'
 
 import scrollMixin from './../mixins/scrollMixin.js'
 import fetchMixin from './../mixins/fetchMixin.js'
@@ -18,7 +19,7 @@ import fetchMixin from './../mixins/fetchMixin.js'
 
 export default {
     mixins: [scrollMixin],
-    components: { NavigationPart, Clouds, TagLine, Btn, Highlight, Card, FooterPart },
+    components: { NavigationPart, Clouds, TagLine, Btn, Highlight, Card, FooterPart, Panel, MaterialObject },
     template: `
            <div ref="scrollContainer" :key="currentPageKey" id="p">
             <header style="position: relative; height: 55px;" >
@@ -70,49 +71,10 @@ export default {
 		                        
 		                    </section>
 		                </div>
-		                <div class="menuItem" id='material'>
-		                	<section class="material_flex">
-			                	<div class="material_exhibit dimovsky">
-			                		Dimovsky
-			                	</div>
-			                	<div class="material_exhibit gabbro_diass">
-			                		Gabbro Diass
-			                	</div>
-			                	<div class="material_exhibit green_gabbro_diass">
-			                		Green Gabbro
-			                	</div>
-		                	</section>
-		                	<section class="material_flex">
-			                	<div class="material_exhibit korelsky">
-			                		Korelsky
-			                	</div>
-			                	<div class="material_exhibit korelsky2">
-			                		Korelsky2
-			                	</div>
-			                	<div class="material_exhibit sopka_bentina">
-			                		Sopka Bentina
-			                	</div>
-		                	</section>
+		                <div class="menuItem" id="materials">
+		                	<material-object src="./assets/materials/0.png"></material-object>
+		                	
 		                </div>
-		               <!-- <div class="menuItem" id='pricing'>
-		                    <section style="position: relative;" class='vt-container'>            
-		                        <div class="product-items">
-		                            <card @click="updateMenu()"  specification='Description' 
-		                                  name="Надгробия" price="Перейти к каталогу" 
-		                                  imagePath="./assets/Gravestones/2mini.png" class='vt-box'
-		                                  pathTo="/gravestone"  ></card>
-		                            <card @click="updateMenu()"   specification='Description' 
-		                                  name="Изображения" price="Перейти к каталогу" imagePath="./assets/Art/hyd.png"  class='vt-box' 
-		                                  pathTo="/art"></card>
-		                            <card @click="updateMenu()"  specification='Description' 
-		                                  name="Площадки" price="Перейти к каталогу" imagePath="./assets/Platform/place_2.png" class='vt-box' 
-		                                  pathTo="/platform"></card>
-		                            <card @click="updateMenu()"  specification='Description' 
-		                                  name="Предметы" price="Перейти к каталогу" imagePath="./assets/Tables/2bench.png" class='vt-box' 
-		                                  pathTo="/table"></card>
-		                        </div>
-		                    </section>
-		                </div>-->
 		             
 		                	
 
@@ -123,8 +85,25 @@ export default {
 		                <!-- </div>  -->
 
             </main>
-            <footer class="menuItem"  id='contact'>
-                <div style="position: relative;">
+            <footer class="menuItem"  id='cont'>
+            	<div class="cont_info">
+	            	<h1>Контакт</h1>
+			        <p>
+			        	<b>granitblizkim.dp.ua</b> - гранитная мастерская . Мы предоставляем услуги для экономии вашего времени. 
+			        </p>
+			        <p>
+			        	Вызов менеджера на дом или в удобное для вас место и время - <b>бесплатно.</b> 
+			        </p>
+            	</div>
+            	<div class="cont_panels">
+            		<panel title='Мы находимся' information="ул. Александра Поля - 76Б"></panel>
+                	<panel title='Будние дни' information="8AM - 6PM"></panel>
+                	<panel title='Выходные дни' information="9AM - 5PM"></panel>
+                	<panel title='Лайф' information="+38(093)159-66-61"></panel>
+                	<panel title='Киевстар' information="+38(097)159-66-61"></panel>
+                	<panel title='G-mail' information="vadim.shevchenko2016@gmail.com"></panel>
+            	</div>
+                <!-- <div style="position: relative;">
                     <div>
                         <section class='vt-container'>
                             <footer-part></footer-part>
@@ -133,7 +112,7 @@ export default {
                         
                         </section>
                     </div>
-                </div>
+                </div> -->
             </footer>   
         </div>    
     `,    
