@@ -5,7 +5,7 @@ import Clouds from './../components/clouds/script.js'
 import TagLine from './../components/tagline/script.js'
 import Btn from './../components/button/script.js'
 import Highlight from './../components/highlight/script.js'
-import MaterialObject from './../components/materials_object.js'
+// import MaterialObject from './../components/materials_object.js'
 import Card from './../components/card/script.js'
 import NavigationPart from './../templates/staticParts/Navigation/script.js'
 import Panel from './../components/panel/script.js'
@@ -19,77 +19,100 @@ import fetchMixin from './../mixins/fetchMixin.js'
 
 export default {
     mixins: [scrollMixin],
-    components: { NavigationPart, Clouds, TagLine, Btn, Highlight, Card, FooterPart, Panel, MaterialObject },
+    components: { NavigationPart, Clouds, TagLine, Btn, Highlight, Card, FooterPart, Panel },
+  props: {
+  },
     template: `
            <div ref="scrollContainer" :key="currentPageKey" id="p">
             <header style="position: relative; height: 55px;" >
                 <navigation-part style=" width: 100vw;"  :newItem="currentSection"></navigation-part>
             </header>
             <main>
-                 <div id="prime" class="menuItem">
-		                <div style="position: relative;" class="prime">		
-		                	<div class="prime_background"></div>                    
-		                        <tag-line text="granitblizkim"></tag-line>
-		                </div>
-		                <div class="menuItem" id='whatwedo'>
-		                    <section id="highlight" class='vt-container' >
-		                        <highlight 	name='Памятники и мемориалы' 
-		                        			src='./assets/tombstone.png'
-		                        			concept='Поделимся какими бывают 
-		                        					мемориалы/памятники, для чего они служат и весь спектр наших услуг, которые мы готовы вам предоставить по работе с ними.' 
-		                        			value='Перейти на страницу' 
-		                        				pathTo="/tombstone"
-		                        ></highlight>
-		                        <highlight 	name='Выбор памятника' 
-		                        			src='./assets/bg_tombstone.png' 
-		                        			concept='Ознакомтесь со всеми видами памятников, с 
-		                        					которыми мы работаем и дальнейшими необходимыми услугами, которые мы предоставляем ' 
-		                        			value='Перейти на страницу' 
-		                        			pathTo="/memorial"
-		                        ></highlight>
-		                        <highlight 	name='Гравировка' 
-		                        			src='./assets/grav.png'
-		                        			concept='Ознакомтесь с условиями  предоставления данной 
-		                        					услуги' 
-		                        			value='Перейти на страницу' 
-		                        			pathTo="/lettering"
-		                        ></highlight>
-		                        <highlight 	name='Уход и обслуживание могил' 
-		                        			src='./assets/backgrounds/background-shovel-ground-diagonal-reverse.png'
-		                        			concept='Ознакомтесь с нашими условиями обслуживания и 
-		                        					ухода за могилами перед оформлением вышеупомянутых услуг ' 
-		                        			value='Перейти на страницу' 
-		                        			pathTo="/care"
-		                        ></highlight>
-		                        <highlight 	name='Посчитать стоимость изделия' 
-		                        			src='./assets/calculate.png'
-		                        			concept='Расщитайте итоговую стоимость заказа 
-		                        				самостоятельно' 
-		                        			value='Перейти на страницу' 
-		                        			pathTo="/countPrice"
-		                        ></highlight>
-		                        
-		                    </section>
-		                </div>
-		                <div class="menuItem" id="materials">
-		                	<material-object src="./assets/materials/0.png"></material-object>
-		                	
-		                </div>
-		             
-		                	
-
-		                </div> 
-		                    <!-- <div class="container"> -->
-   
-		                	
-		                <!-- </div>  -->
-
+                <div id="prime" class="menuItem">
+		            <div style="position: relative;" class="prime">		
+		            	<div class="prime_background"></div>                    
+		                <tag-line text="granitblizkim"></tag-line>
+		            </div>
+		        </div> 
+		            <div class="menuItem" id='whatwedo'>
+		                <section id="highlight" class='vt-container' >
+		                    <highlight 	name='Памятники и мемориалы' 
+		                    			src='./assets/tombstone.png'
+		                    			concept='Поделимся какими бывают 
+		                    					мемориалы/памятники, для чего они служат и весь спектр наших услуг, которые мы готовы вам предоставить по работе с ними.' 
+		                    			value='Перейти на страницу' 
+		                    			pathTo="/tombstone"
+		                    ></highlight>
+		                    <highlight 	name='Выбор памятника' 
+		                    			src='./assets/bg_tombstone.png' 
+		                    			concept='Ознакомтесь со всеми видами памятников, с 
+		                    					которыми мы работаем и дальнейшими необходимыми услугами, которые мы предоставляем ' 
+		                    			value='Перейти на страницу' 
+		                    			pathTo="/memorial"
+		                    ></highlight>
+		                    <highlight 	name='Гравировка' 
+		                    			src='./assets/grav.png'
+		                    			concept='Ознакомтесь с условиями  предоставления данной 
+		                    					услуги' 
+		                    			value='Перейти на страницу' 
+		                    			pathTo="/lettering"
+		                    ></highlight>
+		                    <highlight 	name='Уход и обслуживание могил' 
+		                    			src='./assets/backgrounds/background-shovel-ground-diagonal-reverse.png'
+		                    			concept='Ознакомтесь с нашими условиями обслуживания и 
+		                    					ухода за могилами перед оформлением вышеупомянутых услуг ' 
+		                    			value='Перейти на страницу' 
+		                    			pathTo="/care"
+		                    ></highlight>
+		                    <highlight 	name='Посчитать стоимость изделия' 
+		                    			src='./assets/calculate.png'
+		                    			concept='Расщитайте итоговую стоимость заказа 
+		                    				самостоятельно' 
+		                    			value='Перейти на страницу' 
+		                    			pathTo="/countPrice"
+		                    ></highlight>
+		                </section>
+		            </div>
+		            <div class="menuItem" id="materials">
+					
+		            	<div  class="materials_object 1" @click="moveS"
+					      	  :style="{
+					      	  transform: 'scale(' + materialScale 
+								     + ') rotateY(' + materialRotateY 
+								     + ') rotateX(' + materialRotateX 
+								     + ') translateZ(' 
+								     + materialTranslate + ')'}">
+					      	<img class="materials_image" :src="this.materialSrc[0]" />
+					    </div>
+		            	<div  class="materials_object 2 " @click="moveS"
+					      	  :style="{
+					      	  transform: 'scale(' + materialScale 
+								     + ') rotateY(' + materialRotateY 
+								     + ') rotateX(' + materialRotateX 
+								     + ') translateZ(' 
+								     + materialTranslate + ')'}">
+					      	<img class="materials_image" :src="this.materialSrc[1]" />
+					    </div>
+		            	<div  class="materials_object transform_on 3" @click="moveS"
+					      	  :style="{
+					      	  transform: 'scale(' + materialScale 
+								     + ') rotateY(' + materialRotateY 
+								     + ') rotateX(' + materialRotateX 
+								     + ') translateZ(' 
+								     + materialTranslate + ')'}">
+					      	<img class="materials_image" :src="this.materialSrc[2]" />
+					    </div>
+		               
+		            </div>
             </main>
             <footer class="menuItem"  id='cont'>
             	<div class="cont_info">
-	            	<h1>Контакт</h1>
+	            	<h1>
+	            		Контакт
+	            	</h1>
 			        <p>
-			        	<b>granitblizkim.dp.ua</b> - гранитная мастерская . Мы предоставляем услуги для экономии вашего времени. 
+			        	<b>granitblizkim.dp.ua</b> - гранитная мастерская. 
+			        	Мы предоставляем услуги для экономии вашего времени. 
 			        </p>
 			        <p>
 			        	Вызов менеджера на дом или в удобное для вас место и время - <b>бесплатно.</b> 
@@ -103,22 +126,16 @@ export default {
                 	<panel title='Киевстар' information="+38(097)159-66-61"></panel>
                 	<panel title='G-mail' information="vadim.shevchenko2016@gmail.com"></panel>
             	</div>
-                <!-- <div style="position: relative;">
-                    <div>
-                        <section class='vt-container'>
-                            <footer-part></footer-part>
-                        </section>
-                        <section class='vt-container'>
-                        
-                        </section>
-                    </div>
-                </div> -->
             </footer>   
         </div>    
-    `,    
-    data() {
-        return {
-            currentPageKey: 'home'
-        }
-    }
-}
+`,
+  data() {
+    return {
+      currentPageKey: 'home',
+      // src: this.materialSrc
+    };
+  },
+  methods: {
+    
+  },
+};

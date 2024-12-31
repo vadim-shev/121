@@ -13,7 +13,7 @@ export default {
         cloudElements() {
             return this.convertToArray(this.speedValue, ',').map(speed => ({
                 speedClass: speed.trim(),
-                scaleStyle: `transform: scale(${this.scaleValue});`,
+                scaleStyle: `transform: scale(${this.scaleValue}) rotateY(${this.scaleValue}) rotateX(${this.scaleValue}) translateZ(${this.scaleValue});`,
                 colorStyle: `background: var(${this.colorValue});`
             }))
         }
