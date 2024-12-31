@@ -59,14 +59,16 @@ button, [role=button] {
 ol, ul {
     list-style: none;
 }
-a { 
+a, span { 
     text-decoration: none;
+    color: var(--color-1);
  }
 main, header, footer {
 /*    overflow-x: hidden !important;*/
 /*    width: 100vw;*/
 }
 h1, h2, h3, h4, h5, p {
+    color: var(--color-1);
     padding: 0;
     margin: 0;
 }
@@ -260,8 +262,8 @@ h1, h2, h3, h4, h5, p {
 
 #cont {
     width: 100vw;
-    height: 50vh;
-    background-color: var(--color-1);
+    height: 100vh;
+    background-color: var(--color-5);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -275,12 +277,12 @@ h1, h2, h3, h4, h5, p {
 #cont .cont_info  {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
 
 }
 #cont .cont_info ,
 #cont .cont_panels {
-    height: 50%;
+    height: 100%;
     width: 90%;
     margin: 0px 0px 15px 0px;
 }
@@ -311,4 +313,30 @@ h1, h2, h3, h4, h5, p {
     width: auto;
 
     margin: 0px 0px 5px 0px;
+}
+.copyright {
+    border-top: 1px solid hsla(0, 0%, 100%, .1);
+    clear: both;
+    display: block;
+    padding: 38px 0;
+    text-align: center;
+    width: 100%;
+    font-weight: 100;
+}
+.copyright>span {
+    color: #777;
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: -.25px;
+    line-height: 18px;
+    padding: 0 30px;
+    vertical-align: top;
+}
+.copyright>span a {
+    color: #777;
+    display: inline-block;
+    margin-top: 1px;
+    padding: 7px 0;
+    transition: all .17s ease-out;
+    vertical-align: top;
 }

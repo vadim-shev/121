@@ -107,24 +107,38 @@ export default {
             </main>
             <footer class="menuItem"  id='cont'>
             	<div class="cont_info">
-	            	<h1>
-	            		Контакт
+	            	<h1 style="font-size: 60px; font-weight: 900; text-align: center;">
+	            		Контакты
 	            	</h1>
-			        <p>
-			        	<b>granitblizkim.dp.ua</b> - гранитная мастерская. 
-			        	Мы предоставляем услуги для экономии вашего времени. 
-			        </p>
-			        <p>
-			        	Вызов менеджера на дом или в удобное для вас место и время - <b>бесплатно.</b> 
-			        </p>
+	            	<a style="font-size: 24px; font-weight: 400;  border-bottom: 1px solid gray; width: 80vw; text-align: center;">vadim.shevchenko2016@gmail.com</a>
+	            	<section style="display: flex; flex-direction; row; align-items: center; justify-content: space-around;">
+	            		<img src="./assets/body.svg" style="width: 20vw; height: 20vh; ">
+
+	            		<div style="display: flex; flex-direction: column;  text-align: center; width: 35vw;">
+		            		<a href="" style="font-size: 20px; font-weight: 400; border-bottom: 1px solid gray;">+38(097)159-66-61</a>
+		            		<span style="font-size: 12px; font-weight: 100;">ул. Александра Поля - 76Б</span>
+	            			
+	            		</div>
+	            	</section>
+            	<button style="width: 80%; margin: 20px auto 0; border: 1px solid hsla(0, 0%, 100%, .4); border-radius: 50px;
+    box-sizing: border-box;
+    color: hsla(0, 0%, 100%, .4); font-size: 18px;
+    height: 90px;
+    left: 50%;
+    letter-spacing: -.5px;
+    line-height: 88px;">Вернуться наверх</button>
             	</div>
-            	<div class="cont_panels">
-            		<panel title='Мы находимся' information="ул. Александра Поля - 76Б"></panel>
-                	<panel title='Будние дни' information="8AM - 6PM"></panel>
-                	<panel title='Выходные дни' information="9AM - 5PM"></panel>
-                	<panel title='Лайф' information="+38(093)159-66-61"></panel>
-                	<panel title='Киевстар' information="+38(097)159-66-61"></panel>
-                	<panel title='G-mail' information="vadim.shevchenko2016@gmail.com"></panel>
+            	<div style="height: 35vh; width: 100%; background-color: var(--color-6);">
+            		<div class="copyright">
+                <span>
+                    © 2024 The JOY, s.r.o. All Rights Reserved. Bottova 1863/2A, 972 01 Bojnice, Slovakia (European Union)<br>By using this website, you agree to the use of cookies.
+                    <br>
+
+                    <a href="https://www.art4web.co/privacy-policy" target="_blank">
+                        Cookies &amp; Privacy policy
+                    </a>
+                </span>
+            </div>
             	</div>
             </footer>   
         </div>    
