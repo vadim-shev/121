@@ -182,11 +182,12 @@ export default {
         this.materialSrc[0] = "./assets/materials/0.png"
         this.materialSrc[1] = "./assets/materials/1.png"
         this.materialSrc[2] = "./assets/materials/gabbro.jpg"
-       console.log(this.materialSrc);
-       console.log(this.materialSrc[0]);
-       console.log(this.materialSrc[1]);
-       console.log(this.materialSrc[2]);
-       // console.log(this.Maters[0].lastElementChild.previousElementSibling);
+       // console.log(this.materialSrc);
+       // console.log(this.materialSrc[0]);
+       // console.log(this.materialSrc[1]);
+       // console.log(this.materialSrc[2]);
+       console.log(this.$route.params.id);
+       // console.log(this.fetchAPI('./data/gravestones.json')[0][0].id);
     }
 },
 beforeDestroy() {

@@ -1,3 +1,6 @@
+.nav-bar-container .highlight {
+    color: var(--color-5);
+}
 .nav-bar-container {
     display: flex;
     flex-direction: row;
@@ -5,6 +8,7 @@
     justify-content: center;
     width: 100vw;
     overflow-x: hidden !important;
+    color: var(--color-5);
 }
 .nav-bar {
     position: fixed;
@@ -16,9 +20,9 @@
     z-index: 100 !important;
 }
 .nav-bar-style {
-    backdrop-filter: blur(10px);    
+    backdrop-filter: blur(15px);    
     border-bottom: 1px solid var(--granit-light-blue-4);
-    background-color: rgb(255 255 255 / 30%);
+    background-color: rgba(255, 255, 255, 1%);
     transition: border-color .5s, background-color .5s;
 }
 .header {

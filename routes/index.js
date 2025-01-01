@@ -48,7 +48,7 @@ export default {
 		                    			concept='Ознакомтесь со всеми видами памятников, с 
 		                    					которыми мы работаем и дальнейшими необходимыми услугами, которые мы предоставляем ' 
 		                    			value='Перейти на страницу' 
-		                    			pathTo="/memorial"
+		                    			pathTo="/prod/1"
 		                    ></highlight>
 		                    <highlight 	name='Гравировка' 
 		                    			src='./assets/grav.png'

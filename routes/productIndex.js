@@ -15,7 +15,7 @@ export default {
                 <div class="tombstone_container" style=" padding-top: 55px ;">
                     <h1>Изготовление и установка мемориальных изделий</h1>
                     <p>Устанавливка надгробия происходит не ранее, чем через год после похорон, так как грунту нужно время, чтобы просесть и укрепиться. <br/>Если произвести монтаж на свежий и не просевший грунт, памятник неизбежно покосится спустя некоторое время. В худшем случае памятник  может упасть.</p>               
-                    <router-link class="tombstone-routerLink"  to="/" >На главную</router-link>
+                    <router-link class="tombstone-routerLink"  to="/prod" >На главную</router-link>
 
                 </div>
                 <div style="" class="menuItem" id="catalog">
@@ -176,7 +176,7 @@ export default {
     data() {
         return {
             currentSection: '',
-      currentPageKey: 'tombstone',
+      currentPageKey: 'prodIndex',
         }
     },
     mounted() {

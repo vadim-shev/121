@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Product 1", 
-        "image": "./assets/Gravestones/1flower.png", 
+        "image": "./assets/Gravestones/funeral.png", 
         "price": "$10.99" 
     },
     {

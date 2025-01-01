@@ -1,6 +1,7 @@
 
-
+import scrollMixin from './../../mixins/scrollMixin.js'
 export default {
+    mixins: [scrollMixin],
 	template: `
         <div class="contact_container">
             <h1 class="contact_heading" >Контакты</h1>
@@ -12,7 +13,7 @@ export default {
                     <span >ул. Александра Поля - 76Б</span>
                 </div>
             </section>
-            <button >Вернуться наверх</button>
+            <button @click="scrollAction('p')" >Вернуться наверх</button>
         </div>
         <div class="contact_copyright_container" >
             <div class="copyright">

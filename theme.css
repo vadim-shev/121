@@ -317,10 +317,10 @@ h1, h2, h3, h4, h5, p {
 #contact .contact_container button {
     width: 80%; 
     margin: 20px auto 0; 
-    border: 1px solid hsla(0, 0%, 100%, .4); 
+    border: 1px solid var(--color-1); 
     border-radius: 50px;
     box-sizing: border-box;
-    color: hsla(0, 0%, 100%, .4); 
+    color: var(--color-1); 
     font-size: 18px;
     height: 90px;
     left: 50%;
@@ -371,16 +371,56 @@ h1, h2, h3, h4, h5, p {
     transition: all .17s ease-out;
     vertical-align: top;
 }
+.main-tombstone {
 
+    background-color: var(--color-1);
+} 
+.main-tombstone h2,  
+.main-tombstone span  {
+    color: var(--color-4);
+}
+.tombstone_container {
+    padding: 15px;
+    background-color: var(--color-3);
+}
+.main-tombstone h2,  
+.tombstone_container h1 {
+    color: var(--color-6);
+    margin: 5px 30px;
+    text-align: center;
+}
+.tombstone_container p  {
+    text-align: justify;
+    color: var(--color-1);
+    font-size: 14px;
+    margin: 15px;
+}
+.tombstone-routerLink {
+    background-color: var(--color-1);
+    padding: 10px 20px;
+    color: var(--color-6);
+    border-radius: 1px;
+    font-size: 13px;
+    position: absolute;
+    left: 0px;
+    box-shadow: 0rem 1rem 2rem rgba(0,0,0,0.5), 0rem -1rem 2rem rgba(255,255,255,0.5);
+}
+#catalog>h2 { margin: 0;}
+#catalog {
+    padding: 15px 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: -4rem -1rem 4rem rgba(0,0,0,0.5);
+}
 .category_container {
-            padding-right: 15px;
+    padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
 .category_container .category_item {
-                        background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: transparent;
+    border: 1px solid transparent;
     padding: 20px;
     margin: 10px 0;
     display: flex;
@@ -391,14 +431,53 @@ h1, h2, h3, h4, h5, p {
     width: 100%;
     transition: box-shadow 0.3s ease;
     text-decoration: none;
+    box-shadow: 3rem 0rem 1rem rgba(0,0,0,0.2), -3rem 0rem 1rem rgba(0,0,0,0.2);
 }
 .category_item img {
             max-width: 50px;
         height: auto;
     }
+.category_container span {
+    text-align: justify;
+    margin-right: 15px;
+    margin-left: 15px;
+}
 .category_container .category_item section {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+.main-prod {
+    background-color: var(--color-1);
+    width: 100vw;
+    height: 100vh;
+    margin: 0 0 60vh 0;
+}
+.prod_container {
+    height: 100%;
+    width: 100%;
+}
+.prod_container img {
+    width: auto;
+    height: 60%;
+    margin: 0 20%;
+}
+.prod_cover {
+    position: relative;
+    top: -130px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255,255,255, .6);
+    border-radius: 30px;
+}
+.prod_cover_container {
+    position: relative;
+    top: 60px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255, 1);
+    z-index: 100;
+    border-bottom: none;
+    border-radius: 40px 40px 0px 0px;
 }

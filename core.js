@@ -14,6 +14,8 @@ import Materials from './routes/materials.js'
 import Lettering from './routes/lettering.js'
 import Care from './routes/lettering.js'
 import CountPrice from './routes/countPrice.js'
+import ProductIndex from './routes/productIndex.js'
+import Prod from './routes/prod.js'
 
 const router = VueRouter.createRouter({
     history: VueRouter.createWebHashHistory(),
@@ -26,15 +28,15 @@ const router = VueRouter.createRouter({
         { path: "/care", component: Care },
         { path: "/countPrice", component: CountPrice },
         {   
-            path: "/gravestone", 
-            component: Gravestone
+            path: "/productIndex", 
+            component: ProductIndex
         },
         {   
-            path: "/gravestone/:id", 
-            component: graveProd,
+            path: "/prod/:id", 
+            component: Prod,
             children: [{
                 path: '1',
-                component: graveProd
+                component: Prod
             }]
         },
         {
