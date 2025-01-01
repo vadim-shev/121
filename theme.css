@@ -371,3 +371,34 @@ h1, h2, h3, h4, h5, p {
     transition: all .17s ease-out;
     vertical-align: top;
 }
+
+.category_container {
+            padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.category_container .category_item {
+                        background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 170px;
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+    text-decoration: none;
+}
+.category_item img {
+            max-width: 50px;
+        height: auto;
+    }
+.category_container .category_item section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
