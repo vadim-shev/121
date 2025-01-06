@@ -20,28 +20,25 @@ import Prod from './routes/prod.js'
 const router = VueRouter.createRouter({
     history: VueRouter.createWebHashHistory(),
     routes: [
-        { path: "/", component: Home },
+        { path: "/", component: Home, name: 'Home' },
         { path: "/tombstone", component: Tombstone },
         { path: "/memorial", component: Memorial },
         { path: "/materials", component: Materials },
         { path: "/lettering", component: Lettering },
         { path: "/care", component: Care },
         { path: "/countPrice", component: CountPrice },
+        // {   
+        //     path: "/productIndex", 
+        //     component: ProductIndex
+        // },
         {   
-            path: "/productIndex", 
+            path: "/prod", 
             component: ProductIndex
         },
-        {   
-            path: "/prod/:id", 
-            component: Prod,
-            children: [{
-                path: '1',
-                component: Prod
-            }]
-        },
         {
-            path: "/art", 
-            component: ArtAndInstallation
+            path: '/prod/:id?',
+                component: Prod,
+                // props: route => ({ query: route.query.q })
             
         },
         {   

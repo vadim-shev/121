@@ -1,9 +1,9 @@
 [
     {
         "id": 1,
-        "name": "Product 1", 
+        "name": "Памятник из гранита", 
         "image": "./assets/Gravestones/funeral.png", 
-        "price": "$10.99" 
+        "price": "9085.00 грн" 
     },
     {
         "id": 2,
@@ -13,9 +13,9 @@
     },
     {
         "id": 3,
-        "name": "Product 3", 
-        "image": "./assets/Gravestones/3flower.png",
-        "price": "$15.99" 
+        "name": "Памятник из мрамора", 
+        "image": "./assets/Gravestones/2mini.png",
+        "price": "9142.50 грн" 
     },
     {
         "id": 4,
