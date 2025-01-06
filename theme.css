@@ -398,14 +398,21 @@ h1, h2, h3, h4, h5, p {
     margin: 15px;
 }
 .tombstone-routerLink {
-    background-color: var(--color-1);
+/*    background-color: var(--color-1);*/
     padding: 10px 20px;
     color: var(--color-6);
     border-radius: 1px;
     font-size: 13px;
-    position: absolute;
+    position: relative;
+    padding: 0 !important;
+/*    top: 100px;*/
     left: 0px;
-    box-shadow: 0rem 1rem 2rem rgba(0,0,0,0.5), 0rem -1rem 2rem rgba(255,255,255,0.5);
+/*    box-shadow: 0rem 1rem 2rem rgba(0,0,0,0.5), 0rem -1rem 2rem rgba(255,255,255,0.5);*/
+}
+.tombstone-routerLink .routerLink_img {
+    
+    width: 100px;
+    height: 100px;
 }
 #catalog>h2 { margin: 0;}
 #catalog {

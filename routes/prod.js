@@ -13,6 +13,26 @@ export default {
       <main class="main-prod">
         <div class="prod_container menuItem" style="padding-top: 55px;" id="prod">
           <img :src="Imagee" />
+          <div
+                style="width: 100vw; height: 100px; 
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between; position: absolute; "
+              > 
+                 <router-link
+                  class="tombstone-routerLink" 
+                  :to="'/prod/' + Math.abs(Number($route.params.id) - 1)"
+                >
+                  <img style="position: absolute; left: -20px; top: 100px; " class="routerLink_img" src="./assets/catalog/left-arrow.svg" />
+                </router-link>
+                <router-link
+                  class="tombstone-routerLink" 
+                  :to="'/prod/' + Math.abs(Number($route.params.id) + 1)"
+                  style=""
+                >
+                  <img style="position: absolute; right: -10px;  top: 5px;" class="routerLink_img"  src="./assets/catalog/right-arrow.svg" />
+                </router-link> 
+              </div> 
           <div class="prod_cover">
               <div class="prod_cover_info">
                   <b style="color: black; font-size: 18px; font-weight: 900; letter-spacing:  .7px;">{{ Name }}</b>
@@ -76,23 +96,7 @@ export default {
                 <div class="prod_buttom_seeAll ">
                     <button @click="scrollAction('p')" >Перейти в каталог</button>
                 </div>
-              <!-- <div
-                style="width: 100vw; height: 10vh; display: flex; flex-direction: row; justify-content: space-around; align-items: center;"
-              > -->
-                <!-- <router-link
-                  class="tombstone-routerLink"
-                  :to="'/prod/' + Math.abs(Number($route.params.id) - 1)"
-                >
-                  Предыдущая
-                </router-link>
-                <router-link
-                  class="tombstone-routerLink"
-                  :to="'/prod/' + Math.abs(Number($route.params.id) + 1)"
-                  style="position: absolute; left: 50%;"
-                >
-                  Следующая
-                </router-link> -->
-              <!-- </div> -->
+              
             </div>
           </div>
         </div>
