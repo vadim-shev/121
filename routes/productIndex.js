@@ -22,6 +22,18 @@ export default {
                     <h2>Виды памятников</h2>
                     <ul class="category_container "   >
                         <li class="category_item">
+                            <img src="./assets/catalog/4.svg">
+                            <section>
+                                <h2>Вертикальные модели</h2>
+                                <span>
+                                    Это стильные и практичные решения, 
+                                    которые идеально подходят для создания 
+                                    выразительных мемориалов.
+                                </span>
+                            </section>
+                            
+                        </li>
+                        <li class="category_item">
                             <router-link class="tombstone-routerLink"  to="1" >
                                 <img src="./assets/catalog/1.svg">
                                 <section>
@@ -52,18 +64,6 @@ export default {
                             <img src="./assets/catalog/3.svg">
                             <section>
                                 <h2>Горизонтальные модели</h2>
-                                <span>
-                                    Это стильные и практичные решения, 
-                                    которые идеально подходят для создания 
-                                    выразительных мемориалов.
-                                </span>
-                            </section>
-                            
-                        </li>
-                        <li class="category_item">
-                            <img src="./assets/catalog/4.svg">
-                            <section>
-                                <h2>Вертикальные модели</h2>
                                 <span>
                                     Это стильные и практичные решения, 
                                     которые идеально подходят для создания 
