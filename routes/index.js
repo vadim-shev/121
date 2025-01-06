@@ -36,7 +36,7 @@ export default {
 		        </div> 
 		            <div class="menuItem" id='whatwedo'>
 		                <section id="highlight" class='vt-container' >
-		                    <highlight 	name='Памятники и мемориалы' 
+		                    <highlight 	name='Модели памятников' 
 		                    			src='./assets/tombstone.png'
 		                    			concept='Поделимся какими бывают 
 		                    					мемориалы/памятники, для чего они служат и весь спектр наших услуг, которые мы готовы вам предоставить по работе с ними.' 
