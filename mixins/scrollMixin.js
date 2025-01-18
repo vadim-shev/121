@@ -3,6 +3,7 @@ export default {
     data() {
 		return {
             Item: [],     
+            items: [],     
             Maters: [],     
             hasMounted: false,
             currentSection: '',
@@ -14,6 +15,9 @@ export default {
         }
 	},
     computed: {
+        IsAnchor(e) {
+            return 
+        },
         basePage() {
             return this.$router.options.history.base
         },
@@ -31,13 +35,64 @@ export default {
         }, 
         MaterialsList() {
             return {materialTransform: `transform: scale(${this.materialScale}) rotateY(${this.materialRotateY}) rotateX(${this.materialRotateX}) translateZ(${this.materialTranslate});`}
-        }   
+        },
+        Id() {
+            return Number(this.$route.params.id)
+        }
     },
 	methods: {
+         replacePath(par, arr) {
+            if( this.$route.href == `#/catalog/${ par }/${ arr.length + 1 }` ) {
+                this.$router.push({ path: `/catalog/${ par }/${ arr.length - arr.length + 1 }` })
+            } else if( this.$route.href == `#/catalog/${ par }/${ arr.length - arr.length }` ) {
+                this.$router.push({ path: `/catalog/${ par }/${ arr.length }` })
+            }
+        },
+        async fetchAndGenerateNumbers() {
+        // try {
+        //     const data = await this.fetchAPI('./data/complex.json'); // Загружаем JSON
+            const itemsWithNumbers = data.map(item => {
+                const formattedId = String(item.id).padStart(3, '0'); // Преобразуем id в формат с ведущими нулями
+                const generatedNumber = `${item.serial}-${formattedId}`; // Генерируем номер
+                return {
+                    ...item, // Копируем все свойства из текущего объекта
+                    generatedNumber // Добавляем новое свойство с номером
+                };
+            });
+            this.items = itemsWithNumbers[this.$route.params.id]
+
+            console.log(this.items.generatedNumber); // Выводим в консоль для проверки
+           return this.items // Выводим в консоль для проверки
+            
+         
+
+        },
+        async fetchProduct(_dataLink, _storePar) {
+            const id = Number(this.$route.params.id); // Получаем ID из маршрута
+            this.ID = id;
+            
+                const data = await this.fetchAPI(_dataLink);
+                const product = data?.[id - 1]; // Проверяем наличие данных для текущего ID
+                const formattedId = String(this.$route.params.id).padStart(3, '0'); // Преобразуем id в формат с ведущими нулями
+                // const generatedNumber = ; // Генерируем номер
+                if (product) {
+                    this.Name = product.name;
+                    this.Imagee = product.image;
+                    this.Price = product.price;
+                    this.Category = product.category;
+                    this.Serial = product.serial
+                    this.Model =  `${product.serial}-${formattedId}`
+
+                } else if( this.$route.href == `#/catalog/${ _storePar }/${ data.length + 1 }` ) {
+                    this.$router.push({ path: `/catalog/${ _storePar }/${ data.length - data.length + 1 }` })
+                } else if( this.$route.href == `#/catalog/${ _storePar }/${ data.length - data.length }` ) {
+                    this.$router.push({ path: `/catalog/${ _storePar }/${ data.length }` })
+                }
+
+        },
         moveS() {
             document.querySelectorAll(".materials_object").forEach((items) => {
                 this.Maters.push(items)
-            console.log(this.Maters.length);
             })
         },
         controlMaterialObject(i, options) {
@@ -144,13 +199,12 @@ export default {
         scrollAction(elementId) { // Прокрутить страницу к указанному elementId 
             document.getElementById(elementId).scrollIntoView({ behavior: 'smooth', block: 'start' })
         },
-        updateMenu() {
+         updateMenu() {
             document.querySelectorAll(".menuItem").forEach((item) => {
                 this.Item.push(item.id)
             })
             document.querySelectorAll(".materials_object").forEach((items) => {
                 this.Maters.push( document.getElementById("materials"))
-            // console.log(this.Maters[0]);
             })
             // document.querySelectorAll(".materials_object").forEach((material) => {
             //     this.Maters.push(material)
@@ -174,9 +228,14 @@ export default {
     }
     },
    mounted() {
-        this.updateMenu();
+            // console.log(this.Browser);
+    // var ua = navigator.userAgent;
+    // var isOpera = Object.prototype.toString.call(window);
+    //         console.log(isOpera);
+        this.updateMenu()
+    // this.IsAnchor()
     if (!this.hasMounted) {
-        this.hasMounted = true;
+        this.hasMounted = true; 
         window.addEventListener("load", this.displayViewportElement);
         window.addEventListener("scroll", this.handleScroll);
         this.materialSrc[0] = "./assets/materials/0.png"
@@ -186,12 +245,13 @@ export default {
        // console.log(this.materialSrc[0]);
        // console.log(this.materialSrc[1]);
        // console.log(this.materialSrc[2]);
-       console.log(this.$route.params.id);
+       // console.log(this.$route.params.id);
        // console.log(this.fetchAPI('./data/gravestones.json')[0][0].id);
     }
+    // document.getElementById("materials").appendChild('selector')
 },
 beforeDestroy() {
-        console.log(this.nextTodoId)
+        // console.log(this.nextTodoId)
     window.removeEventListener("scroll", this.handleScroll);
 }
 }

@@ -12,9 +12,23 @@ export default {
                 <navigation-part   :newItem="currentSection"></navigation-part>
             </header>
             <main>
-                <h2>
-                    Уход и обслуживание могил
-                </h2>
+                <div id="prime" class="whatwedo"  >
+                    <h2>
+                        Новые надгробия
+                    </h2>
+                    <h2>
+                        Обрамление могил
+                    </h2>
+                    <h2>
+                        Реновация существующих надгробий
+                    </h2>
+                    <h2>
+                        Добавление дополнительных надписей
+                    </h2>
+                    <h2>
+                        Уход и обслуживание могил
+                    </h2>
+                </div>
                 
                 
             </main>

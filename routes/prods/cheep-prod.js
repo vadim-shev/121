@@ -1,8 +1,6 @@
-import NavigationPart from './../templates/staticParts/Navigation/script.js'
-
-import scrollMixin from './../mixins/scrollMixin.js'
-import FooterPart from './../templates/staticParts/Footer.js'
-
+import NavigationPart from './../../templates/staticParts/Navigation/script.js';
+import scrollMixin from './../../mixins/scrollMixin.js';
+import FooterPart from '../../templates/staticParts/Footer.js';
 
 export default {
   mixins: [scrollMixin],
@@ -23,13 +21,13 @@ export default {
               > 
                  <router-link
                   class="tombstone-routerLink" 
-                  :to="'/catalog/'+this.$route.params.product+'/'+Math.abs(Number($route.params.id) - 1)"
+                  :to="'/catalog/cheep/' + Math.abs(Number($route.params.id) - 1)"
                 >
                   <img style="position: absolute; left: -20px; top: 100px; " class="routerLink_img" src="./assets/catalog/left-arrow.svg" />
                 </router-link>
                 <router-link
                   class="tombstone-routerLink" 
-                  :to="'/catalog/'+this.$route.params.product+'/'+Math.abs(Number($route.params.id)  + 1)"
+                  :to="'/catalog/cheep/' + Math.abs(Number($route.params.id) + 1)"
                   style=""
                 >
                   <img style="position: absolute; right: -10px;  top: 5px;" class="routerLink_img"  src="./assets/catalog/right-arrow.svg" />
@@ -57,15 +55,15 @@ export default {
                       <br />
                   </span>
                 <span  style=" color: gray; font-size: 20px; position: relative; top: 40px; left: 20px;  font-weight: 900; letter-spacing:  .2rem;">
-                      Номер: <b style="color: black; font-weight: 900; letter-spacing:  .7px;">{{ Serial }}</b>
+                      Номер: <b style="color: black; font-weight: 900; letter-spacing:  .7px;">БЖ 002</b>
                       <br />
                   </span>
                 <span  style=" color: gray; font-size: 20px; position: relative; top: 40px; left: 20px;  font-weight: 900; letter-spacing:  .2rem;">
-                      Каталог: <b style="color: black; font-weight: 900; letter-spacing:  .7px;">{{ Category }}</b>
+                      Каталог: <b style="color: black; font-weight: 900; letter-spacing:  .7px;">Вертикальные</b>
                       <br />
                   </span>
                 <span  style=" color: gray; font-size: 20px; position: relative; top: 40px; left: 20px;  font-weight: 900; letter-spacing:  .2rem;">
-                      Модель: <b style="color: black; font-weight: 900; letter-spacing:  .7px;">{{ Model }}</b>
+                      Модель: <b style="color: black; font-weight: 900; letter-spacing:  .7px;">Памятник из гранита</b>
                       <br />
                       <br />
                   </span>
@@ -112,13 +110,10 @@ export default {
     return {
       currentSection: '',
       currentPageKey: 'prodIndex',
-     Name: '',
-            Imagee: '',
-            Price: '',
-            ID: '',
-            Category: '',
-            Model: '',
-            Serial: ''
+      Name: '',
+      Imagee: '',
+      Price: '',
+      ID: '',
     };
   },
   methods: {
@@ -131,22 +126,15 @@ export default {
         console.error('Fetch error:', error);
         throw error;
       }
-    }
+    },
+   
   },
   mounted() {
-    this.fetchProduct(`${'./data/'+this.$route.params.product}.json`, `${this.$route.params.product}`)
-
-    // if (true) {}
-    // this.fetchProduct('./data/vertical.json', 'vertical')
-    // this.fetchProduct('./data/cheep.json', 'cheep')
+   this.fetchProduct('./data/cheep.json', 'cheep')
   },
   watch: {
     '$route.params.id': function () {
-   
-    this.fetchProduct(`${'./data/'+this.$route.params.product}.json`, `${this.$route.params.product}`)
-
-      // this.fetchProduct('./data/vertical.json', 'vertical')
-      // this.fetchProduct('./data/cheep.json', 'cheep')
+      this.fetchProduct('./data/cheep.json', 'cheep')
     },
   },
 };
