@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Комплекс", 
-        "serial": "MC",
+        "serial": "MM",
         "image": "./assets/models/complex/complex_1.png", 
         "price": "4000.00 грн",
         "madeOf": "Гранит",
@@ -15,7 +15,7 @@
     {
         "id": 2,
         "name": "Комплекс", 
-        "serial": "MC",
+        "serial": "MM",
         "image": "./assets/models/complex/complex_2.png", 
         "price": "4000.00 грн",
         "madeOf": "Гранит",
@@ -28,7 +28,7 @@
     {
         "id": 3,
         "name": "Комплекс", 
-        "serial": "MC",
+        "serial": "MM",
         "image": "./assets/models/complex/complex_3.png", 
         "price": "4000.00 грн",
         "madeOf": "Гранит",
@@ -41,7 +41,7 @@
     {
         "id": 4,
         "name": "Комплекс", 
-        "serial": "MC",
+        "serial": "MM",
         "image": "./assets/models/complex/complex_4.png", 
         "price": "4000.00 грн",
         "madeOf": "Гранит",

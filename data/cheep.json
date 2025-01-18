@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Дешевый памятник", 
-        "serial": "DP",
+        "serial": "CH",
         "image": "./assets/models/cheep/1.png", 
         "price": "9085.00 грн",
         "madeOf": "Гранит",

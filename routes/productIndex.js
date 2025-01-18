@@ -22,19 +22,6 @@ export default {
                     <h2>Виды памятников</h2>
                     <ul class="category_container "   >
                         <li class="category_item">
-                            <router-link to="/catalog/vertical/1">
-                                <img src="./assets/catalog/vertical.svg">
-                                <section>
-                                    <h2>Вертикальные модели</h2>
-                                    <span>
-                                        Это стильные и практичные решения, 
-                                        которые идеально подходят для создания 
-                                        выразительных мемориалов.
-                                    </span>
-                                </section>
-                            </router-link>
-                        </li>
-                        <li class="category_item">
                             <router-link to="/catalog/cheep/1">
                                 <img src="./assets/catalog/cheep.svg">
                                 <section>
@@ -48,10 +35,10 @@ export default {
                             </router-link>
                         </li>
                         <li class="category_item">
-                            <router-link to="/catalog/military/1">
-                                <img src="./assets/catalog/military.svg">
+                            <router-link to="/catalog/vertical/1">
+                                <img src="./assets/catalog/vertical.svg">
                                 <section>
-                                    <h2>Модели для военных ЗСУ</h2>
+                                    <h2>Вертикальные модели</h2>
                                     <span>
                                         Это стильные и практичные решения, 
                                         которые идеально подходят для создания 
@@ -74,10 +61,10 @@ export default {
                             </router-link>
                         </li>
                         <li class="category_item">
-                            <router-link to="/catalog/combined/1">
-                                <img src="./assets/catalog/combined.svg">
+                            <router-link to="/catalog/complex/1">
+                                <img src="./assets/catalog/complex.svg">
                                 <section>
-                                    <h2>Комбинированные модели</h2>
+                                    <h2>Мемориальные комплексы</h2>
                                     <span>
                                         Это стильные и практичные решения, 
                                         которые идеально подходят для создания 
@@ -100,10 +87,23 @@ export default {
                             </router-link>
                         </li>
                         <li class="category_item">
-                            <router-link to="/catalog/complex/1">
-                                <img src="./assets/catalog/complex.svg">
+                            <router-link to="/catalog/military/1">
+                                <img src="./assets/catalog/military.svg">
                                 <section>
-                                    <h2>Мемориальные комплексы</h2>
+                                    <h2>Модели для военных ЗСУ</h2>
+                                    <span>
+                                        Это стильные и практичные решения, 
+                                        которые идеально подходят для создания 
+                                        выразительных мемориалов.
+                                    </span>
+                                </section>
+                            </router-link>
+                        </li>
+                        <li class="category_item">
+                            <router-link to="/catalog/combined/1">
+                                <img src="./assets/catalog/combined.svg">
+                                <section>
+                                    <h2>Комбинированные модели</h2>
                                     <span>
                                         Это стильные и практичные решения, 
                                         которые идеально подходят для создания 
@@ -127,6 +127,8 @@ export default {
         }
     },
     mounted() {
+            // console.log(window.history.state)
+        
         
     }
 }

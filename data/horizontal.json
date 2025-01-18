@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Горизонтальный", 
-        "serial": "HT",
+        "serial": "HZ",
         "image": "./assets/models/horizontal/horizontal_1.png", 
         "price": "4000.00 грн",
         "madeOf": "Гранит",
@@ -15,7 +15,7 @@
     {
         "id": 2,
         "name": "Горизонтальный", 
-        "serial": "HT",
+        "serial": "HZ",
         "image": "./assets/models/horizontal/horizontal_2.png", 
         "price": "4000.00 грн",
         "madeOf": "Гранит",

@@ -22,7 +22,7 @@
 .nav-bar-style {
     backdrop-filter: blur(15px);    
     border-bottom: 1px solid var(--granit-light-blue-4);
-    background-color: rgba(255, 255, 255, 1%);
+    background-color: rgba(255, 255, 255, .1);
     transition: border-color .5s, background-color .5s;
 }
 .header {

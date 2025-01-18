@@ -8,19 +8,14 @@ export default {
   mixins: [scrollMixin],
   components: { NavigationPart, FooterPart },
   template: `
-    <h1>{{this.$route.params.product}}</h1>
+    <button @click="show = !show">Toggle</button>
+<Transition>
+  <p v-if="show" ref="show">привет</p>
+</Transition>
   `,
   data() {
     return {
-      currentSection: '',
-      currentPageKey: 'prodIndex',
-     Name: '',
-            Imagee: '',
-            Price: '',
-            ID: '',
-            Category: '',
-            Model: '',
-            Serial: ''
+      show: true
     };
   },
   methods: {
@@ -36,6 +31,7 @@ export default {
     }
   },
   mounted() {
+    // const show = ref(true)
     // this.fetchProduct('./data/complex.json', 'complex')
     this.fetchProduct('./data/vertical.json', 'vertical')
   },

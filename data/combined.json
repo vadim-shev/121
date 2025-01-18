@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "КОМБО памятник", 
-        "serial": "CB",
+        "serial": "CM",
         "image": "./assets/models/combine/tombstone_1.png", 
         "price": "9085.00 грн",
         "madeOf": "Гранит",

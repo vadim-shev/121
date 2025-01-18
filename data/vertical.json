@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Вертикальный памятник", 
-        "serial": "VT",
+        "serial": "VR",
         "image": "./assets/models/vertical/vertical_1.png", 
         "price": "9085.00 грн",
         "madeOf": "Гранит",
@@ -15,7 +15,7 @@
     {
         "id": 2,
         "name": "Вертикальный памятник", 
-        "serial": "VT",
+        "serial": "VR",
         "image": "./assets/models/vertical/vertical_2.png", 
         "price": "9085.00 грн",
         "madeOf": "Гранит",
@@ -28,7 +28,7 @@
     {
         "id": 3,
         "name": "Вертикальный памятник", 
-        "serial": "VT",
+        "serial": "VR",
         "image": "./assets/models/vertical/vertical_3.png", 
         "price": "9085.00 грн",
         "madeOf": "Гранит",
@@ -41,7 +41,7 @@
     {
         "id": 4,
         "name": "Вертикальный памятник", 
-        "serial": "VT",
+        "serial": "VR",
         "image": "./assets/models/vertical/vertical_4.png", 
         "price": "9085.00 грн",
         "madeOf": "Гранит",
@@ -54,7 +54,7 @@
     {
         "id": 5,
         "name": "Вертикальный памятник", 
-        "serial": "VT",
+        "serial": "VR",
         "image": "./assets/models/vertical/vertical_5.png", 
         "price": "9085.00 грн",
         "madeOf": "Гранит",
@@ -67,7 +67,7 @@
     {
         "id": 6,
         "name": "Вертикальный памятник", 
-        "serial": "VT",
+        "serial": "VR",
         "image": "./assets/models/vertical/vertical_6.png", 
         "price": "9085.00 грн",
         "madeOf": "Гранит",
@@ -80,7 +80,7 @@
     {
         "id": 7,
         "name": "Вертикальный памятник", 
-        "serial": "VT",
+        "serial": "VR",
         "image": "./assets/models/vertical/vertical_7.png", 
         "price": "9085.00 грн",
         "madeOf": "Гранит",
@@ -93,7 +93,7 @@
     {
         "id": 8,
         "name": "Вертикальный памятник", 
-        "serial": "VT",
+        "serial": "VR",
         "image": "./assets/models/vertical/vertical_8.png", 
         "price": "9085.00 грн",
         "madeOf": "Гранит",
@@ -106,7 +106,7 @@
     {
         "id": 9,
         "name": "Вертикальный памятник", 
-        "serial": "VT",
+        "serial": "VR",
         "image": "./assets/models/vertical/vertical_9.png", 
         "price": "9085.00 грн",
         "madeOf": "Гранит",

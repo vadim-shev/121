@@ -3,7 +3,7 @@
     {
         "id": 1,
         "name": "ЗСУ памятник", 
-        "serial": "MT",
+        "serial": "ML",
         "image": "./assets/models/military/1.png", 
         "price": "9085.00 грн",
         "madeOf": "Гранит",

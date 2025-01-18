@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, p {
     width: 100%;
     height: 75vh;
 
-    background-image: url('./assets/backgrounds/back1.jpg');
+/*    background: rgba(0, 0, 0, 1.0);*/
     background-repeat: no-repeat;
 /*    background-attachment: stat;*/
     background-size: cover;
@@ -410,7 +410,7 @@ h1, h2, h3, h4, h5, p {
 /*    box-shadow: 0rem 1rem 2rem rgba(0,0,0,0.5), 0rem -1rem 2rem rgba(255,255,255,0.5);*/
 }
 .tombstone-routerLink .routerLink_img {
-    
+    position: absolute;
     width: 100px;
     height: 100px;
 }
@@ -471,6 +471,9 @@ h1, h2, h3, h4, h5, p {
     width: 100%;
     background-color: var(--color-2);
 }
+.prod_arrows_container {
+    width: 100vw; height: 100px; display:flex; flex-direction: column;justify-content: space-between; position: absolute;
+}
 .prod_container img {
     border-radius: 60px;
     width: 200px;
@@ -509,6 +512,18 @@ h1, h2, h3, h4, h5, p {
     align-content: center;
     text-align: justify;
 }
+.prod_cover_container span{
+    color: gray; font-size: 20px; position: relative; top: 40px; left: 20px;    font-weight: 900; letter-spacing:    .2rem;
+}
+.prod_cover_container span b {
+    color: black; font-weight: 900; letter-spacing:    .7px;
+}
+.prod_cover_container .prod_cover_description-t {
+    color: gray; font-size: 24px; position: relative; top: 40px; left: 20px; text-align: right; font-weight: 900; letter-spacing:    .2rem;
+}
+.prod_cover_container .prod_cover_description {
+    color: black; font-size: 16px; position: relative; top: 50px; left: 20px; letter-spacing:    .1px;
+}
 .prod_cover_info {
     width: 50vw;
     height: 35%;
@@ -516,6 +531,10 @@ h1, h2, h3, h4, h5, p {
     flex-direction: column;
     justify-content: center;
     margin: 20px 0px 70px 40px;
+}
+
+.prod_cover_info {
+    color: black; font-size: 18px; font-weight: 900; letter-spacing:    .7px;
 }
 .prod_cover_info button{
     border-radius: 50px;

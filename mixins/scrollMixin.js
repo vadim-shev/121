@@ -41,32 +41,6 @@ export default {
         }
     },
 	methods: {
-         replacePath(par, arr) {
-            if( this.$route.href == `#/catalog/${ par }/${ arr.length + 1 }` ) {
-                this.$router.push({ path: `/catalog/${ par }/${ arr.length - arr.length + 1 }` })
-            } else if( this.$route.href == `#/catalog/${ par }/${ arr.length - arr.length }` ) {
-                this.$router.push({ path: `/catalog/${ par }/${ arr.length }` })
-            }
-        },
-        async fetchAndGenerateNumbers() {
-        // try {
-        //     const data = await this.fetchAPI('./data/complex.json'); // Загружаем JSON
-            const itemsWithNumbers = data.map(item => {
-                const formattedId = String(item.id).padStart(3, '0'); // Преобразуем id в формат с ведущими нулями
-                const generatedNumber = `${item.serial}-${formattedId}`; // Генерируем номер
-                return {
-                    ...item, // Копируем все свойства из текущего объекта
-                    generatedNumber // Добавляем новое свойство с номером
-                };
-            });
-            this.items = itemsWithNumbers[this.$route.params.id]
-
-            console.log(this.items.generatedNumber); // Выводим в консоль для проверки
-           return this.items // Выводим в консоль для проверки
-            
-         
-
-        },
         async fetchProduct(_dataLink, _storePar) {
             const id = Number(this.$route.params.id); // Получаем ID из маршрута
             this.ID = id;
@@ -81,6 +55,7 @@ export default {
                     this.Price = product.price;
                     this.Category = product.category;
                     this.Serial = product.serial
+                    this.Description = product.description
                     this.Model =  `${product.serial}-${formattedId}`
 
                 } else if( this.$route.href == `#/catalog/${ _storePar }/${ data.length + 1 }` ) {
@@ -118,8 +93,6 @@ export default {
         },
 		handleScroll() {          
             this.displayViewportElement()
-
-             // const materialObjectClass = document.querySelectorAll(".materials_object");
 
   if (this.isElementInViewport('materials')) {
     this.controlMaterialObject(0, {
@@ -172,16 +145,6 @@ export default {
       removeClass: "transform_on2",
     });
   }
-
-                // document.querySelector('.materials_image').classList.add("transform_on")
-            
-            // else {
-            // document.querySelectorAll(".materials_object").forEach((item, index) => {
-            //     item.classList.remove("transform_on")
-            //     item.style.marginTop = `${0 * 100}px`
-            // })
-                // document.querySelector('.materials_image').classList.remove("transform_on")
-            
         },
         displayViewportElement() {
             this.currentSection = this.Item[0]
@@ -228,27 +191,15 @@ export default {
     }
     },
    mounted() {
-            // console.log(this.Browser);
-    // var ua = navigator.userAgent;
-    // var isOpera = Object.prototype.toString.call(window);
-    //         console.log(isOpera);
         this.updateMenu()
-    // this.IsAnchor()
     if (!this.hasMounted) {
         this.hasMounted = true; 
         window.addEventListener("load", this.displayViewportElement);
         window.addEventListener("scroll", this.handleScroll);
-        this.materialSrc[0] = "./assets/materials/0.png"
+        this.materialSrc[0] = "./assets/materials/2.png"
         this.materialSrc[1] = "./assets/materials/1.png"
-        this.materialSrc[2] = "./assets/materials/gabbro.jpg"
-       // console.log(this.materialSrc);
-       // console.log(this.materialSrc[0]);
-       // console.log(this.materialSrc[1]);
-       // console.log(this.materialSrc[2]);
-       // console.log(this.$route.params.id);
-       // console.log(this.fetchAPI('./data/gravestones.json')[0][0].id);
+        this.materialSrc[2] = "./assets/materials/3.jpg"
     }
-    // document.getElementById("materials").appendChild('selector')
 },
 beforeDestroy() {
         // console.log(this.nextTodoId)
