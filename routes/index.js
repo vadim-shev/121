@@ -41,21 +41,21 @@ export default {
 		        </div> 
 		            <div class="menuItem" id='whatwedo'>
 		                <section id="highlight" class='vt-container' >
-		                    <card 	name='Модели памятников' 
+		                    <card ID="M"	name='Модели памятников' 
 		                    			src='./assets/icons/memorial_home.png'
 		                    			concept='Поделимся какими бывают 
 		                    					мемориалы/памятники, для чего они служат и весь спектр наших услуг, которые мы готовы вам предоставить по работе с ними.' 
 		                    			value='Перейти на страницу' 
 		                    			pathTo="/catalog"
 		                    ></card>
-		                    <card 	name='Наши услуги' 
+		                    <card ID="S"	name='Наши услуги' 
 		                    			src='./assets/icons/services.png' 
 		                    			concept='Ознакомтесь со всеми видами памятников, с 
 		                    					которыми мы работаем и дальнейшими необходимыми услугами, которые мы предоставляем ' 
 		                    			value='Перейти на страницу' 
 		                    			pathTo="/care"
 		                    ></card>
-		                    <card 	name='Посчитать стоимость изделия' 
+		                    <card ID="C"	name='Посчитать стоимость изделия' 
 		                    			src='./assets/icons/count.png'
 		                    			concept='Расщитайте итоговую стоимость заказа 
 		                    				самостоятельно' 

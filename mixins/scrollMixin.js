@@ -94,6 +94,23 @@ export default {
 		handleScroll() {          
             this.displayViewportElement()
 
+            if(this.isElementInViewport('M')) {
+                document.getElementById('M').style.transform = `scale(1.2) rotateY(0deg) rotateX(0deg) translateZ(.1rem) translateX(120px) translateY(100px)`;
+                
+            } else {
+                document.getElementById('M').style.transform = `scale(.75) rotateY(0deg) rotateX(0deg) translateZ(.1rem) translateX(15.2rem) translateY(100px)`;
+            }
+            if(this.isElementInViewport('S')) {
+                document.getElementById('S').style.transform = `scale(1.2) rotateY(0deg) rotateX(0deg) translateZ(.1rem) translateX(130px) translateY(80px)`;
+            }else {
+                document.getElementById('S').style.transform = `scale(.75) rotateY(0deg) rotateX(0deg) translateZ(.1rem) translateX(15.2rem) translateY(100px)`;
+            }
+            if(this.isElementInViewport('C')) {
+                document.getElementById('C').style.transform = `scale(1.2) rotateY(0deg) rotateX(0deg) translateZ(.1rem) translateX(130px) translateY(70px)`;
+            }else {
+                document.getElementById('C').style.transform = `scale(.75) rotateY(0deg) rotateX(0deg) translateZ(.1rem) translateX(15.2rem) translateY(100px)`;
+            }
+
   if (this.isElementInViewport('materials')) {
     this.controlMaterialObject(0, {
       scale: ".5",
