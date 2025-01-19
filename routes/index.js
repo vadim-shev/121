@@ -30,11 +30,11 @@ export default {
                 <div id="prime" class="menuItem"  >
 		            <div style="position: relative;" class="prime" >		
 		            	<div class="prime_background" >
-    								<video preload="none" id="video" style="height: 100%; width:100%; z-index: 10; object-fit: cover; opacity: .6;" autoplay="autoplay" muted="muted" loop="loop" playsinline="" loading="lazy" ><source src="https://ronniethompson.co.uk/app/uploads/2023/03/ICON_5220_RT_Website-Video-Mobile.mp4" type="video/mp4"></video>
+    								<video preload="none" id="video" style="height: calc(100% + 55px); margin-top: -55px; width:100%; z-index: 10; object-fit: cover; opacity: .6;" autoplay="autoplay" muted="muted" loop="loop" playsinline="" loading="lazy" ><source src="https://ronniethompson.co.uk/app/uploads/2023/03/ICON_5220_RT_Website-Video-Mobile.mp4" type="video/mp4"></video>
 		            	</div>    
 		            	<div style="background: rgba(0,0,0,0.95); width: 100vw; height: 75vh; z-index: 100; display: flex; flex-direction: column; justify-content: center; align-content: center; align-items: flex-end;">
 		            		<h1 style="font-size: 4.5rem; width: 100vw; height: 25vh; text-align: left;">granitblizkim</h1>
-		            		<h2  style="font-size: 2rem; width: auto; height: 25vh; margin: 0 25px 0 5px; text-align: left;">Обслуживание с достоинством и уважением</h2>
+		            		<h2  style="font-size: 2rem; width: auto; height: 25vh; margin: 0 5px 0 5px; text-align: left;">Обслуживание с достоинством и уважением</h2>
                                     <router-link   style="height: auto; width: auto; font-size: 2.5rem; color: black; background: rgba(255, 255, 255, .5); padding: 10px 20px; z-index: 200;  " to="/catalog" >Перейти к каталогу</router-link>
 		            	</div> 
 		            </div>
@@ -42,21 +42,21 @@ export default {
 		            <div class="menuItem" id='whatwedo'>
 		                <section id="highlight" class='vt-container' >
 		                    <card 	name='Модели памятников' 
-		                    			src='./assets/tombstone.png'
+		                    			src='./assets/icons/memorial_home.png'
 		                    			concept='Поделимся какими бывают 
 		                    					мемориалы/памятники, для чего они служат и весь спектр наших услуг, которые мы готовы вам предоставить по работе с ними.' 
 		                    			value='Перейти на страницу' 
 		                    			pathTo="/catalog"
 		                    ></card>
 		                    <card 	name='Наши услуги' 
-		                    			src='./assets/bg_tombstone.png' 
+		                    			src='./assets/icons/services.png' 
 		                    			concept='Ознакомтесь со всеми видами памятников, с 
 		                    					которыми мы работаем и дальнейшими необходимыми услугами, которые мы предоставляем ' 
 		                    			value='Перейти на страницу' 
 		                    			pathTo="/care"
 		                    ></card>
 		                    <card 	name='Посчитать стоимость изделия' 
-		                    			src='./assets/calculate.png'
+		                    			src='./assets/icons/count.png'
 		                    			concept='Расщитайте итоговую стоимость заказа 
 		                    				самостоятельно' 
 		                    			value='Перейти на страницу' 
