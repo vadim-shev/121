@@ -32,9 +32,10 @@ export default {
 		            	<div class="prime_background" >
     								<video preload="none" id="video" style="height: 100%; width:100%; z-index: 10; object-fit: cover; opacity: .6;" autoplay="autoplay" muted="muted" loop="loop" playsinline="" loading="lazy" ><source src="https://ronniethompson.co.uk/app/uploads/2023/03/ICON_5220_RT_Website-Video-Mobile.mp4" type="video/mp4"></video>
 		            	</div>    
-		            	<div style="background: rgba(0,0,0,0.95); width: 100vw; height: 75vh; z-index: 100; display: flex; flex-direction: column; justify-content: space-around; align-content: center; align-items: center;">
-		            		<h1 class="tagline" style=" width: 100vw; height: 35vh;">granitblizkim</h1>
-                                    <router-link   style="font-size: 35px; color: black; width: auto; height: auto; z-index: 200; background: rgba(255, 255, 255, 1.0); padding: 20px 40px ; margin: 200px 0 0 0 ;"  >Каталог</router-link>
+		            	<div style="background: rgba(0,0,0,0.95); width: 100vw; height: 75vh; z-index: 100; display: flex; flex-direction: column; justify-content: center; align-content: center; align-items: flex-end;">
+		            		<h1 style="font-size: 4.5rem; width: 100vw; height: 25vh; text-align: left;">granitblizkim</h1>
+		            		<h2  style="font-size: 2rem; width: auto; height: 25vh; margin: 0 25px 0 5px; text-align: left;">Обслуживание с достоинством и уважением</h2>
+                                    <router-link   style="height: auto; width: auto; font-size: 2.5rem; color: black; background: rgba(255, 255, 255, .5); padding: 10px 20px; z-index: 200;  " to="/catalog" >Перейти к каталогу</router-link>
 		            	</div> 
 		            </div>
 		        </div> 
