@@ -146,4 +146,8 @@ export default {
             // this.fetchProduct('./data/cheep.json', 'cheep')
         },
     },
+    beforeRouteEnter(to, from, next) {
+        window.scrollTo(0, 0)
+        next()
+    }
 };

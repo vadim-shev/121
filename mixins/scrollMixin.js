@@ -94,22 +94,29 @@ export default {
 		handleScroll() {          
             this.displayViewportElement()
 
-            if(this.isElementInViewport('M')) {
-                document.getElementById('M').style.transform = `scale(1.2) rotateY(0deg) rotateX(0deg) translateZ(.1rem) translateX(120px) translateY(100px)`;
-                
+            if(this.isElementInViewport('Memorial_i')) {
+                document.getElementById('Memorial_img').classList.add('action_1')
+                document.getElementById('Memorial_i').classList.add('shadow_0')
             } else {
-                document.getElementById('M').style.transform = `scale(.75) rotateY(0deg) rotateX(0deg) translateZ(.1rem) translateX(15.2rem) translateY(100px)`;
+                document.getElementById('Memorial_i').classList.remove('shadow_0')
+                document.getElementById('Memorial_img').classList.remove('action_1')
             }
-            if(this.isElementInViewport('S')) {
-                document.getElementById('S').style.transform = `scale(1.2) rotateY(0deg) rotateX(0deg) translateZ(.1rem) translateX(130px) translateY(80px)`;
-            }else {
-                document.getElementById('S').style.transform = `scale(.75) rotateY(0deg) rotateX(0deg) translateZ(.1rem) translateX(15.2rem) translateY(100px)`;
+
+             if(this.isElementInViewport('Services_i')) {
+                document.getElementById('Services_img').classList.add('action_1')
+                document.getElementById('Services_i').classList.add('shadow_0')
+            }  else {
+                document.getElementById('Services_i').classList.remove('shadow_0')
+                document.getElementById('Services_img').classList.remove('action_1')
             }
-            if(this.isElementInViewport('C')) {
-                document.getElementById('C').style.transform = `scale(1.2) rotateY(0deg) rotateX(0deg) translateZ(.1rem) translateX(130px) translateY(70px)`;
-            }else {
-                document.getElementById('C').style.transform = `scale(.75) rotateY(0deg) rotateX(0deg) translateZ(.1rem) translateX(15.2rem) translateY(100px)`;
+             if(this.isElementInViewport('Count_i')) {
+                document.getElementById('Count_i').classList.add('shadow_0')
+                document.getElementById('Count_img').classList.add('action_1')
+            } else {
+                document.getElementById('Count_i').classList.remove('shadow_0')
+                document.getElementById('Count_img').classList.remove('action_1')
             }
+               
 
   if (this.isElementInViewport('materials')) {
     this.controlMaterialObject(0, {
@@ -173,7 +180,7 @@ export default {
 
         },
         isElementInViewport(element) { // Проверяем, находится ли указанный element в поле зрения
-            return  document.getElementById(element).getBoundingClientRect().top < window.innerHeight - 400 
+            return  document.getElementById(element).getBoundingClientRect().top < window.innerHeight - 400
                         && document.getElementById(element).getBoundingClientRect().bottom > 0 
         },
         scrollAction(elementId) { // Прокрутить страницу к указанному elementId 
@@ -208,9 +215,9 @@ export default {
     }
     },
    mounted() {
-        this.updateMenu()
     if (!this.hasMounted) {
         this.hasMounted = true; 
+        this.updateMenu()
         window.addEventListener("load", this.displayViewportElement);
         window.addEventListener("scroll", this.handleScroll);
         this.materialSrc[0] = "./assets/materials/2.png"

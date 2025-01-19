@@ -130,5 +130,9 @@ export default {
             // console.log(window.history.state)
         
         
+    },
+    beforeRouteEnter(to, from, next) {
+        window.scrollTo(0, 0)
+        next()
     }
 }

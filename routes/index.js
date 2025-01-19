@@ -41,21 +41,21 @@ export default {
 		        </div> 
 		            <div class="menuItem" id='whatwedo'>
 		                <section id="highlight" class='vt-container' >
-		                    <card ID="M"	name='Модели памятников' 
+		                    <card ID_img="Memorial_img" ID_indent="Memorial_i"	name='Модели памятников' 
 		                    			src='./assets/icons/memorial_home.png'
 		                    			concept='Поделимся какими бывают 
 		                    					мемориалы/памятники, для чего они служат и весь спектр наших услуг, которые мы готовы вам предоставить по работе с ними.' 
 		                    			value='Перейти на страницу' 
 		                    			pathTo="/catalog"
 		                    ></card>
-		                    <card ID="S"	name='Наши услуги' 
+		                    <card ID_img="Services_img" ID_indent="Services_i"	name='Наши услуги' 
 		                    			src='./assets/icons/services.png' 
 		                    			concept='Ознакомтесь со всеми видами памятников, с 
 		                    					которыми мы работаем и дальнейшими необходимыми услугами, которые мы предоставляем ' 
 		                    			value='Перейти на страницу' 
 		                    			pathTo="/care"
 		                    ></card>
-		                    <card ID="C"	name='Посчитать стоимость изделия' 
+		                    <card ID_img="Count_img" ID_indent="Count_i"	name='Посчитать стоимость изделия' 
 		                    			src='./assets/icons/count.png'
 		                    			concept='Расщитайте итоговую стоимость заказа 
 		                    				самостоятельно' 
@@ -110,4 +110,8 @@ export default {
   methods: {
     
   },
+    beforeRouteEnter(to, from, next) {
+        window.scrollTo(0, 0)
+        next()
+    }
 };

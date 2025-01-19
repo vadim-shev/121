@@ -126,7 +126,12 @@ h1, h2, h3, h4, h5, p {
     justify-content: center;
     align-items: center;
     margin: 60px 0px 0px 0px;
+  transition: 0.6s ease box-shadow;
 
+}
+.shadow_0 {
+    box-shadow: none;
+  transition: 0.6s ease box-shadow;
 }
 .produc-image {
     position: absolute;
@@ -180,6 +185,12 @@ h1, h2, h3, h4, h5, p {
     align-items: center;
 
     background-color: var(--color-1);
+}
+.action_1 {
+    transform: scale(1.2) rotateY(0deg) rotateX(0deg) translateZ(.1rem) translateX(120px) translateY(100px);
+}
+.action_0 {
+    transform: scale(.75) rotateY(0deg) rotateX(0deg) translateZ(.1rem) translateX(15.2rem) translateY(100px);
 }
 .transform_on {
     top: -100px;

@@ -125,4 +125,8 @@ export default {
             modelContentElement.style.height = "100%";
         }
     },
+    beforeRouteEnter(to, from, next) {
+        window.scrollTo(0, 0)
+        next()
+    }
 };

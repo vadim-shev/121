@@ -33,12 +33,16 @@ export default {
   mounted() {
     // const show = ref(true)
     // this.fetchProduct('./data/complex.json', 'complex')
-    this.fetchProduct('./data/vertical.json', 'vertical')
+    // this.fetchProduct('./data/vertical.json', 'vertical')
   },
   watch: {
     '$route.params.id': function () {
       // this.fetchProduct('./data/complex.json', 'complex')
-      this.fetchProduct('./data/vertical.json', 'vertical')
+      // this.fetchProduct('./data/vertical.json', 'vertical')
     },
   },
+    beforeRouteEnter(to, from, next) {
+        window.scrollTo(0, 0)
+        next()
+    }
 };
