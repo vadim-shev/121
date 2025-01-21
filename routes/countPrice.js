@@ -1,7 +1,9 @@
 
-import NavigationPart from './../templates/staticParts/Navigation/script.js'
 
-import FooterPart from '../templates/staticParts/Footer.js'
+import FooterPart from './../templates/footer.js'
+import NavigationPart from './../templates/navigation.js'
+
+import scrollMixin from './../mixins/scrollMixin.js'
 export default {
     components: { NavigationPart, FooterPart },
     template: `

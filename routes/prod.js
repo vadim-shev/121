@@ -1,9 +1,9 @@
-import NavigationPart from './../templates/staticParts/Navigation/script.js'
+
+
+import FooterPart from './../templates/footer.js'
+import NavigationPart from './../templates/navigation.js'
 
 import scrollMixin from './../mixins/scrollMixin.js'
-import FooterPart from './../templates/staticParts/Footer.js'
-
-
 export default {
     mixins: [scrollMixin],
     components: { NavigationPart, FooterPart },
@@ -12,8 +12,8 @@ export default {
             <header style="position: relative; height: auto;" class="menuItem" id="header">
                 <navigation-part style="width: 100vw;" :newItem="currentSection"></navigation-part>
             </header>
-            <main class="main-prod" >
-                <div class="prod_container menuItem" style="padding-top: 55px;" id="prod">
+            <main  class="main-prod"  >
+                <div style="background-color: white; !important; width: 100vw; height: 1000vh; z-index: 1000;" class="prod_container menuItem"  id="prod">
 
                     <img :src="Imagee"/>
 
@@ -92,6 +92,7 @@ export default {
                                 <p style="width: 90vw;"><hr style="margin: 60px 0px 0px 0px;" /></p>
 
                             <div class="prod_buttom_seeAll ">
+                                
                                 <router-link :to="'/catalog'" >Перейти в каталог</router-link>
                             </div>
                         </div>

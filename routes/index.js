@@ -1,24 +1,16 @@
 
 
-import FooterPart from './../templates/staticParts/Footer.js'
-// import Clouds from './../components/clouds/script.js'
-// import TagLine from './../components/tagline/script.js'
-// import Btn from './../components/button/script.js'
-import Card from './../components/card/script.js'
-// import MaterialObject from './../components/materials_object.js'
+import Card from './../components/card.js'
+import Care from './../components/care.js'
 // import Card from './../components/card/script.js'
-import NavigationPart from './../templates/staticParts/Navigation/script.js'
+import FooterPart from './../templates/footer.js'
+import NavigationPart from './../templates/navigation.js'
 
 import scrollMixin from './../mixins/scrollMixin.js'
-// import fetchMixin from './../mixins/fetchMixin.js'
-
-// import { ref } from 'https://unpkg.com/vue@3.4.27/dist/vue.global.js';                <div class="background-image-tombstone background-image-tombstone-transform "></div>
-
-
 
 export default {
     mixins: [scrollMixin],
-    components: { NavigationPart, Card, FooterPart },
+    components: { NavigationPart, Card,Care, FooterPart },
   props: {
   },
     template: `
@@ -35,11 +27,11 @@ export default {
 		            	<div style="background: rgba(0,0,0,0.95); width: 100vw; height: 75vh; z-index: 100; display: flex; flex-direction: column; justify-content: center; align-content: center; align-items: flex-end;">
 		            		<h1 style="font-size: 4.5rem; width: 100vw; height: 25vh; text-align: left;">granitblizkim</h1>
 		            		<h2  style="font-size: 2rem; width: auto; height: 25vh; margin: 0 5px 0 5px; text-align: left;">Обслуживание с достоинством и уважением</h2>
-                                    <router-link   style="height: auto; width: auto; font-size: 2.5rem; color: black; background: rgba(255, 255, 255, .5); padding: 10px 20px; z-index: 200;  " to="/catalog" >Перейти к каталогу</router-link>
+                                    <router-link class="prime_btn"  style="height: auto; width: auto; font-size: 2.5rem; color: black; background: rgba(255, 255, 255, .5); padding: 10px 20px; z-index: 200;  " to="/catalog" >Перейти к каталогу</router-link>
 		            	</div> 
 		            </div>
 		        </div> 
-		            <div class="menuItem" id='whatwedo'>
+		            <!-- <div class="menuItem " id='whatwedo' style="display: none;">
 		                <section id="highlight" class='vt-container' >
 		                    <card ID_img="Memorial_img" ID_indent="Memorial_i"	name='Модели памятников' 
 		                    			src='./assets/icons/memorial_home.png'
@@ -63,8 +55,43 @@ export default {
 		                    			pathTo="/countPrice"
 		                    ></card>
 		                </section>
-		            </div>
-		            <div class="menuItem" id="materials">
+		            </div> -->
+		            <div style="" class="menuItem" id="catalog">
+	                    <ul class="category_container "   >
+	                        <card></card>
+	                    </ul>
+	                </div>
+		            <div style="" class="menuItem" id="care">
+	                    <ul class="category_container "   >
+	                        <care></care>
+	                    </ul>
+	                </div>
+		            <!-- <div class="menuItem " id='whatwedo' style="display: none;">
+		                <section id="highlight" class='vt-container' >
+		                    <card ID_img="Memorial_img" ID_indent="Memorial_i"	name='Модели памятников' 
+		                    			src='./assets/icons/memorial_home.png'
+		                    			concept='Поделимся какими бывают 
+		                    					мемориалы/памятники, для чего они служат и весь спектр наших услуг, которые мы готовы вам предоставить по работе с ними.' 
+		                    			value='Перейти на страницу' 
+		                    			pathTo="/catalog"
+		                    ></card>
+		                    <card ID_img="Services_img" ID_indent="Services_i"	name='Наши услуги' 
+		                    			src='./assets/icons/services.png' 
+		                    			concept='Ознакомтесь со всеми видами памятников, с 
+		                    					которыми мы работаем и дальнейшими необходимыми услугами, которые мы предоставляем ' 
+		                    			value='Перейти на страницу' 
+		                    			pathTo="/care"
+		                    ></card>
+		                    <card ID_img="Count_img" ID_indent="Count_i"	name='Посчитать стоимость изделия' 
+		                    			src='./assets/icons/count.png'
+		                    			concept='Расщитайте итоговую стоимость заказа 
+		                    				самостоятельно' 
+		                    			value='Перейти на страницу' 
+		                    			pathTo="/countPrice"
+		                    ></card>
+		                </section>
+		            </div> -->
+		            <!-- <div class="menuItem" id="materials" style="display: none;">
 					
 		            	<div   class="materials_object 1 " 
 					      	  :style="{
@@ -73,7 +100,7 @@ export default {
 								     + ') rotateX(' + materialRotateX 
 								     + ') translateZ(' 
 								     + materialTranslate + ')'}">
-					      	<img class="menuItem materials_image " :src="this.materialSrc[0]" />
+					      	<img class="materials_image " :src="this.materialSrc[0]" />
 					    </div>
 		            	<div  class="materials_object 2 " @click="moveS"
 					      	  :style="{
@@ -92,9 +119,9 @@ export default {
 								     + ') translateZ(' 
 								     + materialTranslate + ')'}">
 					      	<img class="materials_image" :src="this.materialSrc[2]" />
-					    </div>
+					    </div> -->
 		               
-		            </div>
+		            <!-- </div> -->
             </main>
             <footer class="menuItem"  id='contact'>
             	<footer-part></footer-part>

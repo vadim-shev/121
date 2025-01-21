@@ -1,4 +1,5 @@
 
+
 import scrollMixin from './../../mixins/scrollMixin.js'
 export default {
     mixins: [scrollMixin],

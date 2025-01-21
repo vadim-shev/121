@@ -1,4 +1,4 @@
-import scrollMixin from './../../../mixins/scrollMixin.js'
+import scrollMixin from './../mixins/scrollMixin.js'
 
 export default {
     mixins: [ scrollMixin],
@@ -8,11 +8,15 @@ export default {
     data() {
         return {
             isActive: false,
-            currentSectionPosition: 'asd'
+            currentSectionPosition: 'asd',
+            isDarkBackground: false,  // New state to track the background color
         }
     },
     template: `  
-        <div class="nav-bar nav-bar-style">
+        <div  :class="computedClasses" class="nav-bar nav-bar-style">
+        <router-link class="tombstone-routerLink"  to="/" >
+            <img src="./assets/catalog/left-arrow.svg" />
+        </router-link>
             <div class="nav-bar-container">
                 <span class="highlight">{{ newItem }}</span>
             </div>
@@ -32,14 +36,24 @@ export default {
             </aside>
         </div>  
     `,
-    computed: {
-        computedClasses() {
-            return {
-                'is-active': this.isActive
-            }
-        }
-    },
-    mounted() {
-       
+  computed: {
+    computedClasses() {
+      return {
+        'is-active': this.isActive
+      };
     }
-}
+  },
+  methods: {
+    
+
+    toggleClass() {
+      this.isActive = !this.isActive;
+    }
+  },
+  mounted() {
+    
+  },
+  beforeDestroy() {
+
+  }
+};

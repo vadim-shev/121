@@ -1,4 +1,6 @@
+import fetchMixin from './fetchMixin.js'
 export default { 
+    mixins: [fetchMixin],
     props: ['src'],	
     data() {
 		return {
@@ -11,35 +13,10 @@ export default {
             materialRotateY: "-30deg",
             materialRotateX: "45deg",
             materialTranslate: "4.5rem",     
-                materialSrc: []
+                materialSrc: [],
+                CardArr: []
         }
 	},
-    computed: {
-        IsAnchor(e) {
-            return 
-        },
-        basePage() {
-            return this.$router.options.history.base
-        },
-        prevPage() {
-            return this.$router.options.history.state.back
-        },
-        currentPages() {
-            return this.$router.options.history.state.current
-        },
-        nextPage() {
-            return this.$router.options.history.state.forward
-        },
-        productId() {
-            return this.products[this.$route.params.id - 1]
-        }, 
-        MaterialsList() {
-            return {materialTransform: `transform: scale(${this.materialScale}) rotateY(${this.materialRotateY}) rotateX(${this.materialRotateX}) translateZ(${this.materialTranslate});`}
-        },
-        Id() {
-            return Number(this.$route.params.id)
-        }
-    },
 	methods: {
         async fetchProduct(_dataLink, _storePar) {
             const id = Number(this.$route.params.id); // Получаем ID из маршрута
@@ -97,23 +74,18 @@ export default {
             if(this.isElementInViewport('Memorial_i')) {
                 document.getElementById('Memorial_img').classList.add('action_1')
                 document.getElementById('Memorial_i').classList.add('shadow_0')
-            } else {
-                document.getElementById('Memorial_i').classList.remove('shadow_0')
-                document.getElementById('Memorial_img').classList.remove('action_1')
-            }
-
-             if(this.isElementInViewport('Services_i')) {
+            }else if(this.isElementInViewport('Services_i')) {
                 document.getElementById('Services_img').classList.add('action_1')
                 document.getElementById('Services_i').classList.add('shadow_0')
-            }  else {
-                document.getElementById('Services_i').classList.remove('shadow_0')
-                document.getElementById('Services_img').classList.remove('action_1')
-            }
-             if(this.isElementInViewport('Count_i')) {
+            } else if(this.isElementInViewport('Count_i')) {
                 document.getElementById('Count_i').classList.add('shadow_0')
                 document.getElementById('Count_img').classList.add('action_1')
             } else {
-                document.getElementById('Count_i').classList.remove('shadow_0')
+                document.getElementById('Memorial_img').classList.remove('action_1')
+                document.getElementById('Memorial_i').classList.remove('shadow_0')
+ document.getElementById('Services_img').classList.remove('action_1')
+document.getElementById('Services_i').classList.remove('shadow_0')
+ document.getElementById('Count_i').classList.remove('shadow_0')
                 document.getElementById('Count_img').classList.remove('action_1')
             }
                
@@ -169,6 +141,7 @@ export default {
       removeClass: "transform_on2",
     });
   }
+
         },
         displayViewportElement() {
             this.currentSection = this.Item[0]
@@ -215,18 +188,23 @@ export default {
     }
     },
    mounted() {
+     // this.$router.options.history.state.back = 
     if (!this.hasMounted) {
         this.hasMounted = true; 
         this.updateMenu()
+        
         window.addEventListener("load", this.displayViewportElement);
         window.addEventListener("scroll", this.handleScroll);
+
         this.materialSrc[0] = "./assets/materials/2.png"
         this.materialSrc[1] = "./assets/materials/1.png"
         this.materialSrc[2] = "./assets/materials/3.jpg"
     }
+        
 },
 beforeDestroy() {
         // console.log(this.nextTodoId)
+    // const s = 
     window.removeEventListener("scroll", this.handleScroll);
 }
 }
