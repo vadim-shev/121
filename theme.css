@@ -524,12 +524,23 @@ h1, h2, h3, h4, h5, p {
     text-decoration: none;
     box-shadow: 3rem 0rem 1rem rgba(0,0,0,0.2), -3rem 0rem 1rem rgba(0,0,0,0.2);
 }
+.category_item h2 { 
+    margin: 1rem 0;
+}
+.category_item_router {
+    display: flex; flex-direction: row; justify-content: center;
+}
+.category_item section span {
+/*    text-align: justify;*/
+}
 .category_item img {
             max-width: 50px;
         height: auto;
+        float: left; 
+        margin: 0 10px 10px 0;
     }
 .category_container span {
-    text-align: justify;
+/*    text-align: justify;*/
     margin-right: 15px;
     margin-left: 15px;
 }
@@ -542,8 +553,8 @@ h1, h2, h3, h4, h5, p {
 .main-prod {
     background-color: var(--color-1);
     width: 100vw;
-    height: 100vh;
-    margin: 0 0 60vh 0;
+    height: auto;
+/*    margin: 0 0 60vh 0;*/
 }
 .prod_container {
     display: flex;
@@ -568,7 +579,7 @@ h1, h2, h3, h4, h5, p {
     padding: 15px 30px 15px 30px !important;
     margin: 0 !important;
 }
-.prod_arrows_container > span {
+.prod_arrows_container > span, p {
     padding: 0px !important;
     color: var(--color-5) !important;
 
@@ -582,11 +593,11 @@ h1, h2, h3, h4, h5, p {
     margin: 20px 0px 0px 0px;
 }
 .prod_cover {
-    position: absolute;
-/*    box-shadow: 1rem 1rem 4rem rgba(0,0,0,0.3), -1rem 0rem 4rem rgba(0,0,0,0.3);*/
-    top: 50%;
+    position: relative;
+    box-shadow: 1rem 1rem 4rem rgba(0,0,0,0.3), -1rem 0rem 4rem rgba(0,0,0,0.3);
+    
     width: 100vw;
-    height: 20vh;
+    height: auto;
     background-color: rgba(255,255,255, .8);
     box-shadow: 1rem -1rem 4rem rgba(0,0,0,0.4);
     border-radius: 50px 50px 0px 0px;
@@ -595,26 +606,28 @@ h1, h2, h3, h4, h5, p {
     justify-content: center;
 }
 .prod_cover_container {
-    position: absolute;
+    position: relative;
     box-shadow: 1rem -1rem 4rem rgba(0,0,0,0.4);
-    top: 75%;
+    margin-top: 5%;
     width: 100%;
-    height: 92vh;
+    height: auto;
     background-color: rgba(255,255,255, 1);
-    padding: 20px 50px 20px 15px;
+    padding: 20px 50px 0px 15px;
     z-index: 1;
     border-bottom: none;
+/*    padding-bottom: 15vh;*/
     border-radius: 50px 50px 0px 0px;
-    display: flex; 
-    flex-direction: column; 
-    justify-content: flex-start; 
-    align-content: center;
-    text-align: justify;
 }
-.prod_cover_container span{
-    color: gray; font-size: 20px; position: relative; top: 40px; left: 20px;    font-weight: 900; letter-spacing:    .2rem;
+.category_container span, .category_container h2  {
+    color: var(--color-4);
+    text-align: right;
+/*float: left;*/
 }
-.prod_cover_container span b {
+.prod_cover_container p {
+    color: gray; font-size: 20px;     font-weight: 900; letter-spacing:    .2rem;
+}
+}
+.prod_cover_container p b {
     color: black; font-weight: 900; letter-spacing:    .7px;
 }
 .prod_cover_container .prod_cover_description-t {
@@ -625,8 +638,9 @@ h1, h2, h3, h4, h5, p {
 }
 .prod_cover_info {
     position: relative;
+/*    top: 30vh;*/
     width: 100%;
-    height: 75%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -642,28 +656,17 @@ h1, h2, h3, h4, h5, p {
     margin: 10px 20px 10px 20px;
     border: 1px solid var(--color-6);
 }
-.prod_buttom_seeAll {
-    width: 100vw;
-    height: 35%;
-    display: flex;
-    flex-direction: raw;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0px;
-
+.prime_btn {
+   color: var(--color-5);
+   height: auto;
+    padding: 15px 30px 15px 30px ;
+    margin: 10px 20px 10px 20px;
+     border-radius: 50px;
+    border: 1px solid var(--color-6);
+    text-align: center;
 }
-.prod_buttom_seeAll button {
-    width: 60vw;
-     color: var(--color-1); 
-     background-color: var(--color-3);
-     font-size: 24px;
-     font-weight: 400;
-    border-radius: 50px;
-    padding: 20px 20px 20px 20px;
-    margin: 0px 20px 0 0;
-/*    text-shadow: 2rem 2rem 5rem rgba(0,0,0,0.5);*/
-    box-shadow: 1rem 1rem 2rem rgba(0,0,0,0.5), -1rem -1rem 2rem rgba(0,0,0,0.5);
-    border: 5px solid var(--color-3);
+span {
+/*    line-height: 2rem;*/
 }
 
 .care_container {

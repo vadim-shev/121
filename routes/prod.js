@@ -13,7 +13,7 @@ export default {
                 <navigation-part style="width: 100vw;" :newItem="currentSection"></navigation-part>
             </header>
             <main  class="main-prod"  >
-                <div style="background-color: white; !important; width: 100vw; height: 1000vh; z-index: 1000;" class="prod_container menuItem"  id="prod">
+                <div style="background-color: white; height: 100%;  width: 100vw; height: auto; z-index: 1000;" class="prod_container menuItem"  id="prod">
 
                     <img :src="Imagee"/>
 
@@ -40,34 +40,49 @@ export default {
                                 </router-link> 
                             </div>  
 
+                            <div class="prod_cover_container"    >
+                                <div style="display: flex; width: 100%; height: auto; padding: 3rem 1rem;  
+    flex-direction: column; 
+    justify-content: space-between; ">
+
+                                    <p> Каталог: 
+                                        <b> {{ Category }} </b>
+                                        <br />
+                                    </p>
+                                    <p> Модель: 
+                                        <b> {{ Model }} </b>
+                                    </p>
+                                    <p> Материал: 
+                                        <b> Гранит </b>
+                                        <br />
+                                    </p>
+                                    <p> Наличие: 
+                                        <b style="color: green;"> Есть </b>
+                                        <br />
+                                    </p>
+
+                                    <!-- <div></div> -->
+                                        <router-link class="prime_btn"  :to="'/'" >Перейти на главную   </router-link>
+                                        <!-- <router-link  >Перейти в каталог</router-link> -->
+                                </div>
+                                    <div>
+                                        <div>
+                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/_vertical_1.png" />
+                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/_vertical_2.png" />
+                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/_vertical_3.png" />
+                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/_vertical_4.png" />
+                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/_vertical_5.png" />
+                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/_vertical_6.png" />
+                                        </div>
+                                    </div>
+                                
+
+                                
+                            </div>
                         </div>           
                                
                         
-                            <div class="prod_cover_container"    >
-                                <span> Каталог: 
-                                    <b> {{ Category }} </b>
-                                    <br />
-                                </span>
-                                <span> Модель: 
-                                    <b> {{ Model }} </b>
-                                </span>
-                                <span> Материал: 
-                                    <b> Гранит </b>
-                                    <br />
-                                </span>
-                                <span> Наличие: 
-                                    <b style="color: green;"> Есть </b>
-                                    <br />
-                                </span>
                             
-                                
-                                
-
-                            <div class="prod_buttom_seeAll ">
-                                <router-link class="prime_btn"  style="height: auto; width: auto; font-size: 1.5rem; color: var(--color-1); background: rgba(17, 33, 45, .8); padding: 10px 20px; z-index: 200;  " :to="'/catalog'" >Перейти к каталогу</router-link>
-                                <!-- <router-link  >Перейти в каталог</router-link> -->
-                            </div>
-                        </div>
                     </div>
                 </div>
             </main>
