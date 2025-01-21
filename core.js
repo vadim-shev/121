@@ -10,13 +10,12 @@ import Product from './routes/prod.js'
 const router = VueRouter.createRouter({
     history: VueRouter.createWebHashHistory(),
     routes: [
-        { path: "/", children: [{
-                 path: '', component: Home },
+        { path: "/", 
+        children: [{
+                path: '', component: Home },
                 { path: '/:product', component: ProductList },
                 { path: '/:product/:id', component: Product },
-            ]},
-        { path: "/care", component: Care },
-        { path: "/countPrice", component: CountPrice },
+            ]}
         
     ]
 })

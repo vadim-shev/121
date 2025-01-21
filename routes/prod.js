@@ -62,7 +62,7 @@ export default {
                                     </p>
 
                                     <!-- <div></div> -->
-                                        <router-link class="prime_btn"  :to="'/#'" >Перейти на главную   </router-link>
+                                        <router-link class="prime_btn"  :to="'/'" >Перейти на главную   </router-link>
                                         <!-- <router-link  >Перейти в каталог</router-link> -->
                                 </div>
                                     <div style="width: 100%; height: auto;">
@@ -117,10 +117,10 @@ export default {
             }
         }
     },
-    mounted() {
+     mounted() {
         // document.querySelector('.main-prod').classList.add('nested-enter-from') 
         this.fetchProduct(`${'./data/'+this.$route.params.product}.json`, `${this.$route.params.product}`)
-
+        console.log(this.$route.params.product)
         // if (true) {}
         // this.fetchProduct('./data/vertical.json', 'vertical')
         // this.fetchProduct('./data/cheep.json', 'cheep')
