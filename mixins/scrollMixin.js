@@ -35,10 +35,10 @@ export default {
                     this.Description = product.description
                     this.Model =  `${product.serial}-${formattedId}`
 
-                } else if( this.$route.href == `#/catalog/${ _storePar }/${ data.length + 1 }` ) {
-                    this.$router.push({ path: `/catalog/${ _storePar }/${ data.length - data.length + 1 }` })
-                } else if( this.$route.href == `#/catalog/${ _storePar }/${ data.length - data.length }` ) {
-                    this.$router.push({ path: `/catalog/${ _storePar }/${ data.length }` })
+                } else if( this.$route.href == `/${ _storePar }/${ data.length + 1 }` ) {
+                    this.$router.push({ path: `/${ _storePar }/${ data.length - data.length + 1 }` })
+                } else if( this.$route.href == `/${ _storePar }/${ data.length - data.length }` ) {
+                    this.$router.push({ path: `/${ _storePar }/${ data.length }` })
                 }
 
         },

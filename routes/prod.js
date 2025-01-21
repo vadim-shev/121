@@ -30,11 +30,11 @@ export default {
                             </div> 
 
                            <div class="prod_arrows_container"> 
-                                <router-link class="tombstone-routerLink" :to="'/catalog/'+this.$route.params.product+'/'+Math.abs(Number($route.params.id) - 1)">
+                                <router-link class="tombstone-routerLink" :to="'/'+this.$route.params.product+'/'+Math.abs(Number($route.params.id) - 1)">
                                     <img src="./assets/catalog/left-arrow.svg" />
                                     <b>Предыдущий мемориал</b>
                                 </router-link>
-                                <router-link class="tombstone-routerLink" :to="'/catalog/'+this.$route.params.product+'/'+Math.abs(Number($route.params.id) + 1)">
+                                <router-link class="tombstone-routerLink" :to="'/'+this.$route.params.product+'/'+Math.abs(Number($route.params.id) + 1)">
                                     <b>Следующий мемориал</b>
                                     <img src="./assets/catalog/right-arrow.svg" />
                                 </router-link> 
@@ -65,9 +65,9 @@ export default {
                                         <router-link class="prime_btn"  :to="'/'" >Перейти на главную   </router-link>
                                         <!-- <router-link  >Перейти в каталог</router-link> -->
                                 </div>
-                                    <div>
+                                    <div style="width: 100%; height: auto;">
                                         <div>
-                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/_vertical_1.png" />
+                                            <img style=" width: 200px; max-height: 350px; height: 100%;" src="./assets/models/vertical/_vertical_1.png" />
                                             <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/_vertical_2.png" />
                                             <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/_vertical_3.png" />
                                             <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/_vertical_4.png" />
