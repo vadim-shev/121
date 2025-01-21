@@ -62,7 +62,7 @@ export default {
                                     </p>
 
                                     <!-- <div></div> -->
-                                        <router-link class="prime_btn"  :to="'/'" >Перейти на главную   </router-link>
+                                        <router-link class="prime_btn"  to="/" >Перейти на главную   </router-link>
                                         <!-- <router-link  >Перейти в каталог</router-link> -->
                                 </div>
                                     <div style="width: 100%; height: auto;">
