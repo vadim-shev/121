@@ -67,12 +67,12 @@ export default {
                                 </div>
                                     <div style="width: 100%; height: auto;">
                                         <div>
-                                            <img style=" width: 200px; max-height: 350px; height: 100%;" src="./assets/models/vertical/vertical_1.png" />
-                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/_vertical_2.png" />
-                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/_vertical_3.png" />
-                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/_vertical_4.png" />
-                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/_vertical_5.png" />
-                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/_vertical_6.png" />
+                                            <img style=" width: 200px; max-height: 350px; height: 100%;" src="./assets/models/vertical/c_vertical_1.png" />
+                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_2.png" />
+                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_3.png" />
+                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_4.png" />
+                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_5.png" />
+                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_6.png" />
                                         </div>
                                     </div>
                                 
