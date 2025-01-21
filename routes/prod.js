@@ -17,83 +17,55 @@ export default {
 
                     <img :src="Imagee"/>
 
-                    <div class="prod_arrows_container"> 
-                        <router-link class="tombstone-routerLink" :to="'/catalog/'+this.$route.params.product+'/'+Math.abs(Number($route.params.id) - 1)">
-                            <img style=" left: -20px; top: 100px; " class="routerLink_img" src="./assets/catalog/left-arrow.svg" />
-                        </router-link>
-                        <router-link class="tombstone-routerLink" :to="'/catalog/'+this.$route.params.product+'/'+Math.abs(Number($route.params.id) + 1)">
-                            <img style="right: -10px; top: 5px;" class="routerLink_img" src="./assets/catalog/right-arrow.svg" />
-                        </router-link> 
-                    </div> 
+                    
 
                     <div class="prod_cover">
                         <div class="prod_cover_info">
-                                <b>{{ Name }}</b>
-                                    <br />
-                                    <span>
-                                            <b>{{ Price }}</b>
-                                    </span>
-                                    <br />
-                                    <span style="color: green;">
-                                            Есть в наличии
-                                    </span>
-                            </div>
-                            <div class="prod_cover_info">
-                                    <button    >Купить</button>
-                            </div>
+
+                            <div class="prod_arrows_container">
+                                <span>
+                                    <b>{{ Price }}</b>
+                                </span>
+                                <button>Купить</button>
+                            </div> 
+
+                           <div class="prod_arrows_container"> 
+                                <router-link class="tombstone-routerLink" :to="'/catalog/'+this.$route.params.product+'/'+Math.abs(Number($route.params.id) - 1)">
+                                    <img src="./assets/catalog/left-arrow.svg" />
+                                    <b>Предыдущий мемориал</b>
+                                </router-link>
+                                <router-link class="tombstone-routerLink" :to="'/catalog/'+this.$route.params.product+'/'+Math.abs(Number($route.params.id) + 1)">
+                                    <b>Следующий мемориал</b>
+                                    <img src="./assets/catalog/right-arrow.svg" />
+                                </router-link> 
+                            </div>  
+
+                        </div>           
+                               
                         
                             <div class="prod_cover_container"    >
-                                <span> Материал: 
-                                    <b> Гранит </b>
-                            <br />
-                                </span>
-
-                                <span> Номер: 
-                                    <b> {{ Serial }} </b>
-                            <br />
-                                </span>
-
                                 <span> Каталог: 
                                     <b> {{ Category }} </b>
-                            <br />
+                                    <br />
                                 </span>
-
                                 <span> Модель: 
                                     <b> {{ Model }} </b>
-                            <br />
-                            <br />
                                 </span>
-
-                                <span> Цветник: 
-                                    <b> 80*40*10*5 </b>
-                            <br />
+                                <span> Материал: 
+                                    <b> Гранит </b>
+                                    <br />
                                 </span>
-
-                                <span> Подставка: 
-                                    <b> 40*20*15 </b>
-                            <br />
+                                <span> Наличие: 
+                                    <b style="color: green;"> Есть </b>
+                                    <br />
                                 </span>
-
-                                <span> Стела: 
-                                    <b> 60*40*5 </b>
-                            <br />
-                            <br />
-                                </span>
-
-                                <span class="prod_cover_description-t"> 
-                                    Описание
-                            <br />
-                                </span>
-
-                                <p class="prod_cover_description">
-                                   {{ Description }}
-                                </p>
+                            
                                 
-                                <p style="width: 90vw;"><hr style="margin: 60px 0px 0px 0px;" /></p>
+                                
 
                             <div class="prod_buttom_seeAll ">
-                                
-                                <router-link :to="'/catalog'" >Перейти в каталог</router-link>
+                                <router-link class="prime_btn"  style="height: auto; width: auto; font-size: 1.5rem; color: var(--color-1); background: rgba(17, 33, 45, .8); padding: 10px 20px; z-index: 200;  " :to="'/catalog'" >Перейти к каталогу</router-link>
+                                <!-- <router-link  >Перейти в каталог</router-link> -->
                             </div>
                         </div>
                     </div>
