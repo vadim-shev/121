@@ -27,35 +27,11 @@ export default {
 		            	<div style="background: rgba(0,0,0,0.95); width: 100vw; height: 75vh; z-index: 100; display: flex; flex-direction: column; justify-content: center; align-content: center; align-items: flex-end;">
 		            		<h1 style="font-size: 4.5rem; width: 100vw; height: 25vh; text-align: left;">granitblizkim</h1>
 		            		<h2  style="font-size: 2rem; width: auto; height: 25vh; margin: 0 5px 0 5px; text-align: left;">Обслуживание с достоинством и уважением</h2>
-                                    <button class="prime_btn"  style="height: auto; width: auto; font-size: 2.5rem; color: black; background: rgba(255, 255, 255, .5); padding: 10px 20px; z-index: 200; border-radius: 0px;  " @click="scrollAction('catalog')" >Перейти к каталогу</button>
+                                    <button class="prime_btn"  style="height: auto; width: auto;  font-size: 2.5rem; color: black; background: rgba(255, 255, 255, .5); padding: 10px 20px; z-index: 200; border-radius: 0px;  " @click="scrollAction('catalog')" >Перейти к каталогу</button>
 		            	</div> 
 		            </div>
 		        </div> 
-		            <!-- <div class="menuItem " id='whatwedo' style="display: none;">
-		                <section id="highlight" class='vt-container' >
-		                    <card ID_img="Memorial_img" ID_indent="Memorial_i"	name='Модели памятников' 
-		                    			src='./assets/icons/memorial_home.png'
-		                    			concept='Поделимся какими бывают 
-		                    					мемориалы/памятники, для чего они служат и весь спектр наших услуг, которые мы готовы вам предоставить по работе с ними.' 
-		                    			value='Перейти на страницу' 
-		                    			pathTo="/catalog"
-		                    ></card>
-		                    <card ID_img="Services_img" ID_indent="Services_i"	name='Наши услуги' 
-		                    			src='./assets/icons/services.png' 
-		                    			concept='Ознакомтесь со всеми видами памятников, с 
-		                    					которыми мы работаем и дальнейшими необходимыми услугами, которые мы предоставляем ' 
-		                    			value='Перейти на страницу' 
-		                    			pathTo="/care"
-		                    ></card>
-		                    <card ID_img="Count_img" ID_indent="Count_i"	name='Посчитать стоимость изделия' 
-		                    			src='./assets/icons/count.png'
-		                    			concept='Расщитайте итоговую стоимость заказа 
-		                    				самостоятельно' 
-		                    			value='Перейти на страницу' 
-		                    			pathTo="/countPrice"
-		                    ></card>
-		                </section>
-		            </div> -->
+		           
 		            <div style="" class="menuItem" id="catalog">
 	                    <ul class="category_container "   >
 	                        <card></card>
