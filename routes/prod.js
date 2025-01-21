@@ -14,9 +14,10 @@ export default {
             </header>
             <main  class="main-prod"  >
                 <div style="background-color: white; height: 100%;  width: 100vw; height: auto; z-index: 1000;" class="prod_container menuItem"  id="prod">
+                    <!-- <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%;"> -->
+                        <img :src="Imagee" />
 
-                    <img :src="Imagee"/>
-
+                    <!-- </div> -->
                     
 
                     <div class="prod_cover">
@@ -44,8 +45,9 @@ export default {
                                 <div style="display: flex; width: 100%; height: auto; padding: 3rem 1rem;  
     flex-direction: column; 
     justify-content: space-between; ">
-
-                                    <p> Каталог: 
+                                <div style="display: flex; flex-direction: row; justify-content: space-between; width: 85vw;">
+                        <div style="display: flex; flex-direction: column; justify-content: space-around; align-items: flex-start;">
+                            <p> Каталог: 
                                         <b> {{ Category }} </b>
                                         <br />
                                     </p>
@@ -60,12 +62,17 @@ export default {
                                         <b style="color: green;"> Есть </b>
                                         <br />
                                     </p>
+                                        <router-link class="prime_btn"  :to="'/'" >Перейти на главную   </router-link>
+                        </div>
+                                    <img style=" width: 40%; height: 35%; " :src="Description" style="float: left;" />
+                                </div>
+                        
+                                    
 
                                     <!-- <div></div> -->
-                                        <router-link class="prime_btn"  :to="'/'" >Перейти на главную   </router-link>
                                         <!-- <router-link  >Перейти в каталог</router-link> -->
                                 </div>
-                                    <div style="width: 100%; height: auto;">
+                                    <!-- <div style="width: 100%; height: auto;">
                                         <div>
                                             <img style=" width: 200px; max-height: 350px; height: 100%;" src="./assets/models/vertical/c_vertical_1.png" />
                                             <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_2.png" />
@@ -73,8 +80,12 @@ export default {
                                             <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_4.png" />
                                             <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_5.png" />
                                             <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_6.png" />
+                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_7.png" />
+                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_8.png" />
+                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_9.png" />
+                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_10.png" />
                                         </div>
-                                    </div>
+                                    </div> -->
                                 
 
                                 
