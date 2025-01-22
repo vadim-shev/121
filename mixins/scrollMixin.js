@@ -18,7 +18,7 @@ export default {
         }
 	},
 	methods: {
-        async fetchProduct(_dataLink, _storePar) {
+    async fetchProduct(_dataLink, _storePar) {
             const id = Number(this.$route.params.id); // Получаем ID из маршрута
             this.ID = id;
             
@@ -40,8 +40,32 @@ export default {
                 } else if( this.$route.href == `#/${ _storePar }/${ data.length - data.length }` ) {
                     this.$router.push({ path: `/${ _storePar }/${ data.length }` })
                 }
-
+                     if (0 <= this.$route.params.id && this.$route.params.id <= 3 ) {
+                this.selectedMemorial = this.memorials[0];       
+        } else if (this.$route.params.id > 3 ) {
+                this.selectedMemorial = this.memorials[1];
+                // this.mem1 = this.memorials[1];
+        }  else if (his.$route.params.id > 5 ) {
+                this.selectedMemorial = this.memorials[2];
+        }else if (his.$route.params.id > 7 ) {
+                this.selectedMemorial = this.memorials[3];
+        }else if (his.$route.params.id > 9 ) {
+                this.selectedMemorial = this.memorials[4];
+        }else if (his.$route.params.id >= 10 ) {
+                this.selectedMemorial = this.memorials[5];
+        } else {
+            console.error("Memorials data is not available.");        }
+           
+                
+},
+        chooose() {
+            
         },
+        selectMemorial(memorial, index) {
+      // Обновляем выбранный раздел в кнопке
+      this.selectedMemorial = memorial;
+      this.$router.push({ path: `/${this.$route.params.product}/${index+1}` })
+    },
         moveS() {
             document.querySelectorAll(".materials_object").forEach((items) => {
                 this.Maters.push(items)
@@ -199,6 +223,7 @@ document.getElementById('Services_i').classList.remove('shadow_0')
         this.materialSrc[0] = "./assets/materials/2.png"
         this.materialSrc[1] = "./assets/materials/1.png"
         this.materialSrc[2] = "./assets/materials/3.jpg"
+
     }
         
 },
@@ -206,5 +231,6 @@ beforeDestroy() {
         // console.log(this.nextTodoId)
     // const s = 
     window.removeEventListener("scroll", this.handleScroll);
+
 }
 }

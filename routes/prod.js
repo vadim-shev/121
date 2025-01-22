@@ -39,6 +39,28 @@ export default {
                                     <b>Следующий мемориал</b>
                                     <img src="./assets/catalog/right-arrow.svg" />
                                 </router-link> 
+                            </div> 
+
+                            <div > 
+                                 <div class="dropdown">
+    
+      
+        <b>Текущий раздел: {{ selectedMemorial }}</b>
+    
+    
+    <div class="dropdown-content">
+      <button 
+        v-for="(memorial, index) in memorials" 
+        :key="index" 
+        
+        class="dropdown-item"
+        @click="selectMemorial(memorial, index)"
+      >
+        {{ memorial }}
+
+      </button>
+    </div>
+  </div>
                             </div>  
 
                             <div class="prod_cover_container"    >
@@ -64,7 +86,8 @@ export default {
                                     </p>
                                         <router-link class="prime_btn"  :to="'/'" >Перейти на главную   </router-link>
                         </div>
-                                    <img style=" width: 40%; height: 35%; " :src="Description" style="float: left;" />
+                                    <img :src="Description" style="width: 40%; height: 35%; float: left;" />
+
                                 </div>
                         
                                     
@@ -72,21 +95,13 @@ export default {
                                     <!-- <div></div> -->
                                         <!-- <router-link  >Перейти в каталог</router-link> -->
                                 </div>
-                                    <!-- <div style="width: 100%; height: auto;">
-                                        <div>
-                                            <img style=" width: 200px; max-height: 350px; height: 100%;" src="./assets/models/vertical/c_vertical_1.png" />
-                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_2.png" />
-                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_3.png" />
-                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_4.png" />
-                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_5.png" />
-                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_6.png" />
-                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_7.png" />
-                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_8.png" />
-                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_9.png" />
-                                            <img style=" width: 200px; max-height: 350px;" src="./assets/models/vertical/c_vertical_10.png" />
+                                    <div style="width: 100%; height: auto;">
+                                        <div style="display: flex; flex-direction: row; flex-wrap: wrap; width: 100vw;">
+                                            <img style=" width: 150px; max-height: 350px; height: 100%;" src="./assets/models/vertical/form/11.png" />
+                                            
                                         </div>
-                                    </div> -->
-                                
+                                    </div>
+                               
 
                                 
                             </div>
@@ -113,7 +128,9 @@ export default {
             Category: '',
             Model: '',
             Serial: '',
-            Description: ''
+            Description: '',
+            memorials: ['формы', 'резка сердца', 'резка крест', 'резка розы', 'резка деревьев', 'резка винограда'],
+            selectedMemorial: 'Выберите раздел'
         };
     },
     methods: {
@@ -131,7 +148,6 @@ export default {
      mounted() {
         // document.querySelector('.main-prod').classList.add('nested-enter-from') 
         this.fetchProduct(`${'./data/'+this.$route.params.product}.json`, `${this.$route.params.product}`)
-        console.log(this.$route.params.product)
         // if (true) {}
         // this.fetchProduct('./data/vertical.json', 'vertical')
         // this.fetchProduct('./data/cheep.json', 'cheep')
@@ -140,7 +156,7 @@ export default {
         '$route.params.id': function () {
      
         this.fetchProduct(`${'./data/'+this.$route.params.product}.json`, `${this.$route.params.product}`)
-
+        
             // this.fetchProduct('./data/vertical.json', 'vertical')
             // this.fetchProduct('./data/cheep.json', 'cheep')
         },
