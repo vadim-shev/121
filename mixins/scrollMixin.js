@@ -32,7 +32,7 @@ export default {
                     this.Price = product.price;
                     this.Category = product.category;
                     this.Serial = product.serial
-                    this.Description = product.description
+                    // this.Ds = product.description
                     this.Model =  `${product.serial}-${formattedId}`
 
                 } else if( this.$route.href == `#/${ _storePar }/${ data.length + 1 }` ) {
@@ -40,19 +40,32 @@ export default {
                 } else if( this.$route.href == `#/${ _storePar }/${ data.length - data.length }` ) {
                     this.$router.push({ path: `/${ _storePar }/${ data.length }` })
                 }
-                     if (0 <= this.$route.params.id && this.$route.params.id <= 3 ) {
+            
+                     if (0 <= this.$route.params.id && this.$route.params.id <= 5 ) {
                 this.selectedMemorial = this.memorials[0];       
-        } else if (this.$route.params.id > 3 ) {
-                this.selectedMemorial = this.memorials[1];
+                this.selectedIndex = 0;
+      console.log(this.selectedIndex)
+        } else if (this.$route.params.id > 5 && this.$route.params.id <= 15) {
+                this.selectedMemorial = this.memorials[1];                
+                this.selectedIndex = 1;
+
                 // this.mem1 = this.memorials[1];
-        }  else if (his.$route.params.id > 5 ) {
+        }  else if (this.$route.params.id > 15 && this.$route.params.id <= 30) {
                 this.selectedMemorial = this.memorials[2];
-        }else if (his.$route.params.id > 7 ) {
+                this.selectedIndex = 2;
+
+        }else if (this.$route.params.id > 30 && this.$route.params.id <= 70) {
                 this.selectedMemorial = this.memorials[3];
-        }else if (his.$route.params.id > 9 ) {
+                this.selectedIndex = 3;
+
+        }else if (this.$route.params.id > 70 && this.$route.params.id <= 78) {
                 this.selectedMemorial = this.memorials[4];
-        }else if (his.$route.params.id >= 10 ) {
+                this.selectedIndex = 4;
+
+        }else if (this.$route.params.id >= 78 && this.$route.params.id <= 87) {
                 this.selectedMemorial = this.memorials[5];
+                this.selectedIndex = 5;
+
         } else {
             console.error("Memorials data is not available.");        }
            
@@ -61,10 +74,29 @@ export default {
         chooose() {
             
         },
-        selectMemorial(memorial, index) {
+        selectMemorial(memorial, index, target) {
+            this.isActive = true
       // Обновляем выбранный раздел в кнопке
       this.selectedMemorial = memorial;
-      this.$router.push({ path: `/${this.$route.params.product}/${index+1}` })
+
+      this.selectedIndex = index;
+      console.log(this.selectedIndex)
+      if(memorial == this.memorials[0]) {
+        this.$router.push({ path: `/${this.$route.params.product}/1` })
+
+      } else if(memorial == this.memorials[1]) {
+        this.$router.push({ path: `/${this.$route.params.product}/6` })
+      } else if(memorial == this.memorials[2]) {
+        this.$router.push({ path: `/${this.$route.params.product}/16` })
+      } else if(memorial == this.memorials[3]) {
+        this.$router.push({ path: `/${this.$route.params.product}/30` })
+      } else if(memorial == this.memorials[4]) {
+        this.$router.push({ path: `/${this.$route.params.product}/71` })
+      } else if(memorial == this.memorials[5]) {
+        this.$router.push({ path: `/${this.$route.params.product}/79` })
+      } 
+      
+
     },
         moveS() {
             document.querySelectorAll(".materials_object").forEach((items) => {
