@@ -1,5 +1,9 @@
 
+import ModalBtn from './../components/modal.js'
 export default {
+    components: {
+        ModalBtn
+    },
     template: `
         <div class="care_container">
                     <section class="care_section">
@@ -37,13 +41,48 @@ export default {
                                 </p>
                                 
                             </div>
-                            <button class="btn_order">Заказать памятник</button>
-                        </div>
+                            <button class="btn_order" @click="openModal">Заказать памятник</button>
+
+                                <!-- Modal -->
+                                <div v-if="isModalOpened" class="modal-mask">
+                                    <!-- <modal-btn ></modal-btn> -->
+                                    <div class="modal-wrapper" >
+                                        <div class="modal-container"  style="height: 50vh; display: flex; flex-direction: column; justify-content: space-around;">
+                                            <div class="modal-header" style="">
+                                                <slot name="header"> 
+                                                    Заказать памятник
+                                                </slot>
+                                            </div>
+                                            <div class="modal-body" style="">
+                                                <slot name="content">
+                                                    
+                                                    <div  style="display:flex; flex-direction: column; width: auto; height: 30px;">
+                                                        <label>Имя</label>
+                                                        <input style="background: rgba(0, 0, 0, .2); padding: 8px 10px;" type="" name="asd">
+
+                                                    </div>
+                                                </slot>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <slot name="footer" style="">
+                                                    
+                                                    <div  style="display:flex; flex-direction: column; width: auto; height: 30px;">
+                                                        <label>Телефон</label>
+                                                        <input style="background: rgba(0, 0, 0, .2); padding: 8px 10px;"  type="" name="asd">
+
+                                                    </div>
+                                                </slot>
+                                            </div>
+                                                                    <button class="btn_order" @click="closeModal">Заказать sa</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
                     </section>
                     <section  class="care_section">
-                        <h2 class="heading_1">
+                        <h1 class="heading_1">
                             Уход и обслуживание могил
-                        </h2>
+                        </h1>
                         <div  class="care_list_container">
                             <div>
                                 <ul >
@@ -55,9 +94,24 @@ export default {
                                     <li>Перекладка и/или обновление могильного щебня</li>
                                 </ul>
                             </div>
-                            <button class="btn_order">Заказать уход</button>
+                            <button class="btn_order" @click="openModal">Заказать уход</button>
                         </div>
                     </section>
                 </div>
-    `
+    `, 
+    data() {
+        return {
+
+            isModalOpened: false, // Add this line
+        }
+    },
+    methods: {
+
+        openModal() {
+            this.isModalOpened = true; // Open the modal
+        },
+        closeModal() {
+            this.isModalOpened = false; // Close the modal
+        },
+    }
 }

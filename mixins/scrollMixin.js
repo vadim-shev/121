@@ -80,12 +80,6 @@ export default {
                 console.error("error")
             }
         },
-        openModal() {
-            isModalOpened.value = true
-        },
-        closeModal() {
-            isModalOpened.value = false
-        },
         selectMemorial(memorial, index, target) {
             this.isActive = true
             this.selectedMemorial = memorial
