@@ -1,68 +1,183 @@
 [
     {
         "id": 1,
-        "name": "Горизонтальный", 
-        "serial": "HZ",
-        "image": "./assets/models/horizontal/horizontal_1.png", 
-        "price": "4000.00 грн",
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
         "madeOf": "Гранит",
-        "model": "Вертикальный",
-        "flowers": "80*40*10*5",
-        "seat": "40*20*15",
-        "stela": "60*40*5",
-        "description": "Cтандартные надгробные стелы, тумбы и цветники, изготовленные по типовому образцу, поэтому на их производство расходуется сравнительно мало времени и трудозатрат они подойдут как для мужчин так и для женщин. Кроме того, они быстро и легко устанавливаются. Стоимость указана за комплект."
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h1.png", 
+        "description": "./assets/models/horizontal/h1t.jpeg"
     },
     {
         "id": 2,
-        "name": "Горизонтальный", 
-        "serial": "HZ",
-        "image": "./assets/models/horizontal/horizontal_2.png", 
-        "price": "4000.00 грн",
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
         "madeOf": "Гранит",
-        "model": "Вертикальный",
-        "flowers": "80*40*10*5",
-        "seat": "40*20*15",
-        "stela": "60*40*5",
-        "description": "Cтандартные надгробные стелы, тумбы и цветники, изготовленные по типовому образцу, поэтому на их производство расходуется сравнительно мало времени и трудозатрат они подойдут как для мужчин так и для женщин. Кроме того, они быстро и легко устанавливаются. Стоимость указана за комплект."
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h2.png", 
+        "description": "./assets/models/horizontal/h2t.jpeg"
     },
     {
         "id": 3,
-        "name": "Горизонтальный", 
-        "serial": "HZ",
-        "image": "./assets/models/horizontal/horizontal_3.png", 
-        "price": "4000.00 грн",
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
         "madeOf": "Гранит",
-        "model": "Вертикальный",
-        "flowers": "80*40*10*5",
-        "seat": "40*20*15",
-        "stela": "60*40*5",
-        "description": "Cтандартные надгробные стелы, тумбы и цветники, изготовленные по типовому образцу, поэтому на их производство расходуется сравнительно мало времени и трудозатрат они подойдут как для мужчин так и для женщин. Кроме того, они быстро и легко устанавливаются. Стоимость указана за комплект."
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h3.png", 
+        "description": "./assets/models/horizontal/h3t.jpeg"
     },
     {
         "id": 4,
-        "name": "Горизонтальный", 
-        "serial": "HZ",
-        "image": "./assets/models/horizontal/horizontal_4.png", 
-        "price": "4000.00 грн",
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
         "madeOf": "Гранит",
-        "model": "Вертикальный",
-        "flowers": "80*40*10*5",
-        "seat": "40*20*15",
-        "stela": "60*40*5",
-        "description": "Cтандартные надгробные стелы, тумбы и цветники, изготовленные по типовому образцу, поэтому на их производство расходуется сравнительно мало времени и трудозатрат они подойдут как для мужчин так и для женщин. Кроме того, они быстро и легко устанавливаются. Стоимость указана за комплект."
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h4.png", 
+        "description": "./assets/models/horizontal/h4t.jpeg"
     },
     {
         "id": 5,
-        "name": "Горизонтальный", 
-        "serial": "HZ",
-        "image": "./assets/models/horizontal/horizontal_5.png", 
-        "price": "4000.00 грн",
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
         "madeOf": "Гранит",
-        "model": "Вертикальный",
-        "flowers": "80*40*10*5",
-        "seat": "40*20*15",
-        "stela": "60*40*5",
-        "description": "Cтандартные надгробные стелы, тумбы и цветники, изготовленные по типовому образцу, поэтому на их производство расходуется сравнительно мало времени и трудозатрат они подойдут как для мужчин так и для женщин. Кроме того, они быстро и легко устанавливаются. Стоимость указана за комплект."
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h5.png", 
+        "description": "./assets/models/horizontal/h5t.jpeg"
+    },
+    {
+        "id": 6,
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
+        "madeOf": "Гранит",
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h6.png", 
+        "description": "./assets/models/horizontal/h6t.jpeg"
+    },
+    {
+        "id": 7,
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
+        "madeOf": "Гранит",
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h7.png", 
+        "description": "./assets/models/horizontal/h7t.jpeg"
+    },
+    {
+        "id": 8,
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
+        "madeOf": "Гранит",
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h8.png", 
+        "description": "./assets/models/horizontal/h8t.jpeg"
+    },
+    {
+        "id": 9,
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
+        "madeOf": "Гранит",
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h9.png", 
+        "description": "./assets/models/horizontal/h9t.jpeg"
+    },
+    {
+        "id": 10,
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
+        "madeOf": "Гранит",
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h10.png", 
+        "description": "./assets/models/horizontal/h10t.jpeg"
+    },
+    {
+        "id": 11,
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
+        "madeOf": "Гранит",
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h11.png", 
+        "description": "./assets/models/horizontal/h11t.jpeg"
+    },
+    {
+        "id": 12,
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
+        "madeOf": "Гранит",
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h12.png", 
+        "description": "./assets/models/horizontal/h12t.jpeg"
+    },
+    {
+        "id": 13,
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
+        "madeOf": "Гранит",
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h13.png", 
+        "description": "./assets/models/horizontal/h13t.jpeg"
+    },
+    {
+        "id": 14,
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
+        "madeOf": "Гранит",
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h14.png", 
+        "description": "./assets/models/horizontal/h14t.jpeg"
+    },
+    {
+        "id": 15,
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
+        "madeOf": "Гранит",
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h15.png", 
+        "description": "./assets/models/horizontal/h15t.jpeg"
+    },
+    {
+        "id": 16,
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
+        "madeOf": "Гранит",
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h16.png", 
+        "description": "./assets/models/horizontal/h16t.jpeg"
+    },
+    {
+        "id": 17,
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
+        "madeOf": "Гранит",
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h17.png", 
+        "description": "./assets/models/horizontal/h17t.jpeg"
+    },
+    {
+        "id": 18,
+        "name": "Резка", 
+        "serial": "h",
+        "price": "1",
+        "madeOf": "Гранит",
+        "category": "Горизонтальный",
+        "image": "./assets/models/horizontal/h18.png", 
+        "description": "./assets/models/horizontal/h18t.jpeg"
     }
-    
+
 ]

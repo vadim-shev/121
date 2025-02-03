@@ -32,8 +32,9 @@ export default {
                     this.Price = product.price;
                     this.Category = product.category;
                     this.Serial = product.serial
-                    // this.Ds = product.description
-                    this.Model =  `${product.serial}-${formattedId}`
+                    this.Ds = product.description
+                    this.Model = `${product.serial}-${id.toString().padStart(3, '0')}`;
+        // console.log(this.Category)
 
                 } else if( this.$route.href == `#/${ _storePar }/${ data.length + 1 }` ) {
                     this.$router.push({ path: `/${ _storePar }/${ data.length - data.length + 1 }` })

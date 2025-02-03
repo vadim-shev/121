@@ -14,10 +14,11 @@ export default {
             </header>
             <main  class="main-prod"  >
                 <div style="background-color: white; height: 100%;  width: 100vw; height: auto; z-index: 1000;" class="prod_container menuItem"  id="prod">
-                    <!-- <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%;"> -->
-                        <img style="width: 150px; height: 300px; padding: 40px 25px;" :src="Imagee" />
+                    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%;">
+                       <!-- <img id="Imagee" style="padding: 40px 25px;" /> -->
 
-                    <!-- </div> -->
+ <img id="Imagee" :src="Imagee" style="margin: 40px 25px; padding: 40px 25px; " />
+                    </div>
                     
 
                     <div class="prod_cover">
@@ -31,14 +32,14 @@ export default {
                             </div> 
 
                            <div class="prod_arrows_container"> 
-                                <router-link class="tombstone-routerLink" :to="'/'+this.$route.params.product+'/'+Math.abs(Number($route.params.id) - 1)">
-                                    <img src="./assets/catalog/left-arrow.svg" />
-                                    <b>Предыдущий мемориал</b>
-                                </router-link>
-                                <router-link class="tombstone-routerLink" :to="'/'+this.$route.params.product+'/'+Math.abs(Number($route.params.id) + 1)">
-                                    <b>Следующий мемориал</b>
-                                    <img src="./assets/catalog/right-arrow.svg" />
-                                </router-link> 
+                               <router-link class="tombstone-routerLink" :to="'/'+$route.params.product+'/'+Math.abs(Number($route.params.id) - 1)">
+    <img src="./assets/catalog/left-arrow.svg" />
+    <b>Предыдущий мемориал</b>
+</router-link>
+<router-link class="tombstone-routerLink" :to="'/'+$route.params.product+'/'+Math.abs(Number($route.params.id) + 1)">
+    <b>Следующий мемориал</b>
+    <img src="./assets/catalog/right-arrow.svg" />
+</router-link>
                             </div> 
 
                             <div > 
@@ -86,7 +87,7 @@ export default {
                                     </p>
                                         <router-link class="prime_btn"  :to="'/'" >Перейти на главную   </router-link>
                         </div>
-                                    <img :src="Description" style="width: 40%; height: 35%; float: left;" />
+                                    <!-- <img :src="Imagee"  /> -->
 
                                 </div>
                         
@@ -97,7 +98,8 @@ export default {
                                 </div>
                                     <div style="width: 100%; height: auto;">
                                         <div style="display: flex; flex-direction: row; flex-wrap: wrap; width: 100vw;">
-                                            <img style=" width: 150px; max-height: 350px; height: 100%;" src="./assets/models/vertical/form/f1.png" />
+                                            <img  id="Imagee1" :src="Ds" style="margin: 10px 25px; padding: 0px 25px; " />
+
                                             
                                         </div>
                                     </div>
@@ -130,7 +132,7 @@ export default {
             Category: '',
             Model: '',
             Serial: '',
-            Description: '',
+            Ds: '',
             memorials: ['формы', 'резка сердца', 'резка крест', 'резка розы', 'резка деревьев', 'резка винограда'],
             selectedMemorial: 'Выберите раздел'
         };
@@ -150,21 +152,46 @@ export default {
       this.isActive = !this.isActive;
     }
     },
-     mounted() {
-        // document.querySelector('.main-prod').classList.add('nested-enter-from') 
-        this.fetchProduct(`${'./data/'+this.$route.params.product}.json`, `${this.$route.params.product}`)
-        // if (true) {}
-        // this.fetchProduct('./data/vertical.json', 'vertical')
-        // this.fetchProduct('./data/cheep.json', 'cheep')
-    },
-    watch: {
-        '$route.params.id': function () {
-     
-        this.fetchProduct(`${'./data/'+this.$route.params.product}.json`, `${this.$route.params.product}`)
+    async mounted() {
+        // Fetch product data
+        await this.fetchProduct(`${'./data/' + this.$route.params.product}.json`, `${this.$route.params.product}`);
+        // console.log(this.product.image)
+        // Check if the product and image are properly loaded
+        // let imgProd = document.getElementById('Imagee');
+    // if (imgProd) {
+    //     // imgProd.src = this.Imagee;
+    //     console.log(this.Imagee)
+    // } else {
+    //     console.error('Imagee element not found!');
+    // }
+            console.log(this.Ds);  // Log the image to ensure it's available
+            
         
-            // this.fetchProduct('./data/vertical.json', 'vertical')
-            // this.fetchProduct('./data/cheep.json', 'cheep')
-        },
+        // Handle specific product sizes based on route params
+        let imgProd = document.getElementById('Imagee');
+            // document.getElementById('Imagee').src = this.Imagee
+            // document.getElementById('Imagee1').src = this.Ds
+          let imgProdH = document.getElementById('Imagee').style.height
+        let imgProdW = document.getElementById('Imagee').style.width
+        if (this.$route.params.product == "vertical") {
+            document.getElementById('Imagee').style.height = '300px';
+            document.getElementById('Imagee').style.width = '150px';
+            document.getElementById('Imagee1').style.height = '300px';
+            document.getElementById('Imagee1').style.width = '250px';
+        } else if (this.$route.params.product == "horizontal") {
+            document.getElementById('Imagee').style.height = '250px';
+            document.getElementById('Imagee').style.width = '300px';
+            document.getElementById('Imagee1').style.height = '220px';
+            document.getElementById('Imagee1').style.width = '300px';
+            console.log(this.Imagee);  // Log the image to ensure it's available
+        }
+}
+,
+    watch: {
+        '$route.params.id': function(newId, oldId) {
+    // Fetch the new product data based on the new ID
+    this.fetchProduct(`${'./data/' + this.$route.params.product}.json`, `${this.$route.params.product}`);
+  }
     },
     beforeRouteEnter(to, from, next) {
         window.scrollTo(0, 0)
@@ -181,5 +208,12 @@ export default {
     
 
     
+  },
+  beforeRouteUpdate(to, from, next) {
+  // Only fetch the new product data if the `id` changes
+  if (to.params.id !== from.params.id) {
+    this.fetchProduct(`${'./data/' + to.params.product}.json`, `${to.params.product}`);
   }
+  next();
+}
 };
