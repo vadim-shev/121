@@ -18,112 +18,116 @@ export default {
         }
 	},
 	methods: {
-    async fetchProduct(_dataLink, _storePar) {
-            const id = Number(this.$route.params.id); // Получаем ID из маршрута
-            this.ID = id;
-            
-                const data = await this.fetchAPI(_dataLink);
-                const product = data?.[id - 1]; // Проверяем наличие данных для текущего ID
-                const formattedId = String(this.$route.params.id).padStart(3, '0'); // Преобразуем id в формат с ведущими нулями
-                // const generatedNumber = ; // Генерируем номер
-                if (product) {
-                    this.Name = product.name;
-                    this.Imagee = product.image;
-                    this.Price = product.price;
-                    this.Category = product.category;
-                    this.Serial = product.serial
-                    this.Ds = product.description
-                    this.Model = `${product.serial}-${id.toString().padStart(3, '0')}`;
-        // console.log(this.Category)
-
-                } else if( this.$route.href == `#/${ _storePar }/${ data.length + 1 }` ) {
-                    this.$router.push({ path: `/${ _storePar }/${ data.length - data.length + 1 }` })
-                } else if( this.$route.href == `#/${ _storePar }/${ data.length - data.length }` ) {
-                    this.$router.push({ path: `/${ _storePar }/${ data.length }` })
-                }
-            
-                     if (0 <= this.$route.params.id && this.$route.params.id <= 5 ) {
-                this.selectedMemorial = this.memorials[0];       
-                this.selectedIndex = 0;
-      console.log(this.selectedIndex)
-        } else if (this.$route.params.id > 5 && this.$route.params.id <= 15) {
-                this.selectedMemorial = this.memorials[1];                
-                this.selectedIndex = 1;
-
-                // this.mem1 = this.memorials[1];
-        }  else if (this.$route.params.id > 15 && this.$route.params.id <= 30) {
-                this.selectedMemorial = this.memorials[2];
-                this.selectedIndex = 2;
-
-        }else if (this.$route.params.id > 30 && this.$route.params.id <= 70) {
-                this.selectedMemorial = this.memorials[3];
-                this.selectedIndex = 3;
-
-        }else if (this.$route.params.id > 70 && this.$route.params.id <= 78) {
-                this.selectedMemorial = this.memorials[4];
-                this.selectedIndex = 4;
-
-        }else if (this.$route.params.id >= 78 && this.$route.params.id <= 87) {
-                this.selectedMemorial = this.memorials[5];
-                this.selectedIndex = 5;
-
-        } else {
-            console.error("Memorials data is not available.");        }
-           
+        async fetchProduct(_dataLink, _storePar) {
+            const id = Number(this.$route.params.id)
+            this.ID = id
                 
-},
-        chooose() {
+            const data = await this.fetchAPI(_dataLink)
+            const product = data?.[id - 1]
+            const formattedId = String(this.$route.params.id).padStart(3, '0')
+
+            if (product) {
+                this.Name = product.name
+                this.Imagee = product.image
+                this.Price = product.price
+                this.Category = product.category
+                this.Serial = product.serial
+                this.Ds = product.description
+                this.Model = `${product.serial}-${id.toString().padStart(3, '0')}`
+
+            } else if( this.$route.href == `#/${ _storePar }/${ data.length + 1 }` ) {
+                this.$router.push({ path: `/${ _storePar }/${ data.length - data.length + 1 }` })
+            } else if( this.$route.href == `#/${ _storePar }/${ data.length - data.length }` ) {
+                this.$router.push({ path: `/${ _storePar }/${ data.length }` })
+            }
+
+            if (this.$route.params.product == "vertical") {
+                if (0 <= this.$route.params.id && this.$route.params.id <= 5 ) {
+                    this.selectedMemorial = this.memorials[0];       
+                    this.selectedIndex = 0;
+                } else if (this.$route.params.id > 5 && this.$route.params.id <= 15) {
+                    this.selectedMemorial = this.memorials[1];                
+                    this.selectedIndex = 1;
+                }  else if (this.$route.params.id > 15 && this.$route.params.id <= 30) {
+                    this.selectedMemorial = this.memorials[2];
+                    this.selectedIndex = 2;
+                }else if (this.$route.params.id > 30 && this.$route.params.id <= 70) {
+                    this.selectedMemorial = this.memorials[3];
+                    this.selectedIndex = 3;
+                }else if (this.$route.params.id > 70 && this.$route.params.id <= 78) {
+                    this.selectedMemorial = this.memorials[4];
+                    this.selectedIndex = 4;
+                }else if (this.$route.params.id >= 78 && this.$route.params.id <= 87) {
+                    this.selectedMemorial = this.memorials[5];
+                    this.selectedIndex = 5;
+                } 
+            } else if (this.$route.params.product == "horizontal") {
+                this.memorials = ['двойники']
+                this.selectedIndex = 0;
             
+                this.selectedMemorial = this.memorials[0] 
+            } else if (this.$route.params.product == "complex") {
+                this.memorials = ['комплекс']
+                this.selectedIndex = 0;
+            
+                this.selectedMemorial = this.memorials[0] 
+            } else if (this.$route.params.product == "plates") {
+                this.memorials = ['плиты']
+                this.selectedIndex = 0;
+            
+                this.selectedMemorial = this.memorials[0] 
+            } else {
+                console.error("error")
+            }
+        },
+        openModal() {
+            isModalOpened.value = true
+        },
+        closeModal() {
+            isModalOpened.value = false
         },
         selectMemorial(memorial, index, target) {
             this.isActive = true
-      // Обновляем выбранный раздел в кнопке
-      this.selectedMemorial = memorial;
+            this.selectedMemorial = memorial
 
-      this.selectedIndex = index;
-      console.log(this.selectedIndex)
-      if(memorial == this.memorials[0]) {
-        this.$router.push({ path: `/${this.$route.params.product}/1` })
+            this.selectedIndex = index
 
-      } else if(memorial == this.memorials[1]) {
-        this.$router.push({ path: `/${this.$route.params.product}/6` })
-      } else if(memorial == this.memorials[2]) {
-        this.$router.push({ path: `/${this.$route.params.product}/16` })
-      } else if(memorial == this.memorials[3]) {
-        this.$router.push({ path: `/${this.$route.params.product}/30` })
-      } else if(memorial == this.memorials[4]) {
-        this.$router.push({ path: `/${this.$route.params.product}/71` })
-      } else if(memorial == this.memorials[5]) {
-        this.$router.push({ path: `/${this.$route.params.product}/79` })
-      } 
-      
-
-    },
+            if(memorial == this.memorials[0]) {
+              this.$router.push({ path: `/${this.$route.params.product}/1` })
+            } else if(memorial == this.memorials[1]) {
+              this.$router.push({ path: `/${this.$route.params.product}/6` })
+            } else if(memorial == this.memorials[2]) {
+              this.$router.push({ path: `/${this.$route.params.product}/16` })
+            } else if(memorial == this.memorials[3]) {
+              this.$router.push({ path: `/${this.$route.params.product}/30` })
+            } else if(memorial == this.memorials[4]) {
+              this.$router.push({ path: `/${this.$route.params.product}/71` })
+            } else if(memorial == this.memorials[5]) {
+              this.$router.push({ path: `/${this.$route.params.product}/79` })
+            } 
+        },
         moveS() {
             document.querySelectorAll(".materials_object").forEach((items) => {
                 this.Maters.push(items)
             })
         },
         controlMaterialObject(i, options) {
-       
-          const materialObject = document.querySelectorAll(".materials_object");
-          if (!materialObject[i]) {
-            console.error("materials_object not found!");
-            return;
-          }
+            const materialObject = document.querySelectorAll(".materials_object")
+            
+            if (!materialObject[i]) {
+                console.error("materials_object not found!")
+                return;
+            }
 
-          // Apply transformations dynamically
-          if (options.scale) this.materialScale = options.scale;
-          if (options.rotateY) this.materialRotateY = options.rotateY;
-          if (options.rotateX) this.materialRotateX = options.rotateX;
-          if (options.translateZ) this.materialTranslate = options.translateZ;
+            if (options.scale) this.materialScale = options.scale
+            if (options.rotateY) this.materialRotateY = options.rotateY
+            if (options.rotateX) this.materialRotateX = options.rotateX
+            if (options.translateZ) this.materialTranslate = options.translateZ
 
-          // Apply dynamic styles to the materials_object
-          materialObject[i].style.transform = `scale(${this.materialScale}) rotateY(${this.materialRotateY}) rotateX(${this.materialRotateX}) translateZ(${this.materialTranslate})`;
+            materialObject[i].style.transform = `scale(${this.materialScale}) rotateY(${this.materialRotateY}) rotateX(${this.materialRotateX}) translateZ(${this.materialTranslate})`
 
-          // Add or remove classes dynamically
-          if (options.addClass) materialObject[i].classList.add(options.addClass);
-          if (options.removeClass) materialObject[i].classList.remove(options.removeClass);
+            if (options.addClass) materialObject[i].classList.add(options.addClass)
+            if (options.removeClass) materialObject[i].classList.remove(options.removeClass)
         },
 		handleScroll() {          
             this.displayViewportElement()

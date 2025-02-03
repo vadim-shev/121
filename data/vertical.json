@@ -3,7 +3,7 @@
     {
         "id": 1,
         "name": "Форма", 
-        "serial": "VR",
+        "serial": "vf",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -13,7 +13,7 @@
     {
         "id": 2,
         "name": "Форма", 
-        "serial": "VR",
+        "serial": "vf",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -23,7 +23,7 @@
     {
         "id": 3,
         "name": "Форма", 
-        "serial": "VR",
+        "serial": "vf",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -33,7 +33,7 @@
     {
         "id": 4,
         "name": "Форма", 
-        "serial": "VR",
+        "serial": "vf",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -43,7 +43,7 @@
     {
         "id": 5,
         "name": "Форма", 
-        "serial": "VR",
+        "serial": "vf",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -52,8 +52,8 @@
     },
     {
         "id": 6,
-        "name": "Резка сердцеРезка сердце", 
-        "serial": "VR",
+        "name": "Резка сердце", 
+        "serial": "vh",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -63,7 +63,7 @@
     {
         "id": 7,
         "name": "Резка сердце", 
-        "serial": "VR",
+        "serial": "vh",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -73,7 +73,7 @@
     {
         "id": 8,
         "name": "Резка сердце", 
-        "serial": "VR",
+        "serial": "vh",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -83,7 +83,7 @@
     {
         "id": 9,
         "name": "Резка сердце", 
-        "serial": "VR",
+        "serial": "vh",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -93,7 +93,7 @@
     {
         "id": 10,
         "name": "Резка сердце", 
-        "serial": "VR",
+        "serial": "vh",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -103,7 +103,7 @@
     {
         "id": 11,
         "name": "Резка сердце", 
-        "serial": "VR",
+        "serial": "vh",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -113,7 +113,7 @@
     {
         "id": 12,
         "name": "Резка сердце", 
-        "serial": "VR",
+        "serial": "vh",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -123,7 +123,7 @@
     {
         "id": 13,
         "name": "Резка сердце", 
-        "serial": "VR",
+        "serial": "vh",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -133,7 +133,7 @@
     {
         "id": 14,
         "name": "Резка сердце", 
-        "serial": "VR",
+        "serial": "vh",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -143,7 +143,7 @@
     {
         "id": 15,
         "name": "Резка сердце", 
-        "serial": "VR",
+        "serial": "vh",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -153,7 +153,7 @@
     {
         "id": 16,
         "name": "Резка крест", 
-        "serial": "VR",
+        "serial": "vk",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -163,7 +163,7 @@
     {
         "id": 17,
         "name": "Резка крест", 
-        "serial": "VR",
+        "serial": "vk",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -173,7 +173,7 @@
     {
         "id": 18,
         "name": "Резка крест", 
-        "serial": "VR",
+        "serial": "vk",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -183,7 +183,7 @@
     {
         "id": 19,
         "name": "Резка крест", 
-        "serial": "VR",
+        "serial": "vk",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -193,7 +193,7 @@
     {
         "id": 20,
         "name": "Резка крест", 
-        "serial": "VR",
+        "serial": "vk",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -203,7 +203,7 @@
     {
         "id": 21,
         "name": "Резка крест", 
-        "serial": "VR",
+        "serial": "vk",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -213,7 +213,7 @@
     {
         "id": 22,
         "name": "Резка крест", 
-        "serial": "VR",
+        "serial": "vk",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -223,7 +223,7 @@
     {
         "id": 23,
         "name": "Резка крест", 
-        "serial": "VR",
+        "serial": "vk",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -233,7 +233,7 @@
     {
         "id": 24,
         "name": "Резка крест", 
-        "serial": "VR",
+        "serial": "vk",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -243,7 +243,7 @@
     {
         "id": 25,
         "name": "Резка крест", 
-        "serial": "VR",
+        "serial": "vk",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -253,7 +253,7 @@
     {
         "id": 25,
         "name": "Резка крест", 
-        "serial": "VR",
+        "serial": "vk",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -263,7 +263,7 @@
     {
         "id": 26,
         "name": "Резка крест", 
-        "serial": "VR",
+        "serial": "vk",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -273,7 +273,7 @@
     {
         "id": 27,
         "name": "Резка крест", 
-        "serial": "VR",
+        "serial": "vk",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -283,7 +283,7 @@
     {
         "id": 28,
         "name": "Резка крест", 
-        "serial": "VR",
+        "serial": "vk",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -293,7 +293,7 @@
     {
         "id": 29,
         "name": "Резка крест", 
-        "serial": "VR",
+        "serial": "vk",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -303,7 +303,7 @@
     {
         "id": 30,
         "name": "Резка крест", 
-        "serial": "VR",
+        "serial": "vk",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -313,7 +313,7 @@
     {
         "id": 31,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -323,7 +323,7 @@
     {
         "id": 32,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -333,7 +333,7 @@
     {
         "id": 33,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -343,7 +343,7 @@
     {
         "id": 34,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -353,7 +353,7 @@
     {
         "id": 35,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -363,7 +363,7 @@
     {
         "id": 36,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -373,7 +373,7 @@
     {
         "id": 37,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -383,7 +383,7 @@
     {
         "id": 38,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -393,7 +393,7 @@
     {
         "id": 39,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -403,7 +403,7 @@
     {
         "id": 40,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -413,7 +413,7 @@
     {
         "id": 41,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -423,7 +423,7 @@
     {
         "id": 42,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -433,7 +433,7 @@
     {
         "id": 43,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -443,7 +443,7 @@
     {
         "id": 44,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -453,7 +453,7 @@
     {
         "id": 45,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -463,7 +463,7 @@
     {
         "id": 46,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -473,7 +473,7 @@
     {
         "id": 47,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -483,7 +483,7 @@
     {
         "id": 48,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -493,7 +493,7 @@
     {
         "id": 49,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -503,7 +503,7 @@
     {
         "id": 50,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -513,7 +513,7 @@
     {
         "id": 51,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -523,7 +523,7 @@
     {
         "id": 52,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -533,7 +533,7 @@
     {
         "id": 53,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -543,7 +543,7 @@
     {
         "id": 54,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -553,7 +553,7 @@
     {
         "id": 55,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -563,7 +563,7 @@
     {
         "id": 56,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -573,7 +573,7 @@
     {
         "id": 57,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -583,7 +583,7 @@
     {
         "id": 58,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -593,7 +593,7 @@
     {
         "id": 59,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -603,7 +603,7 @@
     {
         "id": 60,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -613,7 +613,7 @@
     {
         "id": 61,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -623,7 +623,7 @@
     {
         "id": 62,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -633,7 +633,7 @@
     {
         "id": 63,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -643,7 +643,7 @@
     {
         "id": 64,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -653,7 +653,7 @@
     {
         "id": 65,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -663,7 +663,7 @@
     {
         "id": 66,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -673,7 +673,7 @@
     {
         "id": 67,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -683,7 +683,7 @@
     {
         "id": 68,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -693,7 +693,7 @@
     {
         "id": 69,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -703,7 +703,7 @@
     {
         "id": 70,
         "name": "Резка розы", 
-        "serial": "VR",
+        "serial": "vr",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -713,7 +713,7 @@
     {
         "id": 71,
         "name": "Резка ветки", 
-        "serial": "VR",
+        "serial": "vt",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -723,7 +723,7 @@
     {
         "id": 72,
         "name": "Резка ветки", 
-        "serial": "VR",
+        "serial": "vt",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -733,7 +733,7 @@
     {
         "id": 73,
         "name": "Резка ветки", 
-        "serial": "VR",
+        "serial": "vt",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -743,7 +743,7 @@
     {
         "id": 74,
         "name": "Резка ветки", 
-        "serial": "VR",
+        "serial": "vt",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -753,7 +753,7 @@
     {
         "id": 75,
         "name": "Резка ветки", 
-        "serial": "VR",
+        "serial": "vt",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -763,7 +763,7 @@
     {
         "id": 76,
         "name": "Резка ветки", 
-        "serial": "VR",
+        "serial": "vt",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -773,7 +773,7 @@
     {
         "id": 77,
         "name": "Резка ветки", 
-        "serial": "VR",
+        "serial": "vt",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -783,7 +783,7 @@
     {
         "id": 78,
         "name": "Резка ветки", 
-        "serial": "VR",
+        "serial": "vt",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -792,8 +792,8 @@
     },
     {
         "id": 79,
-        "name": "Резка виноградРезка виноград", 
-        "serial": "VR",
+        "name": "Резка виноград", 
+        "serial": "vg",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -803,7 +803,7 @@
     {
         "id": 80,
         "name": "Резка виноград", 
-        "serial": "VR",
+        "serial": "vg",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -813,7 +813,7 @@
     {
         "id": 81,
         "name": "Резка виноград", 
-        "serial": "VR",
+        "serial": "vg",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -823,7 +823,7 @@
     {
         "id": 82,
         "name": "Резка виноград", 
-        "serial": "VR",
+        "serial": "vg",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -833,7 +833,7 @@
     {
         "id": 83,
         "name": "Резка виноград", 
-        "serial": "VR",
+        "serial": "vg",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -843,7 +843,7 @@
     {
         "id": 84,
         "name": "Резка виноград", 
-        "serial": "VR",
+        "serial": "vg",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -853,7 +853,7 @@
     {
         "id": 85,
         "name": "Резка виноград", 
-        "serial": "VR",
+        "serial": "vg",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
@@ -863,7 +863,7 @@
     {
         "id": 86,
         "name": "Резка виноград", 
-        "serial": "VR",
+        "serial": "vg",
         "price": "1",
         "madeOf": "Гранит",
         "category": "Вертикальный",
