@@ -132,10 +132,10 @@ document.getElementById( 'Imagee' ).style.width = '150px';
 document.getElementById( 'Imagee1').style.height = '150px';
 document.getElementById( 'Imagee1').style.width = '300px';
 } else if(this.$route.params.product == "horizontal") {
-    document.getElementById( 'Imagee').style.height = '150px';
+    document.getElementById( 'Imagee').style.height = '250px';
 document.getElementById( 'Imagee').style.width = '300px';
 document.getElementById( 'Imagee1').style.height = '300px';
-document.getElementById( 'Imagee1').style.width = '250px';
+document.getElementById( 'Imagee1').style.width = '300px';
 
 } else if (this.$route.params.product == "complex") {
 document.getElementById( 'Imagee' ).style.height = '250px';
