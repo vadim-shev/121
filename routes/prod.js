@@ -126,6 +126,32 @@ export default {
     },
     async mounted() {
         await this.fetchProduct(`${'./data/' + this.$route.params.product}.json`, `${this.$route.params.product}`);
+        if (this.$route.params.product ==
+"vertical") {
+
+document.getElementById( 'Imagee' ).style.heigh
+t= '300px';
+document.getElementById( 'Imagee' ).style.width
+= '150px';
+document.getElementById( 'Imagee1').style.heig
+ht = '300px';
+} else if(this.$route.params.product ==
+"horizontal") {
+document.getElementById( 'Imagee').style.width
+= '300px';
+document.getElementById ( 'Imagee1').style.heig
+ht = '220px';
+document.getElementById( 'Imagee1').style.widt
+h = '300px';
+
+} else if (this.
+$route params.product == "complex") {
+document.getElementById( 'Imagee' ).style.heigh
+t = '250px';
+
+document.getElementById( ('Imagee').style.width
+= '300px' ;
+}
     },
     watch: {
         '$route.params.id': function(newId, oldId) {
