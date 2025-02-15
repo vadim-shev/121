@@ -28,18 +28,27 @@ export default {
 
             if (product) {
                 this.Name = product.name
+                this.MadeOf = product.madeOf
+                this.InStock = product.inStock
                 this.Imagee = product.image
                 this.Price = product.price
                 this.Category = product.category
                 this.Serial = product.serial
                 this.Ds = product.description
-                this.Model = `${product.serial}-${id.toString().padStart(3, '0')}`
+                this.s = product.description
+                this.OrderNumber = `${id.toString().padStart(3, '0')}`
 
             } else if( this.$route.href == `#/${ _storePar }/${ data.length + 1 }` ) {
                 this.$router.push({ path: `/${ _storePar }/${ data.length - data.length + 1 }` })
             } else if( this.$route.href == `#/${ _storePar }/${ data.length - data.length }` ) {
                 this.$router.push({ path: `/${ _storePar }/${ data.length }` })
             }
+
+            if(product.inStock === 'false') {
+            document.getElementById( 'InStock' ).style.color = 'red'
+        } else  {
+            document.getElementById( 'InStock' ).style.color = 'green'
+        }
 
             if (this.$route.params.product == "vertical") {
                 if (0 <= this.$route.params.id && this.$route.params.id <= 5 ) {

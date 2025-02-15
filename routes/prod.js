@@ -22,7 +22,7 @@ export default {
                     <div class="prod_cover">
                         <div class="prod_cover_info">
                             <div class="prod_arrows_container">
-                                <span><b>{{ Price }}</b></span>
+                                <span><b>{{ Price + " " + "грн" }}</b></span>
                                 <button @click="openModal">Купить</button>
 
                                 <!-- Modal -->
@@ -57,16 +57,17 @@ export default {
                                     <div style="display: flex; flex-direction: row; justify-content: space-between; width: 85vw;">
                                         <div style="display: flex; flex-direction: column; justify-content: space-around; align-items: flex-start;">
                                             <p> Каталог: <b>{{ Category }}</b> </p>
-                                            <p> Модель: <b>{{ Model }}</b> </p>
-                                            <p> Материал: <b> Гранит </b></p>
-                                            <p> Наличие: <b style="color: green;"> Есть </b> </p>
+                                            <p> Материал: <b> {{ MadeOf }} </b></p>
+                                            <p> Серийный номер: <b> {{ Serial + "-" + OrderNumber }} </b></p>
+                                            <p> Наличие: <b style="color: green;" id="InStock"> {{ InStock }} </b> </p>
                                             <router-link class="prime_btn" :to="'/'">Перейти на главную</router-link>
                                         </div>
                                     </div>
                                 </div>
                                 <div style="width: 100%; height: auto;">
                                     <div style="display: flex; flex-direction: row; flex-wrap: wrap; width: 100vw;">
-                                        <img id="Imagee1" :src="Ds" style="margin: 10px 25px; padding: 0px 25px; " />
+                                        <div id="Imagee1" :style="{ margin: '20px', padding: '0px', backgroundImage: 'url(' + this.Ds + ')' }"></div>
+
                                     </div>
                                 </div>
                             </div>
@@ -88,11 +89,13 @@ export default {
             currentSection: '',
             currentPageKey: 'prodIndex',
             Name: '',
+            InStock: '',
+            MadeOf: '',
             Imagee: '',
             Price: '',
             ID: '',
             Category: '',
-            Model: '',
+            OrderNumber: '',
             Serial: '',
             Ds: '',
             memorials: ['формы', 'резка сердца', 'резка крест', 'резка розы', 'резка деревьев', 'резка винограда'],
@@ -126,11 +129,14 @@ export default {
     },
     async mounted() {
         await this.fetchProduct(`${'./data/' + this.$route.params.product}.json`, `${this.$route.params.product}`);
+        console.log(this.InStock)
+        
         if (this.$route.params.product == "vertical") {
 document.getElementById( 'Imagee' ).style.height = '300px';
 document.getElementById( 'Imagee' ).style.width = '150px';
-document.getElementById( 'Imagee1').style.height = '150px';
+document.getElementById( 'Imagee1').style.height = '350px';
 document.getElementById( 'Imagee1').style.width = '300px';
+
 } else if(this.$route.params.product == "horizontal") {
     document.getElementById( 'Imagee').style.height = '250px';
 document.getElementById( 'Imagee').style.width = '300px';
