@@ -26,8 +26,8 @@ export default {
                                 <button @click="openModal">Купить</button>
 
                                 <!-- Modal -->
-                                <div v-if="isModalOpened" class="modal-mask" @click="closeModal">
-                                    <modal-btn></modal-btn>
+                                <div v-if="isModalOpened" class="modal-mask">
+                                    <modal-btn :isModalOpened="isModalOpened" @close-modal="closeModal" :info="Serial+'-'+OrderNumber"></modal-btn>
                                 </div>
                             </div> 
 
@@ -43,24 +43,18 @@ export default {
                                 </router-link>
                             </div>
 
-                            <div class="dropdown" :class="computedClasses" @click="toggleClass">
-                                <b>Текущий раздел: {{ selectedMemorial }}</b>
-                                <div class="dropdown-content">
-                                    <a v-for="(memorial, index) in memorials" :key="index" class="dropdown-item" :class="{ active: selectedIndex === index }" @click="selectMemorial(memorial, index)">
-                                        {{ memorial }}
-                                    </a>
-                                </div>
-                            </div>  
 
                             <div class="prod_cover_container">
-                                <div style="display: flex; width: 100%; height: auto; padding: 3rem 1rem; flex-direction: column; justify-content: space-between;">
+                                <div style="display: flex; width: 100%; height: auto; padding: 0rem 1rem; flex-direction: column; justify-content: space-between;">
                                     <div style="display: flex; flex-direction: row; justify-content: space-between; width: 85vw;">
                                         <div style="display: flex; flex-direction: column; justify-content: space-around; align-items: flex-start;">
-                                            <p> Каталог: <b>{{ Category }}</b> </p>
-                                            <p> Материал: <b> {{ MadeOf }} </b></p>
-                                            <p> Серийный номер: <b> {{ Serial + "-" + OrderNumber }} </b></p>
-                                            <p> Наличие: <b style="color: green;" id="InStock"> {{ InStock }} </b> </p>
-                                            <router-link class="prime_btn" :to="'/'">Перейти на главную</router-link>
+
+                                            <p>Текущий раздел: <b class="roboto">{{ selectedMemorial }}</b></p>
+                                            <p> Каталог: <b class="roboto">{{ Category }}</b> </p>
+                                            <p> Материал: <b class="roboto"> {{ MadeOf }} </b></p>
+                                            <p> Серийный номер: <b class="roboto"> {{ Serial + "-" + OrderNumber }} </b></p>
+                                            <p> Есть на складе: <b class="roboto" style="color: green;" id="InStock"> {{ InStock }} </b> </p>
+                                            <!-- <router-link class="prime_btn" :to="'/'">Перейти на главную</router-link> -->
                                         </div>
                                     </div>
                                 </div>

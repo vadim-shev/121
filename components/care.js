@@ -7,9 +7,9 @@ export default {
     template: `
         <div class="care_container">
                     <section class="care_section">
-                        <h1 class="heading_1">
+                        <h2 class="heading_1">
                             Установка памятников
-                        </h1>
+                        </h2>
                         <div class="care_list_container">
                             <div>
                                 <ul>
@@ -80,9 +80,9 @@ export default {
                             </div> 
                     </section>
                     <section  class="care_section">
-                        <h1 class="heading_1">
+                        <h2 class="heading_1">
                             Уход и обслуживание могил
-                        </h1>
+                        </h2>
                         <div  class="care_list_container">
                             <div>
                                 <ul >
