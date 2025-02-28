@@ -130,6 +130,7 @@ export default {
     async mounted() {
         await this.fetchProduct(`${'./data/' + this.$route.params.product}.json`, `${this.$route.params.product}`);
         console.log(this.InStock)
+        console.log(this.$route.params.product)
         
         if (this.$route.params.product == "vertical") {
 document.getElementById( 'Imagee' ).style.height = '300px';

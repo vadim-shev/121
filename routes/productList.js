@@ -17,12 +17,12 @@ export default {
             <div>
               <h3 style="margin: 2vh 2vw; text-align: center;">{{ name }}</h3>
               <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; width: 100%; height: 100%; margin: 2vh 0vw;">
-                <router-link 
+                <router-link  
   v-for="(image, index) in group" 
   :key="index" 
   :to="'/' + $route.params.product + '/' + image.id" 
-  :style="{ backgroundImage: 'url(' + image.image + ')', height: '150px', width: '100px' }" 
-  id="Imagee1">{{ image.name }}
+  :style="{ backgroundImage: 'url(' + image.image + ')', height: '90px', width: '60px' }" 
+  id="Imagee1">{{ image.serial + ' -' + image.id }}
 </router-link>
 
               </div>
@@ -70,7 +70,7 @@ export default {
           ...item, 
           id: item.id,
           name: item.name,
-          
+          serial: item.serial
         });
       });
       return groups;
@@ -84,7 +84,9 @@ export default {
       }
 
       const url = `./data/${productParam}.json`;
+        console.log(url)
       const response = await this.fetchProducts(url);
+        console.log(productParam)
 
       if (response && response.length > 0) {
         this.Imagee = response;

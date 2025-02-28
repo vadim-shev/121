@@ -3,11 +3,15 @@
     background-size: contain;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
-    margin: 0;
+    align-items: center;
+/*    justify-content: center;*/
+    margin: 5px;
     padding: 0;
     background-position: center;
+    font-size: 10px;
+    font-weight: 400;
 }
 .modal-mask {
   position: fixed;
@@ -78,7 +82,7 @@
 @import url('components/panel/style.css');
 /*@import url('components/clouds/style.css');*/
 @import url('components/card/style.css');
-@import url("css/font/bebas/stylesheet.css");
+/*@import url("css/font/bebas/stylesheet.css");*/
 .menu {
     width: 300px; 
     height: 90vh; 
@@ -125,7 +129,7 @@
     --color-2: #9BA8AB;
     --color-1: #CCD0CF;
 
-    font-family: "Bebas Neue Cyrillic", sans-serif;
+   font-family: "Shafarik", serif;
     font-weight: 400;
     font-style: normal;
     overflow-x: hidden !important;

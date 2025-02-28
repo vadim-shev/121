@@ -4,7 +4,7 @@ export default {
 	template: `
 		
                         <li class="category_item">
-                            <router-link to="/vertical/1" class="category_item_router" >
+                            <router-link to="/vertical/" class="category_item_router" >
                                 <img src="./assets/catalog/vertical.svg">
                                 <section>
                                     <h2>Вертикальные модели</h2>
@@ -17,7 +17,7 @@ export default {
                             </router-link>
                         </li>
                         <li class="category_item">
-                            <router-link to="/horizontal/1" class="category_item_router" >
+                            <router-link to="/horizontal/" class="category_item_router" >
                                 <img src="./assets/catalog/horizontal.svg">
                                 <section>
                                     <h2>Горизонтальные модели</h2>
@@ -30,7 +30,7 @@ export default {
                             </router-link>
                         </li>
                         <li class="category_item">
-                            <router-link to="/complex/1" class="category_item_router" >
+                            <router-link to="/complex/" class="category_item_router" >
                                 <img src="./assets/catalog/complex.svg">
                                 <section>
                                     <h2>Площадки</h2>
@@ -43,7 +43,7 @@ export default {
                             </router-link>
                         </li>
                         <li class="category_item">
-                            <router-link to="/plates/1" class="category_item_router" >
+                            <router-link to="/plates/" class="category_item_router" >
                                 <img src="./assets/catalog/complex.svg">
                                 <section>
                                     <h2>Плитки</h2>
