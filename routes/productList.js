@@ -22,7 +22,7 @@ export default {
   :key="index" 
   :to="'/' + $route.params.product + '/' + image.id" 
   :style="{ backgroundImage: 'url(' + image.image + ')', height: '150px', width: '100px' }" 
-  id="Imagee1">
+  id="Imagee1">{{ image.name }}
 </router-link>
 
               </div>
@@ -69,7 +69,8 @@ export default {
         groups[name].push({
           ...item, 
           id: item.id,
-          name: item.name
+          name: item.name,
+          
         });
       });
       return groups;
