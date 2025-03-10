@@ -421,7 +421,7 @@ h1 {
 
 #contact {
     width: 100vw;
-    height: 50vh;
+    height: auto;
     background-color: var(--color-5);
     display: flex;
     flex-direction: column;
