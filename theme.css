@@ -458,11 +458,12 @@ h1 {
 #contact .contact_container .contact_mail {
     font-size: 20px; 
     font-weight: 400;  
+    
     color: var(--color-2);
 /*    border-bottom: 1px solid gray; */
     width: 80vw; 
-    text-transform: lowercase;
-    text-align: center;
+    text-transform: capitalize;
+    text-align: left;
 }
  .contact_info_container{
     display: flex; 
