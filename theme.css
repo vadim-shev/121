@@ -1,3 +1,6 @@
+main {
+    overflow-y: hidden;
+}
 #Imagee1 {
     background-repeat: no-repeat;
     background-size: contain;
