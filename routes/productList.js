@@ -9,7 +9,7 @@ export default {
   template: `
     <div ref="scrollContainer" :key="currentPageKey" id="p">
       <header style="position: relative; height: auto;" class="menuItem" id="header">
-        <navigation-part style="width: 100vw;" :newItem="currentSection"></navigation-part>
+        <navigation-part style="width: 100vw;" :newItem="this.Imagee[0]?.category"></navigation-part>
       </header>
       <main class="main-prod">
         <div style="background-color: white; margin: 10vh 0 0 0; z-index: 1000; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100vw; height: auto;" class="prod_container menuItem" id="prod">
