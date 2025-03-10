@@ -7,7 +7,7 @@ export default {
             <h1 class="contact_heading" >Контакты</h1>
             <div class="contact_text-holder">
                 <b style="color: var(--color-1); text-transform: uppercase;"> почта: <a class="contact_mail" >vadim.shevchenko2016@gmail.com</a> </b>
-                <b style="color: var(--color-1); text-transform: uppercase;"> телефон: <a class="contact_mail" >+38(097)159-66-61</a> </b>
+                <b style="color: var(--color-1); text-transform: uppercase;"> телефон: <a class="contact_mail" >+38(097)-484-72-72</a> </b>
                 <b style="color: var(--color-1); text-transform: uppercase;"> адресс: <a class="contact_mail" >ул. Александра Поля - 76Б</a> </b>
             </div>
             <section class="contact_info_container" >
