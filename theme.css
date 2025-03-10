@@ -430,6 +430,7 @@ h1 {
     z-index: 100 !important;
 }
 #contact .contact_container {
+    overflow: hidden;
     height: 100%;
     width: 100vw;
     display: flex;
