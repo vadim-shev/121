@@ -15,7 +15,7 @@ export default {
         <div style="background-color: white; margin: 10vh 0 0 0; z-index: 1000; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100vw; height: auto;" class="prod_container menuItem" id="prod">
           <div v-for="(group, name) in groupedImages" :key="name">
             <div>
-              <h3 style="margin: 2vh 2vw; text-align: center; color: var(--color-5); font-size: 30px;">{{ name + ' - ' + group[0].serial}}</h3>
+              <h3 style="margin: 2vh 2vw; text-align: center; color: var(--color-5); font-size: 30px;">{{ name }}</h3>
               <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; width: 100%; height: 100%; margin: 2vh 0vw;">
                 <router-link  
   v-for="(image, index) in group" 
