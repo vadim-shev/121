@@ -13,7 +13,7 @@ export default {
       </header>
       <main class="main-prod">
         <div style="background-color: white; margin: 10vh 0 0 0; z-index: 1000; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100vw; height: auto;" class="prod_container menuItem" id="prod">
-              <h3 style="margin: 2vh 2vw; text-align: center; color: var(--color-5); font-size: 30px;">Каталог: {{  this.Imagee[0]?.category }} </h3>
+              <!--<h3 style="margin: 2vh 2vw; text-align: center; color: var(--color-5); font-size: 30px;">Каталог: {{  this.Imagee[0]?.category }} </h3>-->
           <div v-for="(group, name) in groupedImages" :key="name">
             <div>
               <h3 style="margin: 2vh 2vw; text-align: center; color: var(--color-5); font-size: 30px;">{{ name + ' - ' + group[0].serial}}</h3>
