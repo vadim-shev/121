@@ -462,7 +462,7 @@ h1 {
     color: var(--color-2);
 /*    border-bottom: 1px solid gray; */
     width: 80vw; 
-    text-transform: capitalize;
+    text-transform: uppercase;
     text-align: left;
 }
  .contact_info_container{
