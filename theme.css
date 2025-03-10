@@ -420,6 +420,7 @@ h1 {
 }
 
 #contact {
+    overflow: hidden;
     width: 100vw;
     height: auto;
     background-color: var(--color-5);
