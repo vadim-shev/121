@@ -1,6 +1,7 @@
+import groupProducts from './../mixins/groupProducts.js'
 import fetchMixin from './fetchMixin.js'
 export default { 
-    mixins: [fetchMixin],
+    mixins: [fetchMixin, groupProducts ],
     props: ['src'],	
     data() {
 		return {
@@ -14,7 +15,8 @@ export default {
             materialRotateX: "45deg",
             materialTranslate: "4.5rem",     
                 materialSrc: [],
-                CardArr: []
+                CardArr: [],
+            groupArr: ['Форма', 'Резка сердце', 'Резка крест', 'Резка розы', 'Резка ветки', 'Резка виноград']
         }
 	},
 	methods: {
@@ -37,6 +39,7 @@ export default {
                 this.Ds = product.description
                 this.s = product.description
                 this.OrderNumber = `${id.toString().padStart(3, '0')}`
+                // this.selectedMemorial = this.getGroupByIndex(this.$route.params.id )
 
             } else if( this.$route.href == `#/${ _storePar }/${ data.length + 1 }` ) {
                 this.$router.push({ path: `/${ _storePar }/${ data.length - data.length + 1 }` })
@@ -49,11 +52,14 @@ export default {
         } else  {
             document.getElementById( 'InStock' ).style.color = 'green'
         }
-
+        this.$route.params.currentGroup = this.getGroupByIndex(this.$route.params.id)
             if (this.$route.params.product == "vertical") {
-                if (0 <= this.$route.params.id && this.$route.params.id <= 5 ) {
-                    this.selectedMemorial = this.memorials[0];       
+                if (0 <= this.$route.params.id && this.$route.params.id <= this.$route.params.items ) {
+                    this.selectedMemorial = this.$route.params.group    
                     this.selectedIndex = 0;
+                    console.log(this.$route.params.group)
+                    console.log(this.$route.params.items)
+                    // this.getGroupByIndex(72)
                 } else if (this.$route.params.id > 5 && this.$route.params.id <= 15) {
                     this.selectedMemorial = this.memorials[1];                
                     this.selectedIndex = 1;
@@ -252,6 +258,7 @@ document.getElementById('Services_i').classList.remove('shadow_0')
     }
     },
    mounted() {
+    // this.$route.params.group = this.groupArr
      // this.$router.options.history.state.back = 
     if (!this.hasMounted) {
         this.hasMounted = true; 
@@ -266,6 +273,7 @@ document.getElementById('Services_i').classList.remove('shadow_0')
 
     }
         
+            console.log(this.countTotalItems())
 },
 beforeDestroy() {
         // console.log(this.nextTodoId)

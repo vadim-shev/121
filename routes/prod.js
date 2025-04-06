@@ -5,6 +5,7 @@ import NavigationPart from './../templates/navigation.js'
 import ModalBtn from './../components/modal.js'
 
 import scrollMixin from './../mixins/scrollMixin.js'
+// import groupProducts from './../mixins/groupProducts.js'
 export default {
      mixins: [scrollMixin],
      components: { NavigationPart, FooterPart, ModalBtn },
@@ -49,9 +50,9 @@ export default {
                                                 <div style="display: flex; flex-direction: row; justify-content: space-between; width: 85vw;">
                                                      <div style="display: flex; flex-direction: column; justify-content: space-around; align-items: flex-start;">
 
-                                                          <p>Текущий раздел: <b class="roboto">{{ selectedMemorial }}</b></p>
-                                                          <p> Каталог: <b class="roboto">{{ Category }}</b> </p>
-                                                          <p> Материал: <b class="roboto"> {{ MadeOf }} </b></p>
+                                                          <p>Текущий раздел: <b class="roboto">{{  $route.params.group }}</b></p>
+                                                          <p> Каталог: <b class="roboto">{{  this.$route.params.product }}</b> </p>
+                                                          <p> Материал: <b class="roboto"> {{ this.$route.params.currentGroup }} </b></p>
                                                           <p> Серийный номер: <b class="roboto"> {{ Serial + "-" + OrderNumber }} </b></p>
                                                           <p> Есть на складе: <b class="roboto" style="color: green;" id="InStock"> {{ InStock }} </b> </p>
                                                           <!-- <router-link class="prime_btn" :to="'/'">Перейти на главную</router-link> -->
@@ -93,7 +94,9 @@ export default {
                 Serial: '',
                 Ds: '',
                 memorials: ['формы', 'резка сердца', 'резка крест', 'резка розы', 'резка деревьев', 'резка винограда'],
-                selectedMemorial: 'Выберите раздел'
+                selectedMemorial: '',
+
+                groupArr: ['Форма', 'Резка сердце', 'Резка крест', 'Резка розы', 'Резка ветки', 'Резка виноград']
           };
      },
      methods: {
@@ -119,12 +122,16 @@ export default {
           selectMemorial(memorial, index) {
                 this.selectedMemorial = memorial;
                 this.selectedIndex = index;
-          }
+          },updateCurrentGroup() {
+            // This method updates the current group based on the route params
+            this.$route.params.currentGroup = this.getGroupByIndex(this.$route.params.id);
+       }
      },
      async mounted() {
           await this.fetchProduct(`${'./data/' + this.$route.params.product}.json`, `${this.$route.params.product}`);
+          this.selectedMemorial =  this.ID
           console.log(this.InStock)
-          console.log(this.$route.params.product)
+          // console.log(this.groupedImages[groupArr].length())
           
           if (this.$route.params.product == "vertical") {
 document.getElementById( 'Imagee' ).style.height = '300px';
@@ -153,7 +160,10 @@ document.getElementById('Imagee1').style.width = '400px' ;
      watch: {
           '$route.params.id': function(newId, oldId) {
                 this.fetchProduct(`${'./data/' + this.$route.params.product}.json`, `${this.$route.params.product}`);
-          }
+          },
+        '$route.params.group': function(newProduct, oldProduct) {
+            this.getGroupByIndex(this.$route.params.id)
+        },
      },
      computed: {
           computedClasses() {
@@ -169,6 +179,7 @@ document.getElementById('Imagee1').style.width = '400px' ;
      beforeRouteUpdate(to, from, next) {
           if (to.params.id !== from.params.id) {
                 this.fetchProduct(`${'./data/' + to.params.product}.json`, `${to.params.product}`);
+                 this.updateCurrentGroup();
           }
           next();
      }

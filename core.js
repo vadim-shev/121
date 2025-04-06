@@ -13,8 +13,8 @@ const router = VueRouter.createRouter({
         { path: "/", 
         children: [{
                 path: '', component: Home },
-                { path: '/:product', component: ProductList },
-                { path: '/:product/:id', component: Product },
+                { path: '/:product', component: ProductList, name: 'Категории' },
+                { path: '/:product/:id', component: Product, name: 'Продукт'  },
             ]}
         
     ]
