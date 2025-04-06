@@ -89,6 +89,10 @@ export default {
   methods: {
     
   },
+  mounted() {
+console.log(this.$route.params.currentPageKEY)
+  	
+  },
     beforeRouteEnter(to, from, next) {
         window.scrollTo(0, 0)
         next()

@@ -41,7 +41,7 @@ export default {
                 return {
                         s: '',
                         // k: 5,
-                        currentPageKey: 'some-unique-key',
+                        currentPageKey: this.$route.params.product,
                         Imagee: [],
                         Groups: [],
                         groupArr: ['Форма', 'Резка сердце', 'Резка крест', 'Резка розы', 'Резка ветки', 'Резка виноград']
@@ -63,7 +63,7 @@ export default {
                         }
                 },
         },
-        async mounted() {
+         mounted() {
                 // try {
                 //         const productParam = this.$route.params.product;
                 //         if (!productParam) {
@@ -80,6 +80,7 @@ export default {
                 //         console.error('Error during mounted hook:', error.message);
                 //         this.$emit('error', error.message); // Emit an error event for better handling
                 // }
+console.log(this.$route.params.currentPageKEY)
                 
             // this.$route.params.groups = this.groupArr
             // console.log(this.getGroupByIndex(11))

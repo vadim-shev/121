@@ -35,6 +35,7 @@ export default {
     },
     mounted() {
             // console.log(window.history.state)
+console.log(this.$route.params.currentPageKEY)
         
         
     },

@@ -2,7 +2,7 @@ import groupProducts from './../mixins/groupProducts.js'
 import fetchMixin from './fetchMixin.js'
 export default { 
     mixins: [fetchMixin, groupProducts ],
-    props: ['src'],	
+
     data() {
 		return {
             Item: [],     
@@ -20,81 +20,81 @@ export default {
         }
 	},
 	methods: {
-        async fetchProduct(_dataLink, _storePar) {
-            const id = Number(this.$route.params.id)
-            this.ID = id
+        // async fetchProduct(_dataLink, _storePar) {
+        //     const id = Number(this.$route.params.id)
+        //     this.ID = id
                 
-            const data = await this.fetchAPI(_dataLink)
-            const product = data?.[id - 1]
-            const formattedId = String(this.$route.params.id).padStart(3, '0')
+        //     const data = await this.fetchAPI(_dataLink)
+        //     const product = data?.[id - 1]
+        //     const formattedId = String(this.$route.params.id).padStart(3, '0')
 
-            if (product) {
-                this.Name = product.name
-                this.MadeOf = product.madeOf
-                this.InStock = product.inStock
-                this.Imagee = product.image
-                this.Price = product.price
-                this.Category = product.category
-                this.Serial = product.serial
-                this.Ds = product.description
-                this.s = product.description
-                this.OrderNumber = `${id.toString().padStart(3, '0')}`
-                // this.selectedMemorial = this.getGroupByIndex(this.$route.params.id )
+        //     if (product) {
+        //         this.Name = product.name
+        //         this.MadeOf = product.madeOf
+        //         this.InStock = product.inStock
+        //         this.Imagee = product.image
+        //         this.Price = product.price
+        //         this.Category = product.category
+        //         this.Serial = product.serial
+        //         this.Ds = product.description
+        //         this.s = product.description
+        //         this.OrderNumber = `${id.toString().padStart(3, '0')}`
+        //         // this.selectedMemorial = this.getGroupByIndex(this.$route.params.id )
 
-            } else if( this.$route.href == `#/${ _storePar }/${ data.length + 1 }` ) {
-                this.$router.push({ path: `/${ _storePar }/${ data.length - data.length + 1 }` })
-            } else if( this.$route.href == `#/${ _storePar }/${ data.length - data.length }` ) {
-                this.$router.push({ path: `/${ _storePar }/${ data.length }` })
-            }
+        //     } else if( this.$route.href == `#/${ _storePar }/${ data.length + 1 }` ) {
+        //         this.$router.push({ path: `/${ _storePar }/${ data.length - data.length + 1 }` })
+        //     } else if( this.$route.href == `#/${ _storePar }/${ data.length - data.length }` ) {
+        //         this.$router.push({ path: `/${ _storePar }/${ data.length }` })
+        //     }
 
-            if(product.inStock === 'false') {
-            document.getElementById( 'InStock' ).style.color = 'red'
-        } else  {
-            document.getElementById( 'InStock' ).style.color = 'green'
-        }
-        this.$route.params.currentGroup = this.getGroupByIndex(this.$route.params.id)
-            if (this.$route.params.product == "vertical") {
-                if (0 <= this.$route.params.id && this.$route.params.id <= this.$route.params.items ) {
-                    this.selectedMemorial = this.$route.params.group    
-                    this.selectedIndex = 0;
-                    console.log(this.$route.params.group)
-                    console.log(this.$route.params.items)
-                    // this.getGroupByIndex(72)
-                } else if (this.$route.params.id > 5 && this.$route.params.id <= 15) {
-                    this.selectedMemorial = this.memorials[1];                
-                    this.selectedIndex = 1;
-                }  else if (this.$route.params.id > 15 && this.$route.params.id <= 30) {
-                    this.selectedMemorial = this.memorials[2];
-                    this.selectedIndex = 2;
-                }else if (this.$route.params.id > 30 && this.$route.params.id <= 70) {
-                    this.selectedMemorial = this.memorials[3];
-                    this.selectedIndex = 3;
-                }else if (this.$route.params.id > 70 && this.$route.params.id <= 78) {
-                    this.selectedMemorial = this.memorials[4];
-                    this.selectedIndex = 4;
-                }else if (this.$route.params.id >= 78 && this.$route.params.id <= 87) {
-                    this.selectedMemorial = this.memorials[5];
-                    this.selectedIndex = 5;
-                } 
-            } else if (this.$route.params.product == "horizontal") {
-                this.memorials = ['двойники']
-                this.selectedIndex = 0;
+        //     if(product.inStock === 'false') {
+        //     document.getElementById( 'InStock' ).style.color = 'red'
+        // } else  {
+        //     document.getElementById( 'InStock' ).style.color = 'green'
+        // }
+        // this.$route.params.currentGroup = this.getGroupByIndex(this.$route.params.id)
+        //     if (this.$route.params.product == "vertical") {
+        //         if (0 <= this.$route.params.id && this.$route.params.id <= this.$route.params.items ) {
+        //             this.selectedMemorial = this.$route.params.group    
+        //             this.selectedIndex = 0;
+        //             console.log(this.$route.params.group)
+        //             console.log(this.$route.params.items)
+        //             // this.getGroupByIndex(72)
+        //         } else if (this.$route.params.id > 5 && this.$route.params.id <= 15) {
+        //             this.selectedMemorial = this.memorials[1];                
+        //             this.selectedIndex = 1;
+        //         }  else if (this.$route.params.id > 15 && this.$route.params.id <= 30) {
+        //             this.selectedMemorial = this.memorials[2];
+        //             this.selectedIndex = 2;
+        //         }else if (this.$route.params.id > 30 && this.$route.params.id <= 70) {
+        //             this.selectedMemorial = this.memorials[3];
+        //             this.selectedIndex = 3;
+        //         }else if (this.$route.params.id > 70 && this.$route.params.id <= 78) {
+        //             this.selectedMemorial = this.memorials[4];
+        //             this.selectedIndex = 4;
+        //         }else if (this.$route.params.id >= 78 && this.$route.params.id <= 87) {
+        //             this.selectedMemorial = this.memorials[5];
+        //             this.selectedIndex = 5;
+        //         } 
+        //     } else if (this.$route.params.product == "horizontal") {
+        //         this.memorials = ['двойники']
+        //         this.selectedIndex = 0;
             
-                this.selectedMemorial = this.memorials[0] 
-            } else if (this.$route.params.product == "complex") {
-                this.memorials = ['комплекс']
-                this.selectedIndex = 0;
+        //         this.selectedMemorial = this.memorials[0] 
+        //     } else if (this.$route.params.product == "complex") {
+        //         this.memorials = ['комплекс']
+        //         this.selectedIndex = 0;
             
-                this.selectedMemorial = this.memorials[0] 
-            } else if (this.$route.params.product == "plates") {
-                this.memorials = ['плиты']
-                this.selectedIndex = 0;
+        //         this.selectedMemorial = this.memorials[0] 
+        //     } else if (this.$route.params.product == "plates") {
+        //         this.memorials = ['плиты']
+        //         this.selectedIndex = 0;
             
-                this.selectedMemorial = this.memorials[0] 
-            } else {
-                console.error("error")
-            }
-        },
+        //         this.selectedMemorial = this.memorials[0] 
+        //     } else {
+        //         console.error("error")
+        //     }
+        // },
         selectMemorial(memorial, index, target) {
             this.isActive = true
             this.selectedMemorial = memorial
@@ -258,13 +258,15 @@ document.getElementById('Services_i').classList.remove('shadow_0')
     }
     },
    mounted() {
+                         this.$route.params.currentPageKEY =  this.currentPageKey
+    
     // this.$route.params.group = this.groupArr
      // this.$router.options.history.state.back = 
     if (!this.hasMounted) {
         this.hasMounted = true; 
         this.updateMenu()
         
-        window.addEventListener("load", this.displayViewportElement);
+        // window.addEventListener("load", this.displayViewportElement);
         window.addEventListener("scroll", this.handleScroll);
 
         this.materialSrc[0] = "./assets/materials/2.png"
@@ -273,7 +275,7 @@ document.getElementById('Services_i').classList.remove('shadow_0')
 
     }
         
-            console.log(this.countTotalItems())
+            // console.log(this.countTotalItems())
 },
 beforeDestroy() {
         // console.log(this.nextTodoId)

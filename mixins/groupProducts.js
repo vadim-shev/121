@@ -8,7 +8,7 @@ export default {
     data() {
         return {
             Imagee: [],  // Your product images
-            currentPageKey: 'some-unique-key',
+            // currentPageKey: 'some-unique-key',
             Groups: [],
             groupArr: ['Форма', 'Резка сердце', 'Резка крест', 'Резка розы', 'Резка ветки', 'Резка виноград']
         };
@@ -120,10 +120,11 @@ export default {
             this.$emit('error', error.message); // Emit an error event for better handling
         }
            
-          console.log(this.$route.params.currentGroup)
+          // console.log(this.$route.params.currentGroup)
           //   console.log(this.countTotalItems())
           this.$route.params.currentGroup =  this.getGroupByIndex(this.$route.params.id)
           this.$route.params.currentGroup =  this.getGroupByIndex(this.$route.params.id)
+         
           //   this.$route.params.totalGroupItems = this.countItemsInGroup(this.$route.params.currentGroup)
           //   this.$route.params.totalItems = this.countTotalItems()
     },
